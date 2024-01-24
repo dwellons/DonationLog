@@ -8,20 +8,36 @@
   <name>DonationLog Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
+
   <properties>
-    <javaee.version>7.0</javaee.version>
-    <maven.compiler-plugin-version>3.8.1</maven.compiler-plugin-version>
+    <maven.compiler.release>11</maven.compiler.release>
+    <junit.version>4.12</junit.version>
+    <javax.version>7.0</javax.version>
+    <!-- TODO make sure your mysql driver version matches your mysql version -->
+    <mysql-version>8.0.16</mysql-version>
+    <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
   </properties>
 
   <dependencies>
     <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-web-api</artifactId>
-      <version>${javaee.version}</version>
+      <version>${javax.version}</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql-version}</version>
+    </dependency>
+
   </dependencies>
-
-
   <build>
     <finalName>DonationLog</finalName>
     <pluginManagement>
@@ -29,11 +45,9 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>${maven.compiler-plugin-version}</version>
+          <version>${maven-compiler-plugin-version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
   </build>
-
-
 </project>
