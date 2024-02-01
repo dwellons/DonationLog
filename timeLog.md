@@ -30,9 +30,9 @@ Tuesday 1/30/24 6pm - 1am
 
 -   readings, videos, started and finished activity 1
 
-Wednesday 1/31/24 12pm - 2:30, 3:30 -
+Wednesday 1/31/24 12pm - 2:30, 3:30 - 
 
 -   started and finished week 3 exercise, videos
 -   updated timeLog
 -   look at prof. dev. opp. - signed up https://nofluffjuststuff.com/webinar/91/continuous_learning
--   start looking at checkpoint 1
+-   start working on checkpoint 1
