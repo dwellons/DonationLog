@@ -17,3 +17,42 @@ donations as they come, and then let managers be able to search through the reco
 using different search options. It will return a summary that the manager can use for
 finances or other reasons, or to share with donors. I want it to be open source and
 free to use so that any organization can use it.
+
+
+### Project Technologies/Techniques
+
+* Security/Authentication
+    * AWS Cognito
+* Database
+    * MySQL 8.x
+* ORM Framework
+    * Hibernate Version TBD
+* Dependency Management
+    * Maven
+* Web Services consumed using Java
+    * TBD
+* CSS
+    * Bootstrap or Materialize
+* Data Validation
+    * Bootstrap Validator for front end
+    * Explore Hibernate Validator?
+* Logging
+    * Log4J2
+* Hosting
+    * AWS
+* Tech I'd like to explore as part of this work
+    * CI tools in AWS
+    * Materialize
+    * Google Maps API
+    * Hibernate Validator
+    * Hibernate Search
+* Project Lombok
+* Unit Testing
+    * JUnit tests to cover all testable logic
+* IDE: IntelliJ IDEA
+
+
+### Design
+
+* [User Stories](DesignDocuments/userStories.md)
+* [Screen Design](DesignDocuments/Screens.md)
