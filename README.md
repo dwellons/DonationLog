@@ -19,12 +19,13 @@ finances or other reasons, or to share with donors. I want it to be open source 
 free to use so that any organization can use it.
 
 
-### Project Technologies/Techniques
+### Project Technologies/Techniques Used.
 
 * Security/Authentication
     * AWS Cognito
 * Database
     * MySQL 8.x
+    * MAMP
 * ORM Framework
     * Hibernate Version TBD
 * Dependency Management
@@ -49,10 +50,22 @@ free to use so that any organization can use it.
 * Project Lombok
 * Unit Testing
     * JUnit tests to cover all testable logic
-* IDE: IntelliJ IDEA
+* Editors
+    * IDE: IntelliJ IDEA
+    * Editor: VSCodium
 
 
-### Design
+
+### Design Documents.
 
 * [User Stories](DesignDocuments/userStories.md)
 * [Screen Design](DesignDocuments/Screens.md)
+
+### [Project Plan](ProjectPlan.md)
+
+### Documentation of progress, reflections, and time spent on this class.
+Choose a format that works for you, or create your own.
+
+#### [Weekly Refelection](WeeklyReflection.md)
+#### [Journal](Journal.md)
+#### [TimeLog](TimeLog.md)
