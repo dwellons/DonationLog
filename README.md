@@ -15,7 +15,7 @@ using different search options. It will return a summary that the manager can us
 finances or other reasons, or to share with donors. It is open source and free to use for any non-profit
 organizations. 
 
-Donations to help fund the project can be made at www.website.com
+If you want to help support the project, you can here: www.website.com
 
 
 ### Project Technologies/Techniques Used.

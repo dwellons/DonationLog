@@ -1,4 +1,4 @@
-# Project Plan
+# Donation Log Project Plan
 
 ### Week 2
 - [X] Create project repository on GitHub
@@ -24,21 +24,27 @@ For those using this as a model, continue adding weekly tasks by considering:
 4. add in project checkpoints/milestones and tasks to achieve them
 5. I started a few of these below as examples
 
-### Week 4 - Class topic is Hibernate
-#### This week my focus is the Find Trails by Name user story
+### Week 4 and 5 - Class topic is Hibernate
+#### This week my focus is the Find Donations by Donor Name user story
 - [ ] First cut at database design
-- [ ] Create the dev version of the database - at least the Trail table
-- [ ] Create Trail entity
-- [ ] Create a class to perform CRUD on trail - TrailDao
+- [ ] Create the dev version of the database - at least the donations table
+- [ ] Create Donation entity 
+- [ ] Create a class to perform CRUD on donations - DonationDao
 - [ ] Create the config files for the DB connection info (dev and test)
 - [ ] Create a test version of the database for unit testing
-- [ ] Create unit tests for the TrailDao
+- [ ] Create unit tests for the DonationDao
 - [ ] Create a class for the DB connection business
-- [ ] Create JSP for finding trails
-- [ ] Create JSP for trail results
-- [ ] Create controller to route to find-a-trail jsp
-- [ ] Create controller to manage the work of finding a trail
+- [ ] Create JSP for finding donations
+- [ ] Create JSP for donation search results
+- [ ] Create controller to route to donation search jsp
+- [ ] Create controller to manage the work of finding a donation
 - [ ] Update weekly reflection
+
+### Week 6
+#### This week my focus is on the Add Donation user story
+- [ ] Create JSP for adding donations
+- [ ] Create controller to manage the work of adding a donation
+- [ ] Create JSP for add donation results
 
 ### Week 7
 #### Checkpoint 2 is Due: Database designed and created, at least one DAO with full CRUD (create, read, update, delete) implemented with Hibernate, DAO is fully unit tested, Log4J is implemented (no System.out.printlns)
@@ -50,10 +56,29 @@ For those using this as a model, continue adding weekly tasks by considering:
 - [ ] Deploy project to AWS
 - [ ] Add deployed link to indie project list in student repo
 
+## Week 8
+#### This week my focus is on the Administer Edit Donation and Administer Remove Donation user storys
+- [ ] Create JSP for modifying donations
+- [ ] Create JSP for removing donations
+- [ ] Create controller to manage the work of modifying a donation
+- [ ] Create controller to manage the work of removing a donation
+- [ ] Create JSP for add donation results
+- [ ] Create JSP for remove donation results
+
 
 ### Week 9 (Start of the team project)
 #### Checkpoint 3 is Due: Deployed to AWS, at least one JSP that displays data from the database is implemented, authentication implemented, add AWS deployed app link to indie project list in student repo.
 - [ ] Double-check all checkpoint 3 items (above) are complete and visible in github.
+
+### Week 10
+
+### Week 11
+
+### Week 12
+
+### Week 13
+
+### Week 14
 
 ### Week 15
 - [ ] Implement Feedback from Week 14 review

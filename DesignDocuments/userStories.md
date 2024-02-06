@@ -12,7 +12,7 @@ I want administrators to be able to create an Admin account, to modify the datab
 
 As an administrator I want to log in so that I can edit or delete donations.
 
-### Find Donors *
+### Find Donations by Donor Name *
 
 As a user, I want to be able to search donors by name, and to see a list of donations from them.
 
