@@ -17,14 +17,13 @@
     <!-- Navigation Content -->
     <nav id="nav">
         <header>
-            <h2>Links to future pages</h2>
+            <h2>Possible</h2>
         </header>
         <ul>
             <li><a href="#">Sign In</a></li>
             <li><a href="#">Sign Up</a></li>
             <li><a href="#">Log Donation</a></li>
             <li><a href="#">Search Donations</a></li>
-            <li><a href="#">Contact Information</a></li>
         </ul>
     </nav>
 

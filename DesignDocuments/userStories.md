@@ -20,17 +20,13 @@ As a user, I want to be able to search donors by name, and to see a list of dona
 
 As a user, I want to be able to search for and see donations for a given day. 
 
-### View Donation Report *
+### Print or Send Donation Report *
 
-As an administrator, I want to be able to provide a report to donors or for myself.
+As an administrator, I want to be able to print or send a report to donors.
 
 ### View Logged Donation *
 
 As an administrator, I want to be able to select and view a donation to edit or delete.
-
-### Contact *
-
-As a user, I want quick access to contact information that I may need to give to a client.
 
 ### Add Donation *
 
@@ -55,10 +51,6 @@ As an administrator, I want to be able to remove donors from our list.
 ### Password Reset 
 
 As a user or administrator, I want to be able to be able to reset my password if I forget it.
-
-### Edit Administrator profile
-
-As an administrator, I want to be able to edit my profile.
 
 ### Report an Issue
 

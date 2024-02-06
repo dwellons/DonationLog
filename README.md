@@ -52,6 +52,7 @@ If you want to help support the project, you can here: www.website.com
 * Editors
     * IDE: IntelliJ IDEA
     * Editor: VSCodium
+    * Screen Design: Figma
 
 
 

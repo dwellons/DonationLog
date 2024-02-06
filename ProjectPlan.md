@@ -71,6 +71,7 @@ For those using this as a model, continue adding weekly tasks by considering:
 - [ ] Double-check all checkpoint 3 items (above) are complete and visible in github.
 
 ### Week 10
+- [ ] Print / Send Report
 
 ### Week 11
 
