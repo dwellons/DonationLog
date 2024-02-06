@@ -2,7 +2,9 @@
 
 ### Home Page, shows Donations recorded so far today.
 
-![Home Page](screenDesign/Homepage.pdf)
+screenDesign/Homepage.pdf
+
+![Home_Page](screenDesign/Homepage.pdf)
 
 ### New Donation Page
 
