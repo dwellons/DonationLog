@@ -15,3 +15,8 @@ Setup and tested initial project environment:
 
 **1/31/24**
 Entered user stories into project file.
+
+### Week 4 - Spring 2024
+**02/05/24**
+Double checked user stories and problem statement.
+Created wire frames.

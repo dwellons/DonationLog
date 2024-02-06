@@ -24,15 +24,24 @@ Thursday 1/25/24 6pm - 12am
 
 Monday 1/29/24 8pm - 12pm
 
--   made corrections to week 2
+-   Made corrections to week 2.
 
 Tuesday 1/30/24 6pm - 1am
 
--   readings, videos, started and finished activity 1
+-   Readings, videos, started and finished activity 1.
 
-Wednesday 1/31/24 12pm - 2:30, 3:30 - 
+Wednesday 1/31/24 12pm - 2:30, 3:30 - 10pm
 
--   started and finished week 3 exercise, videos
--   updated timeLog
--   look at prof. dev. opp. - signed up https://nofluffjuststuff.com/webinar/91/continuous_learning
--   start working on checkpoint 1
+-   Started and finished week 3 exercise and videos.
+-   Updated timeLog.
+-   Look at Prof. Dev. Opp. - Signed up https://nofluffjuststuff.com/webinar/91/continuous_learning
+-   Started working on checkpoint 1.
+
+### Week 4
+
+Monday 2/5/24 6pm - 
+- Double-checked project specifications.
+- Went through my user stories and MVP's.
+- Updated my project plan.
+- Started working on wire frames.
+- 

@@ -1,10 +1,10 @@
 ## Problem Statement
 
 Smaller, non-profit organizations like food pantries and re-sale stores rely on donations
-for a most of their inventory. Where I work, we are getting food donations from multiple
-businesses in town every day, and the volunteers in the food pantry record them all in a
-notebook. We take in donations like clothes, household items, toys, etc. from community
-members as well, and there is no real way we are tracking those at all. The amounts,
+for a most of their inventory. Pantries might be getting food donations from multiple
+businesses in town every day, and the volunteers there have to record them all in a
+notebook. Not just food donations, but things like clothes, household items, toys, etc. from community
+members as well, and there is no real way we are tracking any of these. The amounts,
 values, weights, kinds, and who donated them are all information that we need to have at
 the end of the year.
 
