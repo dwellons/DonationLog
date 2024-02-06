@@ -4,34 +4,34 @@
 
 screenDesign/Homepage.pdf
 
-![Home_Page](screenDesign/Homepage.pdf)
+![Home Page](screenDesign/Homepage.png)
 
 ### New Donation Page
 
-![New Donation Page](screenDesign/NewDonation.pdf)
+![New Donation Page](screenDesign/NewDonation.png)
 
 ### New User Page
 
-![New User Page](screenDesign/NewUser.pdf)
+![New User Page](screenDesign/NewUser.png)
 
 ### Log In Page
 
-![Log In Page](screenDesign/LogIn.pdf)
+![Log In Page](screenDesign/LogIn.png)
 
 ### Donation Search Page
 
-![Donation Search Page](screenDesign/DonationSearch.pdf)
+![Donation Search Page](screenDesign/DonationSearch.png)
 
 ### Print Report Page
 
-![Print Report Page](screenDesign/PrintReport.pdf)
+![Print Report Page](screenDesign/PrintReport.png)
 
 ### Send Report Page
 
-![Send Report Page](screenDesign/SendReport.pdf)
+![Send Report Page](screenDesign/SendReport.png)
 
 ### Report Issues Page
 
-![Report Issues Page](screenDesign/ReportIssue.pdf)
+![Report Issues Page](screenDesign/ReportIssue.png)
 
 
