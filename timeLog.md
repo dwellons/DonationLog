@@ -39,9 +39,10 @@ Wednesday 1/31/24 12pm - 2:30, 3:30 - 10pm
 
 ### Week 4
 
-Monday 2/5/24 6pm - 
+Monday 2/5/24 6pm - 12am
 - Double-checked project specifications.
 - Went through my user stories and MVP's.
 - Updated my project plan.
-- Started working on wire frames.
+- Completed wire frames.
+- Created WeeklyReflection.md
 - 
