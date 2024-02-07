@@ -50,10 +50,6 @@ As an administrator, I want to be able to add new donors to our list.
 
 As an administrator, I want to be able to remove donors from our list.
 
-### Password Reset 
-
-As a user or administrator, I want to be able to be able to reset my password if I forget it.
-
 ### Report an Issue
 
 As any user, I want to be able to report an issue to the System Administrator.
