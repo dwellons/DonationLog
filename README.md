@@ -66,6 +66,6 @@ If you want to help support the project, you can here: www.website.com
 ### Documentation of progress, reflections, and time spent on this class.
 Choose a format that works for you, or create your own.
 
-#### [Weekly Refelection](WeeklyReflection.md)
+#### [Weekly Refelection](WeeklyReflection)
 #### [Journal](Journal.md)
 #### [TimeLog](TimeLog.md)
