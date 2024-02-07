@@ -43,10 +43,8 @@ If you want to help support the project, you can here: (future link)
 * Tech I'd like to explore as part of this work
     * CI tools in AWS
     * Materialize
-    * Google Maps API
     * Hibernate Validator
     * Hibernate Search
-* Project Lombok
 * Unit Testing
     * JUnit tests to cover all testable logic
 * Editors
