@@ -9,7 +9,6 @@ Tasks Completed:
 * Install and configure IntelliJ IDEA (Apache, Tomcat, Maven).
 * Connect to Database (MAMP).
 * Determine Project Idea.
-* Started looking at what API's are and how they are used. 
 * Weekly Classwork
 
 Key learning points/takeaways:
@@ -29,6 +28,7 @@ Tasks Completed:
 * Create initial project repository on GitHub.
 * Started documenting the project plan.
 * Began listing technologies and how they fit in this project
+* Started looking at what API's are and how they are used.
 * Weekly Classwork
 
 Key learning points/takeaways:
@@ -72,6 +72,11 @@ Tasks Completed:
 * Completed wire frames.
 * Created WeeklyReflection.md
 * Weekly Classwork
+
+Different API's for emailing Donation Reports:
+* Java Mail: https://javaee.github.io/javamail/
+* Apache Commons EMail: https://commons.apache.org/proper/commons-email/ 
+* Email Verifier: https://rapidapi.com/mr_admin/api/email-verifier
 
 Key learning points/takeaways:
 * PDF images will not load in a md file. 
