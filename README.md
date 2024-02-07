@@ -54,18 +54,14 @@ If you want to help support the project, you can here: www.website.com
     * Editor: VSCodium
     * Screen Layout Design: Figma
 
-
-
 ### Design Documents.
 
-* [User Stories](DesignDocuments/UserStories)
+* [User Stories](DesignDocuments/UserStories.md)
 * [Screen Design](DesignDocuments/Screens.md)
-
-### [Project Plan](ProjectPlan.md)
+* [Project Plan](ProjectPlan.md)
 
 ### Documentation of progress, reflections, and time spent on this class.
-Choose a format that works for you, or create your own.
 
-#### [Weekly Refelection](WeeklyReflection.md)
-#### [Journal](Journal.md)
-#### [TimeLog](TimeLog.md)
+* [Weekly Refelection](WeeklyReflection.md)
+* [Journal](Journal.md)
+* [TimeLog](TimeLog.md)
