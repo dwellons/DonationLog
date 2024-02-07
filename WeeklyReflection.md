@@ -77,6 +77,12 @@ Different API's for emailing Donation Reports:
 * Java Mail: https://javaee.github.io/javamail/
 * Apache Commons EMail: https://commons.apache.org/proper/commons-email/ 
 * Email Verifier: https://rapidapi.com/mr_admin/api/email-verifier
+* Adobe Create PDF: https://developer.adobe.com/document-services/docs/overview/pdf-services-api/howtos/create-pdf/
+
+Thins I would like to explore further:
+* The best way to take a html table, with results from the database, and turn it into a pdf file.
+* The best way to take that pdf file and automatically insert it as an attachment in a blank email.
+* The best way to print only the html table with results from the database, not the whole webpage.
 
 Key learning points/takeaways:
 * PDF images will not load in a md file. 
