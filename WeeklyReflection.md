@@ -41,7 +41,7 @@ What challenged me:
 
 ### Week 3
 
-1/23/2024 - 20 Hours
+1/29/2024 - 20 Hours
 
 Tasks Completed:
 * Signed up for Professional Development Opportuity

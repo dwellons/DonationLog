@@ -45,4 +45,10 @@ Monday 2/5/24 6pm - 12am
 - Updated my project plan.
 - Completed wire frames.
 - Created WeeklyReflection.md
+
+Tuesday 2/6/24 7pm - 
+- Worked on Checkpoint 1
+- Going over specifications
+- Updating WeeklyReflection, Journal, TimeLog
+- Re Organizing file structure, linking together
 - 
