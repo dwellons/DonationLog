@@ -46,9 +46,12 @@ Monday 2/5/24 6pm - 12am
 - Completed wire frames.
 - Created WeeklyReflection.md
 
-Tuesday 2/6/24 7pm - 
+Tuesday 2/6/24 7pm - 12am
 - Worked on Checkpoint 1
 - Going over specifications
 - Updating WeeklyReflection, Journal, TimeLog
 - Re Organizing file structure, linking together
-- 
+- Researched API's and read about what they are and how they work, thought about how to implement them. 
+
+Wednesday 2/7/24
+
