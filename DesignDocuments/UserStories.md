@@ -1,5 +1,7 @@
 # User Stories
 
+(*) Denotes Minimum Viable Product (MVP)
+
 ### View Today's Logged Donations *
 
 As a new user I want the main screen to list todays days logged donations, to avoid duplicate entries.
@@ -56,7 +58,7 @@ As a user or administrator, I want to be able to be able to reset my password if
 
 As any user, I want to be able to report an issue to the System Administrator.
 
-*Denotes Minimum Viable Product (MVP)
+
 
 
 
