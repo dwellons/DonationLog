@@ -58,7 +58,7 @@ If you want to help support the project, you can here: www.website.com
 
 ### Design Documents.
 
-* [User Stories](DesignDocuments/userStories.md)
+* [User Stories](DesignDocuments/UserStories)
 * [Screen Design](DesignDocuments/Screens.md)
 
 ### [Project Plan](ProjectPlan.md)
@@ -66,6 +66,6 @@ If you want to help support the project, you can here: www.website.com
 ### Documentation of progress, reflections, and time spent on this class.
 Choose a format that works for you, or create your own.
 
-#### [Weekly Refelection](WeeklyReflection)
+#### [Weekly Refelection](WeeklyReflection.md)
 #### [Journal](Journal.md)
 #### [TimeLog](TimeLog.md)
