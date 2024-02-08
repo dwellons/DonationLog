@@ -53,5 +53,6 @@ Tuesday 2/6/24 7pm - 12am
 - Re Organizing file structure, linking together
 - Researched API's and read about what they are and how they work, thought about how to implement them. 
 
-Wednesday 2/7/24
-
+Wednesday 2/7/24 7pm - 
+- Readings, Videos, classwork
+- 
