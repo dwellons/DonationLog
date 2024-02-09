@@ -54,18 +54,24 @@
                             <td>${donation.donationWeight}</td>
                             <td>${donation.donationDate}</td>
 
+                            <td>
+                                <!-- Links to UpdateDonation.jsp -->
+                                <a href="UpdateDonation.jsp?donationID=${donation.donationID}">Modify</a>
+                            </td>
+
+
                         </tr>
                     </c:forEach>
                 </table>
              </c:if>
 
-            <c:if test="${empty donation}">
+            <c:if test="${empty donations}">
                 <p>No results found.</p>
              </c:if>
 
             <!-- End Search Results Table -->
 
-            <a href="DonationSearch.jsp">Search Again</a>
+            <a href="DonationRead.jsp">Search Again</a>
 
         </article>
     </div>

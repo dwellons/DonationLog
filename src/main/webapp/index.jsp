@@ -22,6 +22,12 @@
             <c:import url="assets/index_files/header.jsp"/>
             <!--end header -->
 
+            <!-- Display the donation UPDATE message -->
+            <c:if test="${not empty donationUpdateMessage}">
+                <p>${donationUpdateMessage}</p>
+            </c:if>
+
+
             <!-- main page display -->
 
             <form action="searchDonations" method="get" id="loadAllForm">

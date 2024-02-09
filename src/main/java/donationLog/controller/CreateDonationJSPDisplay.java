@@ -12,10 +12,10 @@ import javax.servlet.annotation.*;
  *
  */
 @WebServlet(
-        name = "AddDonationJSPDisplay",
-        urlPatterns = { "/AddDonationJSPDisplay" }
+        name = "CreateDonationJSPDisplay",
+        urlPatterns = { "/CreateDonationJSPDisplay" }
 )
-public class AddDonationJSPDisplay extends HttpServlet {
+public class CreateDonationJSPDisplay extends HttpServlet {
 
     /**
      * The servlet will only have a doGet() method
@@ -29,7 +29,7 @@ public class AddDonationJSPDisplay extends HttpServlet {
             throws ServletException, IOException {
 
         // forward to add user JSP Page
-        String url = "AddDonation.jsp";
+        String url = "CreateDonation.jsp";
 
 
         RequestDispatcher dispatcher =

@@ -22,7 +22,7 @@ import org.apache.logging.log4j.Logger;
         urlPatterns = {"/searchDonations"}
 )
 
-public class SearchDonations extends HttpServlet {
+public class ReadDonations extends HttpServlet {
 
     // Instantiate Logger
     private final Logger logger = LogManager.getLogger(this.getClass());

@@ -26,7 +26,7 @@ import org.apache.logging.log4j.Logger;
         urlPatterns = { "/addDonation" }
 )
 
-public class AddDonation extends HttpServlet {
+public class CreateDonation extends HttpServlet {
     DonationDAO donationDAO;
 
     // Instantiate Logger
@@ -73,7 +73,7 @@ public class AddDonation extends HttpServlet {
         logger.debug("TEST In Add Donation");
 
             // Send a redirect the browser to the Add Donation page
-            response.sendRedirect(request.getContextPath() + "/DonationAdd.jsp");
+            response.sendRedirect(request.getContextPath() + "/DonationCreate.jsp");
             return;
         }
 
@@ -94,7 +94,7 @@ public class AddDonation extends HttpServlet {
         donationDAO.insert(newDonation);
 
         response.sendRedirect(request.getContextPath() +
-                "/DonationAdd.jsp");
+                "/DonationCreate.jsp");
 
         request.getSession().setAttribute("donationAddMessage",
                 "You have added your donation.");
@@ -123,8 +123,8 @@ public class AddDonation extends HttpServlet {
         /*
          * if the donor name and donation type aren't text
          */
-        if (!donor_name.matches("[a-z A-Z]+") ||
-              !donation_type.matches("[a-z A-Z]+")) {
+        if (!donor_name.matches("[a-zA-Z ]+") ||
+              !donation_type.matches("[a-zA-Z ]+")) {
 
              //set the variable to not valid, false
             isValid = false;
