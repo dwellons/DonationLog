@@ -28,11 +28,11 @@
         <ul>
 
             <!-- need to change these links -->
-            <a href = "http://localhost:8080/DonationLog_war/DonationAdd.jsp">Add a new Donation</a>
+            <a href = "http://localhost:8080/DonationLog_war/DonationCreate.jsp">Add a new Donation</a>
 
             <br>
 
-            <a href = "http://localhost:8080/DonationLog_war/DonationSearch.jsp">Search for a Donation</a>
+            <a href = "http://localhost:8080/DonationLog_war/DonationRead.jsp">Search for a Donation</a>
 
 
 

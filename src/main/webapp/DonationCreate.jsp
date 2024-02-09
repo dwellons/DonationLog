@@ -7,9 +7,9 @@
 
 <html>
 
-<!-- head -->
+<!-- Head -->
 <c:import url="/assets/index_files/head.jsp"/>
-<!-- end head -->
+<!-- End Head -->
 
 <!-- Content -->
 <div id="content">
@@ -18,13 +18,14 @@
         <!-- Post -->
         <article class="box post post-excerpt">
 
-            <!-- header -->
+            <!-- Header -->
             <c:import url="assets/index_files/header.jsp"/>
-            <!--end header -->
+            <!--End Header -->
 
-            <!-- Add User FORM -->
-            <h2>Add a new User</h2>
+            <!-- Add Donation Form -->
+            <h2>Add a new Donation</h2>
 
+            <!-- Display the Donation Add Message -->
             <c:if test="${not empty donationAddMessage}">
                 <h3>${donationAddMessage}</h3>
             </c:if>
@@ -51,18 +52,18 @@
                 <input type="submit" value="Add Donation">
 
             </form>
-            <!-- End Add User Form -->
+            <!-- End Add Donation Form -->
 
-            <!-- remove the message after displaying it, if it is present-->
+            <!-- Remove the message after displaying it, if it is present. -->
             <c:remove var="donationAddMessage"/>
 
         </article>
     </div>
 </div>
 
-<!-- sidebar -->
+<!-- Sidebar -->
 <c:import url="/assets/index_files/sidebar.jsp"/>
-<!-- end sidebar -->
+<!-- End sidebar -->
 
 <!-- Scripts -->
 <script href="assets/js/jquery.min.js"></script>

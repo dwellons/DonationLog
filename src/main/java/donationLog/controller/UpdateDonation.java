@@ -62,7 +62,7 @@ public class UpdateDonation extends HttpServlet {
                             + "Weight can only contain digits");
 
             // Forward to the Update Donation page
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/UpdateDonation.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/DonationUpdate.jsp");
             dispatcher.forward(request, response);
             return;
         }
@@ -89,7 +89,7 @@ public class UpdateDonation extends HttpServlet {
                 "You have updated the donation with ID: " + donationID);
 
         // Forward to the Update Donation page
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/UpdateDonation.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/DonationUpdate.jsp");
         dispatcher.forward(request, response);
 
         logger.debug("TEST in UpdateDonation.java - donationToUpdate:  " + donationToUpdate);
