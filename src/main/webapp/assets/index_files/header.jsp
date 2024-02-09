@@ -1,6 +1,6 @@
 <header>
     <!-- HEADER -->
-    <h2>Donation Log Application</h2>
+    <h1>Donation Log Application</h1>
     <p>An application for managing donations. Created by Darin Wellons</p>
 </header>
 

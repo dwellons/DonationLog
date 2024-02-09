@@ -23,7 +23,7 @@
             <!--end header -->
 
             <!-- USER SEARCH FORM -->
-            <h2>User Search Form</h2>
+            <h2>Search for a Past Donation</h2>
 
             <form action="searchDonations" method="get">
 
@@ -64,7 +64,7 @@
 
             <form action="searchDonations" method="get">
 
-                <input type ="submit" name="submit" value="Show All">
+                <input type ="submit" name="submit" value="Show All Donations">
 
             </form>
 

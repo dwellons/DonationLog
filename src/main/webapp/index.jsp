@@ -25,7 +25,7 @@
             <!-- main page display -->
 
             <form action="searchDonations" method="get" id="loadAllForm">
-                <input type ="submit" name="submit" value="Show All">
+                <input type ="submit" name="submit" value="Show All Donations">
             </form>
 
             <!-- end main page display -->
