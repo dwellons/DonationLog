@@ -40,19 +40,26 @@ Wednesday 1/31/24 12pm - 2:30, 3:30 - 10pm
 ### Week 4
 
 Monday 2/5/24 6pm - 12am
-- Double-checked project specifications.
-- Went through my user stories and MVP's.
-- Updated my project plan.
-- Completed wire frames.
-- Created WeeklyReflection.md
+
+-   Double-checked project specifications.
+-   Went through my donation stories and MVP's.
+-   Updated my project plan.
+-   Completed wire frames.
+-   Created WeeklyReflection.md
 
 Tuesday 2/6/24 7pm - 12am
-- Worked on Checkpoint 1
-- Going over specifications
-- Updating WeeklyReflection, Journal, TimeLog
-- Re Organizing file structure, linking together
-- Researched API's and read about what they are and how they work, thought about how to implement them. 
 
-Wednesday 2/7/24 7pm - 
-- Readings, Videos, classwork
-- 
+-   Worked on Checkpoint 1
+-   Going over specifications
+-   Updating WeeklyReflection, Journal, TimeLog
+-   Re Organizing file structure, linking together
+-   Researched API's and read about what they are and how they work, thought about how to implement them.
+
+Wednesday 2/7/24 7pm - 12am
+
+-   Readings, Videos, classwork
+
+Thursday 2/8/24 8pm -
+
+-   Readings, Videos, classwork
+-

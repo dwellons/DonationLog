@@ -34,7 +34,7 @@
 ### Week 4 - Spring 2024
 **02/05/24**
 * Double-checked project specifications.
-* Went through my user stories and MVP's.
+* Went through my donation stories and MVP's.
 * Updated my project plan.
 * Completed wire frames.
 * Created WeeklyReflection.md

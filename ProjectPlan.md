@@ -11,14 +11,14 @@
 - [X] Research possible Web Services/APIs to use
 - [X] List technologies, versions and how they will be used
 - [X] Write project plan
-- [X] Document user stories and select MVP stories
+- [X] Document donation stories and select MVP stories
 - [X] Confirm MVP stories meet Ent Java indie project objectives
-- [X] Design screens - make sure all MVP user stories are covered
+- [X] Design screens - make sure all MVP donation stories are covered
 - [X] Triple-check for Checkpoint 1
 - [X] Update journal/time log/reflection
 
 ### Week 4 and 5 - Class topic is Hibernate
-#### This week my focus is the Find Donations by Donor Name user story
+#### This week my focus is the Find Donations by Donor Name donation story
 - [ ] First cut at database design
 - [ ] Create the dev version of the database - at least the donations table
 - [ ] Create Donation entity 
@@ -34,7 +34,7 @@
 - [ ] Update weekly reflection
 
 ### Week 6
-#### This week my focus is on the Add Donation user story
+#### This week my focus is on the Add Donation donation story
 - [ ] Create JSP for adding donations
 - [ ] Create controller to manage the work of adding a donation
 - [ ] Create JSP for add donation results
@@ -50,7 +50,7 @@
 - [ ] Add deployed link to indie project list in student repo
 
 ## Week 8
-#### This week my focus is on the Administer Edit Donation and Administer Remove Donation user storys
+#### This week my focus is on the Administer Edit Donation and Administer Remove Donation donation storys
 - [ ] Create JSP for modifying donations
 - [ ] Create JSP for removing donations
 - [ ] Create controller to manage the work of modifying a donation

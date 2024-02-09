@@ -9,7 +9,7 @@ values, weights, kinds, and who donated them are all information that we need to
 the end of the year.
 
 Often times individuals are tracking and managing those donations by hand in a notebook or in
-a spreadsheet. This is time-consuming and in efficient. This is an application that will let users record
+a spreadsheet. This is time-consuming and in efficient. This is an application that will let donations record
 donations as they come, and then let managers be able to search through the recordings
 using different search options. It will return a summary that the manager can use for
 finances or other reasons, or to share with donors. It is open source and free to use for any non-profit
