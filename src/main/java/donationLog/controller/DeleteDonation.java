@@ -26,7 +26,7 @@ public class DeleteDonation extends HttpServlet {
         // Extract the donation ID from the request parameter.
         int donationID = Integer.parseInt(request.getParameter("donationID"));
 
-        logger.debug("TEST In Delete Donations Before DAO call" + request.getAttribute("donationID"));
+        logger.debug("TEST In Delete Donations Before DAO call: {}",  request.getAttribute("donationID"));
 
         // Instantiate DonationDAO.
         DonationDAO donationDAO = new DonationDAO();

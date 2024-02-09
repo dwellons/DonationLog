@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.39, for osx11.0 (x86_64)
 --
--- Host: 127.0.0.1    Database: sample
+-- Host: 127.0.0.1    Database: DonationLogApplication
 -- ------------------------------------------------------
 -- Server version	5.7.39
 
@@ -23,15 +23,13 @@ DROP TABLE IF EXISTS `donations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `donations` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(25) DEFAULT NULL,
-  `last_name` varchar(30) DEFAULT NULL,
-  `user_name` varchar(15) DEFAULT NULL,
-  `password` varchar(30) DEFAULT NULL,
-  `date_of_birth` date DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `user_name` (`user_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+  `donationID` int(11) NOT NULL AUTO_INCREMENT,
+  `donor_name` varchar(25) DEFAULT NULL,
+  `donation_type` varchar(30) DEFAULT NULL,
+  `donation_weight` varchar(15) DEFAULT NULL,
+  `donation_date` date DEFAULT NULL,
+  PRIMARY KEY (`donationID`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +38,7 @@ CREATE TABLE `donations` (
 
 LOCK TABLES `donations` WRITE;
 /*!40000 ALTER TABLE `donations` DISABLE KEYS */;
-INSERT INTO `donations` VALUES (1,'Joe','Coyne','jcoyne','supersecret1','1964-04-01'),(2,'Fred','Hensen','fhensen','supersecret2','1988-05-08'),(3,'Barney','Curry','bcurry','supersecret3','1947-11-11'),(4,'Karen','Mack','kmack','supersecret4','1986-07-08'),(5,'Dianne','Klein','dklein','supersecret5','1991-01-22'),(6,'Dawn','Tillman','dtillman','supersecret6','1979-08-30'),(7,'Darin','Wellons','dmwellons','password','1989-10-16');
+INSERT INTO `donations` VALUES (9,'Kwik Trip','Frozen','20','2024-02-09'),(11,'Kwik Trip','Frozen','20','2024-02-09'),(12,'Kwik Trip','Frozen','20','2024-02-09'),(13,'Kwik Trip','Frozen','20','2024-02-09'),(14,'Kwik Trip','Frozen','20','2024-02-09'),(15,'Kwik Trip','Frozen','20','2024-02-09');
 /*!40000 ALTER TABLE `donations` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-07 22:42:35
+-- Dump completed on 2024-02-09 15:44:15

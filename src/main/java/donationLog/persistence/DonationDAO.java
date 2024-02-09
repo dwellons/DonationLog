@@ -19,7 +19,7 @@ public class DonationDAO {
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
     /**
-     * Get user by id
+     * Get donation by id
      */
     public Donation getById(int id) {
         Session session = sessionFactory.openSession();

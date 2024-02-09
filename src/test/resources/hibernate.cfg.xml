@@ -6,7 +6,7 @@
 <hibernate-configuration>
     <session-factory>
         <!-- UPDATED TO CONNECT TO TEST DATABASE -->
-        <property name="connection.url">jdbc:mysql://localhost:8889/DonationLog</property>
+        <property name="connection.url">jdbc:mysql://localhost:8889/DonationLogApplication_Test</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 
         <property name="connection.username">student</property>
@@ -20,7 +20,7 @@
 
         <!-- include all of the classes we are annotating to work with hibernate -->
         <!-- IF I MAKE A CHANGE, ADD TO BOTH HIBERNATE CONFIG FILES -->
-        <mapping class="edu.matc.entity.User"/>
+        <mapping class="donationLog.entity.Donation"/>
 
 
 

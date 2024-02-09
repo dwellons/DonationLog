@@ -20,7 +20,7 @@ public class Donation {
 
     @Id // need to do this for primary key
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
-    @GenericGenerator(name = "native",strategy = "native")
+    @GenericGenerator(name = "native", strategy = "native")
     private int donationID;
     @Column(name = "donor_name") // Don't have to specify if column is named the same thing as var name (string below)
     private String donorName;

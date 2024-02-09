@@ -5,8 +5,8 @@
 <!--suppress ALL -->
 <hibernate-configuration>
     <session-factory>
-        <!-- CONNECTS TO PRODUCTION DATABASE -->
-        <property name="connection.url">jdbc:mysql://localhost:8889/DonationLogApplication</property>
+        <!-- CONNECTS TO TEST DATABASE -->
+        <property name="connection.url">jdbc:mysql://localhost:8889/DonationLogApplication_Test</property>
 
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="connection.username">student</property>

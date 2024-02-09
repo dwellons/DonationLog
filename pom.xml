@@ -12,19 +12,6 @@
     <maven.compiler.release>11</maven.compiler.release>
     <junit.version>4.13.1</junit.version>
     <javax.version>7.0</javax.version>
-    <!-- TODO make sure your mysql driver version matches your mysql version -->
-
-    <!-- using MAMP my version is 5.7.39, when I change this to match it causes errors.
-     I am having no issues otherwise until I change this-->
-
-    <!-- [ERROR] Failed to execute goal on project userdisplayexercise: Could not resolve
-    dependencies for project edu.matc.entjava.userdisplayexercise:userdisplayexercise:war:1.0-SNAPSHOT:
-    The following artifacts could not be resolved: mysql:mysql-connector-java:jar:5.7.39 (absent):
-    mysql:mysql-connector-java:jar:5.7.39 was not found in https://repo.maven.apache.org/maven2 during a
-    previous attempt. This failure was cached in the local repository and resolution is not reattempted
-    until the update interval of central has elapsed or updates are forced -->
-
-    <!-- when i followed the link and looked for the jar, 5.7.39 is not there -->
 
     <mysql-version>8.0.28</mysql-version>
     <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
