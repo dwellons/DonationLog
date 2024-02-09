@@ -37,18 +37,15 @@
                 <input type="text" id="donorName"
                        name="donorName" required>
                 <br>
-                <br>
 
                 <label for="donationType">Donation Type: </label>
                 <input type="text" id="donationType"
                        name="donationType" required>
                 <br>
-                <br>
 
                 <label for="donationWeight">Donation Weight: </label>
                 <input type="text" id="donationWeight"
                        name="donationWeight" required>
-                <br>
                 <br>
 
                 <input type="submit" value="Add Donation">

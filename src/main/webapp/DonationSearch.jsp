@@ -62,7 +62,7 @@
             <br>
             <br>
 
-            <form action="searchUser" method="get">
+            <form action="searchDonations" method="get">
 
                 <input type ="submit" name="submit" value="Show All">
 
@@ -87,6 +87,7 @@
 <script href="assets/js/breakpoints.min.js"></script>
 <script href="assets/js/util.js"></script>
 <script href="assets/js/main.js"></script>
+
 
 </body>
 </html>

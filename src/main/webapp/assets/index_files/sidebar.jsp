@@ -26,10 +26,16 @@
             <h2>Resources</h2>
         </header>
         <ul>
-            <li><a href="https://www.oracle.com/java/technologies/downloads/">Java Downloads</a></li>
-            <li><a href="https://tomcat.apache.org/">Tomcat</a></li>
-            <li><a href="https://www.jslint.com/">JS Lint</a></li>
-            <li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
+
+            <!-- need to change these links -->
+            <a href = "http://localhost:8080/DonationLog_war/DonationAdd.jsp">Add a new Donation</a>
+
+            <br>
+
+            <a href = "http://localhost:8080/DonationLog_war/DonationSearch.jsp">Search for a Donation</a>
+
+
+
         </ul>
     </section>
 

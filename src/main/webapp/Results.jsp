@@ -66,7 +66,7 @@
 
             <!-- End Search Results Table -->
 
-            <a href="donationSearch.jsp">Search Again</a>
+            <a href="DonationSearch.jsp">Search Again</a>
 
         </article>
     </div>

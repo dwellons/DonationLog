@@ -23,16 +23,13 @@
             <!--end header -->
 
             <!-- main page display -->
-            <h2>Donation Log Application</h2>
 
-            <br>
+            <form action="searchDonations" method="get" id="loadAllForm">
+                <input type ="submit" name="submit" value="Show All">
+            </form>
 
-            <a href = "DonationSearch.jsp">Search for a Donation</a>
-
-            <br>
-
-            <a href = "DonationAdd.jsp">Add a new Donation</a>
             <!-- end main page display -->
+
 
         </article>
     </div>
@@ -43,11 +40,13 @@
 <!-- end sidebar -->
 
 <!-- Scripts -->
-<script href="assets/js/jquery.min.js"></script>
-<script href="assets/js/browser.min.js"></script>
-<script href="assets/js/breakpoints.min.js"></script>
-<script href="assets/js/util.js"></script>
-<script href="assets/js/main.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+
 
 </body>
 </html>
