@@ -65,7 +65,7 @@ public class DonationDaoTest {
         Date donationDate = new Date(1989,10,16);
 
         int donationID = 0;
-        Donation newDonation = new Donation(donationID, "Nirad", "Snollew", "130", donationDate);
+        Donation newDonation = new Donation(donationID, "Piggly Wiggly", "Bread", "130", donationDate);
 
         newDonation.setDonationDate(donationDate);
 
@@ -74,7 +74,7 @@ public class DonationDaoTest {
         assertNotEquals(0, insertedUserId);
 
         Donation insertedDonation = donationDAO.getById(insertedUserId);
-        assertEquals("Nirad", insertedDonation.getDonorName());
+        assertEquals("Piggly Wiggly", insertedDonation.getDonorName());
 
 
     }
