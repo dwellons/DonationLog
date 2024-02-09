@@ -39,3 +39,4 @@
 * Completed wire frames.
 * Created WeeklyReflection.md
 * Weekly Classwork
+* Started working on Project in leu of Exercise. Implementing CRUD, DAO, Hibernate

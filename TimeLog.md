@@ -59,7 +59,7 @@ Wednesday 2/7/24 7pm - 12am
 
 -   Readings, Videos, classwork
 
-Thursday 2/8/24 8pm -
+Thursday 2/8/24 8pm - 2:45am
 
 -   Readings, Videos, classwork
--
+-   Started Exercise, working on Project.
