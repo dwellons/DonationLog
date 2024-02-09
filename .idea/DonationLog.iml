@@ -6,7 +6,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
-          <factory-entry name="DonationLog" value="c9324037-cd9b-4a14-9c3c-010c55dee53a" />
+          <factory-entry name="DonationLog" value="67646fb3-5d6c-4424-bb89-a7c791f05778" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>

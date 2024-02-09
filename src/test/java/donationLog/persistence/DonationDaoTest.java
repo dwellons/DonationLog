@@ -1,27 +1,22 @@
 package donationLog.persistence;
 
 import donationLog.entity.Donation;
-
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import org.junit.Test;
-
-
-
 import java.util.Date;
 import java.util.List;
-
 import static org.junit.Assert.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.junit.Before;
+import org.junit.Test;
+import donationLog.util.Database;
 
 public class DonationDaoTest {
 
-    //@Before
-    //public void setup() {
-      //  Database database = Database.getInstance();
-        //database.runSQL("cleandb.sql");
-   // }
+    @Before
+    public void setup() {
+        Database database = Database.getInstance();
+        database.runSQL("cleandb.sql");
+    }
 
     DonationDAO donationDAO;
 
@@ -48,7 +43,7 @@ public class DonationDaoTest {
     public void updateSuccess() {
         // get a record out of the database
         donationDAO = new DonationDAO();
-        Donation donationToUpdate = donationDAO.getById(1);
+        Donation donationToUpdate = donationDAO.getById(9);
 
         // change the name on that user
         donationToUpdate.setDonationType("Dairy");
@@ -57,7 +52,7 @@ public class DonationDaoTest {
         donationDAO.update(donationToUpdate);
 
         // retrieve the user and check that the name change worked
-        Donation actualDonation = donationDAO.getById(1);
+        Donation actualDonation = donationDAO.getById(9);
 
         // do comparison
         assertEquals("Dairy", actualDonation.getDonationType());
@@ -88,9 +83,9 @@ public class DonationDaoTest {
         //create new user
         donationDAO = new DonationDAO();
         // get the user with id of two, delete it
-        donationDAO.delete(donationDAO.getById(2));
+        donationDAO.delete(donationDAO.getById(9));
         // if delete is working, shouldn't get a user back
-        assertNull(donationDAO.getById(2));
+        assertNull(donationDAO.getById(9));
 
     }
     @Test
@@ -104,16 +99,16 @@ public class DonationDaoTest {
     @Test
     public void testGetByPropertyEqual() {
         donationDAO = new DonationDAO();
-        List<Donation> donations = donationDAO.getByPropertyLike("donor_name", "Kwik Trip");
-        assertEquals(1, donations.size());
-        assertEquals(3, donations.get(0).getDonationID());
+        List<Donation> donations = donationDAO.getByPropertyLike("donorName", "Kwik Trip");
+        assertEquals(6, donations.size());
+        assertEquals(9, donations.get(0).getDonationID());
 
     }
 
     @Test
     public void testGetByPropertyLike() {
         donationDAO = new DonationDAO();
-        List<Donation> donations = donationDAO.getByPropertyLike("lastName", "c");
-        assertEquals(3, donations.size());
+        List<Donation> donations = donationDAO.getByPropertyLike("donorName", "Kwik Trip");
+        assertEquals(6, donations.size());
     }
 }
