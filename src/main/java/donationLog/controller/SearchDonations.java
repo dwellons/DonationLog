@@ -54,7 +54,7 @@ public class SearchDonations extends HttpServlet {
         // RequestDispatcher dispatcher = request.getRequestDispatcher("/Results.jsp");
         // dispatcher.forward(request, response);
 
-        RequestDispatcher dispatcher2 = request.getRequestDispatcher("/index.jsp");
+        RequestDispatcher dispatcher2 = request.getRequestDispatcher("/Results.jsp");
         dispatcher2.forward(request,response);
     }
 }
