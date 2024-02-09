@@ -52,7 +52,7 @@ public class DonationDAO {
         // persist is for adding
         session.persist(donation);
         transaction.commit();
-        id = donation.getId();
+        id = donation.getDonationID();
         session.close();
         return id;
     }

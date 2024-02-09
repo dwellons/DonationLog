@@ -65,8 +65,8 @@ public class DonationDaoTest {
 
         Date birthdate = new Date(1989,10,16);
 
-        int donationID = 1;
-        Donation newDonation = new Donation("Nirad", "Snollew", "nsnollew", birthdate);
+        int donationID = 0;
+        Donation newDonation = new Donation(donationID, "Nirad", "Snollew", "nsnollew", birthdate);
 
         newDonation.setDonationDate(birthdate);
 
@@ -102,7 +102,7 @@ public class DonationDaoTest {
         donationDAO = new DonationDAO();
         List<Donation> donations = donationDAO.getByPropertyLike("lastName", "Curry");
         assertEquals(1, donations.size());
-        assertEquals(3, donations.get(0).getId());
+        assertEquals(3, donations.get(0).getDonationID());
 
     }
 

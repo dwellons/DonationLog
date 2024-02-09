@@ -30,7 +30,7 @@ public class SearchDonations extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        logger.debug("TEST In Search Donations Before DAO call" + request.getAttribute("donation"));
+        logger.debug("TEST In Search Donations Before DAO call" + request.getAttribute("donations"));
 
         //instantiate a new donationDAO
         // make sure you unit test things before using things on front end
@@ -39,10 +39,10 @@ public class SearchDonations extends HttpServlet {
         // if submit attribute = search
         if (request.getParameter("submit").equals("Submit")) {
             //get my donations (donations), call donationDAO method, pass in the donation
-            request.setAttribute("donation", donationDAO.getByPropertyEqual(request.getParameter("searchType"), request.getParameter("searchTerm")));
+            request.setAttribute("donations", donationDAO.getByPropertyEqual(request.getParameter("searchType"), request.getParameter("searchTerm")));
         } else {
             // get all
-            request.setAttribute("donation", donationDAO.getAll());
+            request.setAttribute("donations", donationDAO.getAll());
         }
 
         /*
@@ -51,10 +51,7 @@ public class SearchDonations extends HttpServlet {
          */
 
         // for search results
-        // RequestDispatcher dispatcher = request.getRequestDispatcher("/Results.jsp");
-        // dispatcher.forward(request, response);
-
-        RequestDispatcher dispatcher2 = request.getRequestDispatcher("/Results.jsp");
-        dispatcher2.forward(request,response);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/Results.jsp");
+        dispatcher.forward(request,response);
     }
 }

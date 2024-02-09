@@ -26,7 +26,7 @@
             <!-- Search Results Table -->
             <h2>Search Results</h2>
 
-            <c:if test="${not empty donation}">
+            <c:if test="${not empty donations}">
 
 
                 <table>
@@ -36,6 +36,7 @@
                         be part of the template text of the page.-->
                     <thead>
                     <tr>
+                        <th>Donation ID</th>
                         <th>Donor Name</th>
                         <th>Donation Type</th>
                         <th>Donation Weight</th>
@@ -43,18 +44,16 @@
                         <th>Edit</th>
                     </tr>
                     </thead>
-                     <c:forEach var="donation" items="${donation}">
+                     <c:forEach var="donation" items="${donations}">
 
 
                         <tr>
+                            <td>${donation.donationID}</td>
                             <td>${donation.donorName}</td>
                             <td>${donation.donationType}</td>
                             <td>${donation.donationWeight}</td>
                             <td>${donation.donationDate}</td>
-                            <td>
 
-
-                            </td>
                         </tr>
                     </c:forEach>
                 </table>

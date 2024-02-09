@@ -17,6 +17,11 @@ import java.util.Date;
 @Entity
 @Table(name = "donations") // CASE SENSITIVE
 public class Donation {
+
+    @Id // need to do this for primary key
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native",strategy = "native")
+    private int donationID;
     @Column(name = "donor_name") // Don't have to specify if column is named the same thing as var name (string below)
     private String donorName;
 
@@ -25,11 +30,6 @@ public class Donation {
 
     @Column(name = "donation_weight")
     private String donationWeight;
-
-    @Id // need to do this for primary key
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
-    @GenericGenerator(name = "native",strategy = "native")
-    private int donationID;
 
     @Column(name = "donation_date")
     private Date donationDate;
@@ -43,17 +43,40 @@ public class Donation {
     /**
      * Instantiates a new Donation.
      *
+     * @param donationID the donationID
      * @param donorName the donors name
      * @param donationType  the donation type
      * @param donationWeight  the donation weight
      * @param donationDate the date of the donation
+
      */
-    public Donation(String donorName, String donationType, String donationWeight, Date donationDate) {
+    public Donation(int donationID, String donorName, String donationType, String donationWeight, Date donationDate) {
+        this.donationID = donationID;
         this.donorName = donorName;
         this.donationType = donationType;
         this.donationWeight = donationWeight;
         this.donationDate = donationDate;
 
+    }
+
+
+    /**
+     * Gets donationID.
+     *
+     * @return the donationID
+     */
+    public int getDonationID() {
+        return donationID;
+    }
+
+    /**
+     * Sets donationID.
+     *
+     * @param donationID the donationID
+     */
+    public void setDonationID(int donationID) {
+
+        this.donationID = donationID;
     }
 
     /**
@@ -110,24 +133,7 @@ public class Donation {
         this.donationWeight = donationWeight;
     }
 
-    /**
-     * Gets donationID.
-     *
-     * @return the donationID
-     */
-    public int getId() {
-        return donationID;
-    }
 
-    /**
-     * Sets donationID.
-     *
-     * @param donationID the donationID
-     */
-    public void setId(int donationID) {
-
-        this.donationID = donationID;
-    }
 
     /**
      * Gets donationDate
