@@ -1,7 +1,5 @@
 # Journal
 
-[Time Log](TimeLog.md)
-
 ### Week 1 - Spring 2024
 
 **1/16/24 4-12pm** 
