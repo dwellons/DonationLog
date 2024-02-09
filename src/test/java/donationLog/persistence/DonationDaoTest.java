@@ -62,12 +62,12 @@ public class DonationDaoTest {
     public void testInsertSuccess() {
         donationDAO = new DonationDAO();
 
-        Date birthdate = new Date(1989,10,16);
+        Date donationDate = new Date(1989,10,16);
 
         int donationID = 0;
-        Donation newDonation = new Donation(donationID, "Nirad", "Snollew", "nsnollew", birthdate);
+        Donation newDonation = new Donation(donationID, "Nirad", "Snollew", "130", donationDate);
 
-        newDonation.setDonationDate(birthdate);
+        newDonation.setDonationDate(donationDate);
 
         int insertedUserId = donationDAO.insert(newDonation);
 

@@ -60,6 +60,4 @@ If you want to help support the project, you can here: (future link)
 
 ### Documentation of progress, reflections, and time spent on this class.
 
-* [Weekly Refelection](WeeklyReflection.md)
 * [Journal](Journal.md)
-* [TimeLog](TimeLog.md)
