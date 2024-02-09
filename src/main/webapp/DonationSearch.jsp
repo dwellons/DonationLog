@@ -25,7 +25,7 @@
             <!-- USER SEARCH FORM -->
             <h2>User Search Form</h2>
 
-            <form action="searchUser" method="get">
+            <form action="searchDonations" method="get">
 
                 <label for="searchType">What will you be searching by?</label>
 

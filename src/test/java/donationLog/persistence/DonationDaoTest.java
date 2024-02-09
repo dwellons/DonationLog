@@ -35,8 +35,8 @@ public class DonationDaoTest {
         donationDAO = new DonationDAO();
         Donation retrievedDonation = donationDAO.getById(7);
         assertNotNull(retrievedDonation);
-        assertEquals("Darin", retrievedDonation.getFirstName());
-        logger.info("RESULTS: " + retrievedDonation + " " + retrievedDonation.getFirstName() + " RESULTS");
+        assertEquals("Darin", retrievedDonation.getDonorName());
+        logger.info("RESULTS: " + retrievedDonation + " " + retrievedDonation.getDonorName() + " RESULTS");
         // assertEquals shows this, don't really need logger.info for this.
     }
 
@@ -65,16 +65,17 @@ public class DonationDaoTest {
 
         Date birthdate = new Date(1989,10,16);
 
-        Donation newDonation = new Donation("Nirad", "Snollew", "nsnollew", birthdate );
+        int donationID = 1;
+        Donation newDonation = new Donation("Nirad", "Snollew", "nsnollew", birthdate);
 
-        newDonation.setDateOfBirth(birthdate);
+        newDonation.setDonationDate(birthdate);
 
         int insertedUserId = donationDAO.insert(newDonation);
 
         assertNotEquals(0, insertedUserId);
 
         Donation insertedDonation = donationDAO.getById(insertedUserId);
-        assertEquals("Nirad", insertedDonation.getFirstName());
+        assertEquals("Nirad", insertedDonation.getDonorName());
 
 
     }

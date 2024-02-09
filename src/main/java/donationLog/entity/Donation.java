@@ -61,7 +61,7 @@ public class Donation {
      *
      * @return the donors name
      */
-    public String getFirstName() {
+    public String getDonorName() {
         return donorName;
     }
 
@@ -125,6 +125,7 @@ public class Donation {
      * @param donationID the donationID
      */
     public void setId(int donationID) {
+
         this.donationID = donationID;
     }
 
@@ -133,7 +134,7 @@ public class Donation {
      *
      * @return the date of the donation
      */
-    public Date getDateOfBirth() {
+    public Date getDonationDate() {
         return donationDate;
     }
 
@@ -142,7 +143,7 @@ public class Donation {
      *
      * @param donationDate the date of the donation
      */
-    public void setDateOfBirth(Date donationDate) {
+    public void setDonationDate(Date donationDate) {
         this.donationDate = donationDate;
     }
 

@@ -11,20 +11,26 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * A simple servlet to welcome the user.
  * @author pwaite
  */
 @WebServlet(
-        urlPatterns = {"/searchUser"}
+        urlPatterns = {"/searchDonations"}
 )
 
 public class SearchDonations extends HttpServlet {
 
+    // Instantiate Logger
+    private final Logger logger = LogManager.getLogger(this.getClass());
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        logger.debug("TEST In Search Donations Before DAO call" + request.getAttribute("donation"));
 
         //instantiate a new donationDAO
         // make sure you unit test things before using things on front end
@@ -32,7 +38,7 @@ public class SearchDonations extends HttpServlet {
 
         // if submit attribute = search
         if (request.getParameter("submit").equals("Submit")) {
-            //get my donations (donations), call donationDAO method, pass in the last name
+            //get my donations (donations), call donationDAO method, pass in the donation
             request.setAttribute("donation", donationDAO.getByPropertyEqual(request.getParameter("searchType"), request.getParameter("searchTerm")));
         } else {
             // get all

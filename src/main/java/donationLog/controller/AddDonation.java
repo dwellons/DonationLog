@@ -29,6 +29,7 @@ import org.apache.logging.log4j.Logger;
 public class AddDonation extends HttpServlet {
     DonationDAO donationDAO;
 
+    // Instantiate Logger
     private final Logger logger = LogManager.getLogger(this.getClass());
     /**
      * create a valid or not valid variable for validating form entries
@@ -58,17 +59,18 @@ public class AddDonation extends HttpServlet {
          */
         ServletContext context = getServletContext();
 
-        // Extract the data for the new Employee from the HTML form.
+        // Extract the data for the new Donation from the HTML form.
         String donor_name = request.getParameter("donorName");
         String donation_type = request.getParameter("donationType");
         String donation_weight = request.getParameter("donationWeight");
+
 
         /**
          * have to validate the input from the form before accessing database
          */
         if (!validateUserInput(donor_name, donation_type, donation_weight, request)) {
 
-        logger.debug("test");
+        logger.debug("TEST In Add Donation");
 
             // Send a redirect the browser to the Add Donation page
             response.sendRedirect(request.getContextPath() + "/DonationAdd.jsp");
@@ -80,6 +82,8 @@ public class AddDonation extends HttpServlet {
 
         // get todays date
         Date donationDate = new Date();
+
+
 
         // create the new donation object
         Donation newDonation = new Donation(donor_name,donation_type,donation_weight,donationDate);
@@ -103,6 +107,7 @@ public class AddDonation extends HttpServlet {
      * @param donor_name the donors name
      * @param donation_type the donation type
      * @param donation_weight the donation weight
+
      * @param request the servlet request attribute
      * @return if the user input is valid or not
      * @throws IOException for io exceptions

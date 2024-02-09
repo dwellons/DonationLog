@@ -26,7 +26,7 @@
             <!-- Search Results Table -->
             <h2>Search Results</h2>
 
-            <c:if test="${not empty donations}">
+            <c:if test="${not empty donation}">
 
 
                 <table>
@@ -44,6 +44,8 @@
                     </tr>
                     </thead>
                      <c:forEach var="donation" items="${donation}">
+
+
                         <tr>
                             <td>${donation.donorName}</td>
                             <td>${donation.donationType}</td>
@@ -51,13 +53,6 @@
                             <td>${donation.donationDate}</td>
                             <td>
 
-                                <!-- added buttons, come back if enough time to add functionality -->
-                                <!-- might be different than php -->
-                                <a href="modifyUser?donationName=${donation.donationName}">Modify</a>
-
-                                <br>
-
-                                <a href="deleteUser?donationName=${donation.donationName}">Delete</a>
 
                             </td>
                         </tr>
