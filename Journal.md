@@ -68,7 +68,7 @@ What challenged me:
 **2/6/24 7pm - 12am**
 **2/7/24 7pm - 12am**
 **2/8/24 8pm - 2:45am**
-**2/9/24 9am -**
+**2/9/24 9am - 8pm**
 
 * Double-checked project specifications.
 * Went through my donation stories and MVP's.
