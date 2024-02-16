@@ -1,7 +1,6 @@
 package donationLog.controller;
 
 import donationLog.persistence.UsersDAO;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,7 +21,7 @@ import org.apache.logging.log4j.Logger;
 
 public class ReadDeleteUser extends HttpServlet {
 
-    // Instantiate Logger
+    // Instantiate Logger.
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     @Override
@@ -36,9 +34,11 @@ public class ReadDeleteUser extends HttpServlet {
 
         // If submit attribute = Submit, search.
         if (request.getParameter("submit").equals("Remove")) {
-            //get my donations (donations), call donationDAO method, pass in the donation
+
+            // Get my donations (donations), call donationDAO method, pass in the donation.
             request.setAttribute("users", usersDAO.getById(Integer.parseInt(request.getParameter("ID"))));
         } else {
+
             // Get all entries.
             request.setAttribute("users", usersDAO.getAll());
         }

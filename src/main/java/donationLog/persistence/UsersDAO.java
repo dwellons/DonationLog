@@ -10,7 +10,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.criteria.HibernateCriteriaBuilder;
-
 import java.util.List;
 
 public class UsersDAO {
@@ -19,7 +18,9 @@ public class UsersDAO {
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
     /**
-     * Get donation by id
+     * Gets Users by ID.
+     * @param id
+     * @return
      */
     public Users getById(int id) {
         Session session = sessionFactory.openSession();
@@ -29,8 +30,8 @@ public class UsersDAO {
     }
 
     /**
-     * update user
-     * @param user  Donation to be updated
+     * Updates users.
+     * @param user
      */
     public void update(Users user) {
         Session session = sessionFactory.openSession();
@@ -42,8 +43,9 @@ public class UsersDAO {
     }
 
     /**
-     * insert a new user
-     * @param user  user to be inserted
+     * Inserts new users.
+     * @param user
+     * @return
      */
     public int insert(Users user) {
         int id = 0;
@@ -58,8 +60,8 @@ public class UsersDAO {
     }
 
     /**
-     * Delete a user
-     * @param user user to be deleted
+     * Deletes users.
+     * @param user
      */
     public void delete(Users user) {
         Session session = sessionFactory.openSession();
@@ -70,9 +72,9 @@ public class UsersDAO {
     }
 
 
-    /** Return a list of all users
-     *
-     * @return All users
+    /**
+     * Returns a list of all users.
+     * @return
      */
     public List<Users> getAll() {
 
@@ -90,8 +92,10 @@ public class UsersDAO {
     }
 
     /**
-     * Get user by property (exact match)
-     * sample usage: getByPropertyEqual("lastname", "Curry")
+     * Searches for users that match a determined value.
+     * @param propertyName
+     * @param value
+     * @return
      */
     public List<Users> getByPropertyEqual(String propertyName, String value) {
         Session session = sessionFactory.openSession();
@@ -110,8 +114,10 @@ public class UsersDAO {
     }
 
     /**
-     * Get user by property (like)
-     * sample usage: getByPropertyLike("lastname", "C")
+     * Searches for users that are like a current value.
+     * @param propertyName
+     * @param value
+     * @return
      */
     public List<Users> getByPropertyLike(String propertyName, String value) {
         Session session = sessionFactory.openSession();
@@ -129,5 +135,4 @@ public class UsersDAO {
         session.close();
         return users;
     }
-
 }

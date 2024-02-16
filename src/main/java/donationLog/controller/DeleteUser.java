@@ -23,7 +23,7 @@ public class DeleteUser extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        // Extract the donation ID from the request parameter.
+        // Extract the user ID from the request parameter.
         int userID = Integer.parseInt(request.getParameter("ID"));
 
         logger.debug("TEST In Delete User Before DAO call: {}",  request.getAttribute("ID"));
@@ -31,17 +31,17 @@ public class DeleteUser extends HttpServlet {
         // Instantiate UsersDAO.
         UsersDAO usersDAO = new UsersDAO();
 
-        // Retrieve the donation to delete.
+        // Retrieve the user to delete.
         Users donationToDelete = usersDAO.getById(userID);
 
-        // Delete the donation from the database
+        // Delete the user from the database.
         usersDAO.delete(donationToDelete);
 
-        // Set a session attribute for the donationDeleteMessage.
+        // Set a session attribute for the userDeleteMessage.
         request.getSession().setAttribute("userDeleteMessage",
                 "You have successfully removed user number " + userID + ".");
 
-        // Redirect to the ReadUserss servlet to display updated donation list.
+        // Redirect to the ReadUsers servlet to display updated donation list.
         response.sendRedirect(request.getContextPath() + "/readUsers?submit=Show+All+Users");
     }
 }

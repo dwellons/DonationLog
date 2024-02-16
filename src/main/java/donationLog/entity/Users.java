@@ -72,7 +72,6 @@ public class Users {
 
     /**
      * Gets id.
-     *
      * @return the id
      */
     public int getID() {
@@ -81,7 +80,6 @@ public class Users {
 
     /**
      * Sets id.
-     *
      * @param id the id
      */
     public void setID(int id) {
@@ -90,8 +88,7 @@ public class Users {
     }
 
     /**
-     * Gets the userName
-     *
+     * Gets the userName.
      * @return the userName
      */
     public String getUserName() {
@@ -99,8 +96,7 @@ public class Users {
     }
 
     /**
-     * Sets userName
-     *
+     * Sets userName.
      * @param userName the userName
      */
     public void setUserName(String userName) {
@@ -108,8 +104,7 @@ public class Users {
     }
 
     /**
-     * Gets a password
-     *
+     * Gets password.
      * @return the password
      */
     public String getPassword() {
@@ -117,8 +112,7 @@ public class Users {
     }
 
     /**
-     * Sets the password
-     *
+     * Sets the password.
      * @param password the password
      */
     public void setPassword(String password) {
@@ -126,8 +120,7 @@ public class Users {
     }
 
     /**
-     * Gets firstName
-     *
+     * Gets firstName.
      * @return the firstName
      */
     public String getFirstName() {
@@ -136,7 +129,6 @@ public class Users {
 
     /**
      * Sets firstName.
-     *
      * @param firstName the firstName
      */
     public void setFirstName(String firstName) {
@@ -145,7 +137,6 @@ public class Users {
 
     /**
      * Gets lastName
-     *
      * @return the lastName
      */
     public String getLastName() {
@@ -154,21 +145,32 @@ public class Users {
 
     /**
      * Sets lastName
-     *
      * @param lastName the last name
      */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+    /**
+     *
+     * @return
+     */
     public List<Donation> getDonations() {
         return donations;
     }
 
+    /**
+     *
+     * @param donations
+     */
     public void setDonations(List<Donation> donations) {
         this.donations = donations;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "User{" +

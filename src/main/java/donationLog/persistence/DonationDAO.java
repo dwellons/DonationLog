@@ -19,7 +19,9 @@ public class DonationDAO {
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
     /**
-     * Get donation by id
+     * Gets donations by ID
+     * @param id
+     * @return
      */
     public Donation getById(int id) {
         Session session = sessionFactory.openSession();
@@ -29,8 +31,8 @@ public class DonationDAO {
     }
 
     /**
-     * update donation
-     * @param donation  Donation to be updated
+     * Updates donations.
+     * @param donation
      */
     public void update(Donation donation) {
         Session session = sessionFactory.openSession();
@@ -42,8 +44,9 @@ public class DonationDAO {
     }
 
     /**
-     * insert a new donation
-     * @param donation  Donation to be inserted
+     * Inserts donations
+     * @param donation
+     * @return
      */
     public int insert(Donation donation) {
         int id = 0;
@@ -58,8 +61,8 @@ public class DonationDAO {
     }
 
     /**
-     * Delete a donation
-     * @param donation Donation to be deleted
+     * Deletes donations.
+     * @param donation
      */
     public void delete(Donation donation) {
         Session session = sessionFactory.openSession();
@@ -69,10 +72,9 @@ public class DonationDAO {
         session.close();
     }
 
-
-    /** Return a list of all users
-     *
-     * @return All users
+    /**
+     * Gets all donations.
+     * @return
      */
     public List<Donation> getAll() {
 
@@ -90,8 +92,10 @@ public class DonationDAO {
     }
 
     /**
-     * Get user by property (exact match)
-     * sample usage: getByPropertyEqual("lastname", "Curry")
+     * Searches for property that equals a determined value.
+     * @param propertyName
+     * @param value
+     * @return
      */
     public List<Donation> getByPropertyEqual(String propertyName, String value) {
         Session session = sessionFactory.openSession();
@@ -110,8 +114,10 @@ public class DonationDAO {
     }
 
     /**
-     * Get user by property (like)
-     * sample usage: getByPropertyLike("lastname", "C")
+     * Searches for a property that is like a determined value.
+     * @param propertyName
+     * @param value
+     * @return
      */
     public List<Donation> getByPropertyLike(String propertyName, String value) {
         Session session = sessionFactory.openSession();

@@ -34,9 +34,7 @@ public class Donation {
     @ManyToOne
     private Users user_id;
 
-    /**
-     * Instantiates constructors.
-     */
+    // Empty Constructor.
     public Donation() {
     }
 
@@ -47,7 +45,6 @@ public class Donation {
      * @param donationType
      * @param donationWeight
      * @param donationDate
-
      */
     public Donation(int donationID, String donorName, String donationType, String donationWeight, Date donationDate) {
         this.donationID = donationID;
@@ -59,54 +56,107 @@ public class Donation {
     }
 
 
+    /**
+     * Empty Constructor
+     * @return
+     */
     public int getDonationID() {
         return donationID;
     }
 
+    /**
+     * Constructor
+     * @param donationID
+     */
     public void setDonationID(int donationID) {
         this.donationID = donationID;
     }
 
+
+    /**
+     *
+     * @return
+     */
     public String getDonorName() {
         return donorName;
     }
 
+    /**
+     *
+     * @param donorName
+     */
     public void setDonorName(String donorName) {
         this.donorName = donorName;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getDonationType() {
         return donationType;
     }
 
+    /**
+     *
+     * @param donationType
+     */
     public void setDonationType(String donationType) {
         this.donationType = donationType;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getDonationWeight() {
         return donationWeight;
     }
 
+    /**
+     *
+     * @param donationWeight
+     */
     public void setDonationWeight(String donationWeight) {
         this.donationWeight = donationWeight;
     }
 
+    /**
+     *
+     * @return
+     */
     public Date getDonationDate() {
         return donationDate;
     }
 
+    /**
+     *
+     * @param donationDate
+     */
     public void setDonationDate(Date donationDate) {
         this.donationDate = donationDate;
     }
 
+    /**
+     *
+     * @return
+     */
     public Users getUser_id() {
         return user_id;
     }
 
+    /**
+     *
+     * @param user_id
+     */
     public void setUser_id(Users user_id) {
         this.user_id = user_id;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Donation{" +

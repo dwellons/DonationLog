@@ -7,7 +7,6 @@ import java.util.*;
  * This interface contains a default method that can be used anywhere a Properties
  * object is needed to be loaded.
  * @author Eric Knapp
- *
  */
 public interface PropertiesLoader{
 

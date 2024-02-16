@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -36,9 +35,11 @@ public class ReadDeleteDonations extends HttpServlet {
 
         // If submit attribute = Submit, search.
         if (request.getParameter("submit").equals("Remove")) {
-            //get my donations (donations), call donationDAO method, pass in the donation
+
+            // Get my donations, call donationDAO method, pass in the donation.
             request.setAttribute("donations", donationDAO.getById(Integer.parseInt(request.getParameter("donationID"))));
         } else {
+
             // Get all entries.
             request.setAttribute("donations", donationDAO.getAll());
         }

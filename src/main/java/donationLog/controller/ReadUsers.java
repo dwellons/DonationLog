@@ -37,7 +37,8 @@ public class ReadUsers extends HttpServlet {
 
         // If submit attribute = Submit, search.
         if (request.getParameter("submit").equals("Submit")) {
-            //get my donations (donations), call donationDAO method, pass in the donation
+
+            // Get my Users, call usersDAO method, pass in the donation.
             request.setAttribute("users", usersDAO.getByPropertyEqual(request.getParameter("searchType"), request.getParameter("searchTerm")));
         } else {
             // Get all entries.
