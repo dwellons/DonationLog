@@ -4,7 +4,7 @@
 
 ### View Today's Logged Donations *
 
-As a new donation I want the main screen to list todays days logged donations, to avoid duplicate entries.
+As a new user, I want the main screen to list today's logged donations, to avoid duplicate entries.
 
 ### Sign up *
 
@@ -14,13 +14,17 @@ I want administrators to be able to create an Admin account, to modify the datab
 
 As an administrator I want to log in so that I can edit or delete donations.
 
+### Sign Out *
+
+As an administrator I want to log out after I'm finished working.
+
 ### Find Donations by Donor Name *
 
-As a donation, I want to be able to search donors by name, and to see a list of donations from them.
+As a user, I want to be able to search donors by name, and to see a list of donations from them.
 
 ### Find Donations by Date 
 
-As a donation, I want to be able to search for and see donations for a given day. 
+As a user, I want to be able to search for and see donation from a given day. 
 
 ### Print or Send Donation Report *
 
@@ -32,7 +36,7 @@ As an administrator, I want to be able to select and view a donation to edit or 
 
 ### Add Donation *
 
-As a donation, I want to be able to add a new donation easily.
+As a user, I want to be able to add a new donation easily.
 
 ### Administrator Edit Donation *
 
@@ -52,7 +56,7 @@ As an administrator, I want to be able to remove donors from our list.
 
 ### Report an Issue
 
-As any donation, I want to be able to report an issue to the System Administrator.
+As any user, I want to be able to report an issue to the System Administrator.
 
 
 

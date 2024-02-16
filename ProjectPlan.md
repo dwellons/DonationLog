@@ -19,19 +19,26 @@
 
 ### Week 4 and 5 - Class topic is Hibernate
 #### This week my focus is the Find Donations by Donor Name donation story
-- [ ] First cut at database design
-- [ ] Create the dev version of the database - at least the donations table
-- [ ] Create Donation entity 
-- [ ] Create a class to perform CRUD on donations - DonationDao
-- [ ] Create the config files for the DB connection info (dev and test)
-- [ ] Create a test version of the database for unit testing
-- [ ] Create unit tests for the DonationDao
-- [ ] Create a class for the DB connection business
-- [ ] Create JSP for finding donations
-- [ ] Create JSP for donation search results
-- [ ] Create controller to route to donation search jsp
-- [ ] Create controller to manage the work of finding a donation
-- [ ] Update weekly reflection
+- [X] First cut at database design
+- [X] Create the dev version of the database - at least the donations table
+- [X] Create Donation entity 
+- [X] Create a class to perform CRUD on donations - DonationDao
+- [X] Create the config files for the DB connection info (dev and test)
+- [X] Create a test version of the database for unit testing
+- [X] Create unit tests for the DonationDao
+- [X] Create a class for the DB connection business
+- [X] Create JSP for finding donations
+- [X] Create JSP for donation search results
+- [X] Create controller to route to donation search jsp
+- [x] Create controller to manage the work of finding a donation
+- [x] Update weekly reflection
+- 
+  Different API's for emailing Donation Reports:
+
+-   Java Mail: https://javaee.github.io/javamail/
+-   Apache Commons EMail: https://commons.apache.org/proper/commons-email/
+-   Email Verifier: https://rapidapi.com/mr_admin/api/email-verifier
+-   Adobe Create PDF: https://developer.adobe.
 
 ### Week 6
 #### This week my focus is on the Add Donation donation story

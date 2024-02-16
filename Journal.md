@@ -101,14 +101,14 @@ When working on Using the DAO, and implementing getByPropertyEqual, I kept getti
 that I wasnt putting Submit into the request, I thought that i was putting searchUser there but I wasn't. I had to put 
 the name i was putting into the request with the submit button.
 
-I was then getting an error that it couldnt resolve the attribute first_name. I wondered why it wasnt able to find it 
-and then started looking, and I didnt see anywhere I called it first_name, everywhere else it was called firstName. So 
-in my form where I was naming the searchType's to first_name, last_name etc, I changed them to firstName, lastName and 
+I was then getting an error that it couldn't resolve the attribute first_name. I wondered why it wasn't able to find it 
+and then started looking, and I didn't see anywhere I called it first_name, everywhere else it was called firstName. So 
+in my form where I was naming the searchType's to first_name, last_name etc. I changed them to firstName, lastName and 
 my errors went away.
 
 When working on the exercise, I was able to implement modify and delete pretty easily after having gone through the
 weekly activities. There are still things I am having issues with in regards to those, but they are functioning and
-passing right now. I want my values to pre fill my text boxes when I modify and delete, but everything I have tried so
+passing right now. I want my values to pre-fill my text boxes when I modify and delete, but everything I have tried so
 far hasn't worked. I will come back to that. If you put in the donation id # of the one you chose to modify or delete
 it functions as expected. And my values are visible in the request, I'm not sure why I cant fill the text boxes.
 
@@ -116,13 +116,17 @@ After that I started testing and my @before setup(), when I ran my tests it had 
 want in there and everything stopped working. I was able to figure that out with the log error saying that that value
 wasn't in my database. Always make sure to create the test database first, not just before you start testing.
 
-I started with this weeks activiites, I created a new database for my donation log and then changed the things in the 
+I started with this-weeks activities. I created a new database for my donation log and then changed the things in the 
 weekly activity to reference and work with that database. then I just started personalizing things and changing class
-variable names. I had modify and delete buttons from an earlier week and implemented those. The jsp's and java classes
-were all mostly the same so I was able to just use the ones for adding a donation to create the modify and delete
+variable names. I had modify and delete buttons from an earlier week and implemented those. The JSP's and java classes
+were all mostly the same, so I was able to just use the ones for adding a donation to create the modify and delete
 functions. I would like the delete function to show the information for the user you selected to delete instead of
 using the from from adding a donation, but I wasn't able to see the results from the request for that either. 
 
 ### Week 5 - Spring 2024
 
-** ** 
+**2/15/24 7:30pm - 12:00am**
+
+* Double-checked project specifications.
+* Cleaned up time logs / entries and put them all into Journal.md
+* Weekly Classwork
