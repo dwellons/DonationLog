@@ -75,7 +75,7 @@ public class UsersDaoTest {
 
         Users insertedUser = usersDAO.getById(insertedUserId);
         assertEquals("Maddie", insertedUser.getFirstName());
-        
+
     }
     @Test
     public void testDelete() {

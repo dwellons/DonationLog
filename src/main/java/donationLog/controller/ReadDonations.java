@@ -48,7 +48,7 @@ public class ReadDonations extends HttpServlet {
          * The servlet will forward the request and response
          * to the Results JSP page.
          */
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/Results.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/DonationSearchResults.jsp");
         dispatcher.forward(request,response);
     }
 }

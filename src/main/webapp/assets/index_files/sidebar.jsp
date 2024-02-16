@@ -26,6 +26,11 @@
             <br>
             <a href = "/DonationLog_war/DonationRead.jsp">Search for a Donation</a>
             <br>
+            <a href = "/DonationLog_war/UserCreate.jsp">Add a new User</a>
+            <br>
+            <a href = "/DonationLog_war/UserRead.jsp">Search for a User</a>
+            <br>
+            
             <a href = "/DonationLog_war/DonationCreate.jsp">Sign In</a>
             <br>
             <a href = "/DonationLog_war/DonationCreate.jsp">Sign Out</a>
