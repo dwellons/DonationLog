@@ -1,6 +1,5 @@
 package donationLog.controller;
 
-
 import donationLog.persistence.DonationDAO;
 
 import javax.servlet.RequestDispatcher;
@@ -19,10 +18,10 @@ import org.apache.logging.log4j.Logger;
  * @author Darin Wellons
  */
 @WebServlet(
-        urlPatterns = {"/readDonations"}
+        urlPatterns = {"/readDeleteDonations"}
 )
 
-public class ReadDonations extends HttpServlet {
+public class ReadDeleteDonations extends HttpServlet {
 
     // Instantiate Logger
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -30,15 +29,15 @@ public class ReadDonations extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        logger.debug("TEST In Search Donations Before DAO call" + request.getAttribute("submit"));
+        logger.debug("TEST In Read Delete Donations Before DAO call" + request.getAttribute("submit"));
 
-        // Enstantiate a new DonationDAO.
+        // Instantiate a new DonationDAO.
         DonationDAO donationDAO = new DonationDAO();
 
         // If submit attribute = Submit, search.
-        if (request.getParameter("submit").equals("Submit")) {
+        if (request.getParameter("submit").equals("Remove")) {
             //get my donations (donations), call donationDAO method, pass in the donation
-            request.setAttribute("donations", donationDAO.getByPropertyEqual(request.getParameter("searchType"), request.getParameter("searchTerm")));
+            request.setAttribute("donations", donationDAO.getById(Integer.parseInt(request.getParameter("donationID"))));
         } else {
             // Get all entries.
             request.setAttribute("donations", donationDAO.getAll());
@@ -48,7 +47,7 @@ public class ReadDonations extends HttpServlet {
          * The servlet will forward the request and response
          * to the Results JSP page.
          */
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/Results.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/DonationDelete.jsp");
         dispatcher.forward(request,response);
     }
 }

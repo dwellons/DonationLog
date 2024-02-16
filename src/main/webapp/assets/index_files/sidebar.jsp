@@ -23,10 +23,18 @@
         <ul>
 
             <a href = "/DonationLog_war/DonationCreate.jsp">Add a new Donation</a>
-
             <br>
-
             <a href = "/DonationLog_war/DonationRead.jsp">Search for a Donation</a>
+            <br>
+            <a href = "/DonationLog_war/DonationCreate.jsp">Sign In</a>
+            <br>
+            <a href = "/DonationLog_war/DonationCreate.jsp">Sign Out</a>
+            <br>
+            <a href = "/DonationLog_war/DonationCreate.jsp">Sign Up</a>
+            <br>
+            <a href = "/DonationLog_war/DonationRead.jsp">Contact</a>
+            <br>
+            <a href = "/DonationLog_war/DonationRead.jsp">Report an Issue</a>
 
         </ul>
     </section>

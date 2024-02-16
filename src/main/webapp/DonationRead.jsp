@@ -31,7 +31,7 @@
             <!-- Donation Search Form -->
             <h2>Search for a Past Donation</h2>
 
-            <form action="searchDonations" method="get">
+            <form action="readDonations" method="get">
 
                 <label for="searchType">What will you be searching by?</label>
 
@@ -48,7 +48,6 @@
                 <label for="donationType">Donation Type</label>
 
                 <br>
-
                 <br>
 
                 <label for="searchTerm">
@@ -68,7 +67,7 @@
             <br>
             <br>
 
-            <form action="searchDonations" method="get">
+            <form action="readDonations" method="get">
 
                 <input type ="submit" name="submit" value="Show All Donations">
 

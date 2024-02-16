@@ -22,8 +22,8 @@ import org.apache.logging.log4j.Logger;
  */
 
 @WebServlet(
-        name = "addDonation",
-        urlPatterns = { "/addDonation" }
+        name = "createDonation",
+        urlPatterns = { "/createDonation" }
 )
 
 public class CreateDonation extends HttpServlet {
@@ -80,21 +80,21 @@ public class CreateDonation extends HttpServlet {
         // Instantiate donationDAO
         donationDAO = new DonationDAO();
 
-        // get todays date
+        // Get Today's date
         Date donationDate = new Date();
 
-
-
-        // create the new donation object
+        // Create the new donation object
         Donation newDonation = new Donation(donationID, donor_name,donation_type,donation_weight,donationDate);
 
         /*
-         * Call insert in donationDAO
+         * Call Insert in DonationDAO
          */
         donationDAO.insert(newDonation);
 
-        response.sendRedirect(request.getContextPath() +
-                "/DonationCreate.jsp");
+        /*
+         * Redirect to Results page
+         */
+        response.sendRedirect("/DonationLog_war/readDonations?submit=Show+All+Donations");
 
         request.getSession().setAttribute("donationAddMessage",
                 "You have added your donation.");

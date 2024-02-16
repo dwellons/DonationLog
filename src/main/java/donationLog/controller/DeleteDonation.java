@@ -39,9 +39,9 @@ public class DeleteDonation extends HttpServlet {
 
         // Set a session attribute for the donationDeleteMessage.
         request.getSession().setAttribute("donationDeleteMessage",
-                "You have deleted the donation with ID: " + donationID);
+                "You have successfully removed donation number " + donationID + ".");
 
         // Redirect to the ReadDonations servlet to display updated donation list.
-         response.sendRedirect(request.getContextPath() + "/searchDonations?submit=Show+All+Donations");
+         response.sendRedirect(request.getContextPath() + "/readDonations?submit=Show+All+Donations");
     }
 }

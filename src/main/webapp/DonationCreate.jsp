@@ -39,7 +39,7 @@
 
             <br>
 
-            <form action="addDonation" method="post">
+            <form action="createDonation" method="post">
 
                 <label for="donorName">Donor Name: </label>
                 <input type="text" id="donorName"

@@ -34,7 +34,7 @@
             </c:if>
 
             <!-- Main Page Display -->
-            <form action="searchDonations" method="get" id="loadAllForm">
+            <form action="readDonations" method="get" id="loadAllForm">
                 <input type ="submit" name="submit" value="Show All Donations">
             </form>
 
