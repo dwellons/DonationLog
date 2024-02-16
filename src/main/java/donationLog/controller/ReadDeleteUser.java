@@ -37,7 +37,7 @@ public class ReadDeleteUser extends HttpServlet {
         // If submit attribute = Submit, search.
         if (request.getParameter("submit").equals("Remove")) {
             //get my donations (donations), call donationDAO method, pass in the donation
-            request.setAttribute("users", usersDAO.getById(Integer.parseInt(request.getParameter("userID"))));
+            request.setAttribute("users", usersDAO.getById(Integer.parseInt(request.getParameter("ID"))));
         } else {
             // Get all entries.
             request.setAttribute("users", usersDAO.getAll());

@@ -24,9 +24,9 @@ public class DeleteUser extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // Extract the donation ID from the request parameter.
-        int userID = Integer.parseInt(request.getParameter("userID"));
+        int userID = Integer.parseInt(request.getParameter("ID"));
 
-        logger.debug("TEST In Delete User Before DAO call: {}",  request.getAttribute("userID"));
+        logger.debug("TEST In Delete User Before DAO call: {}",  request.getAttribute("ID"));
 
         // Instantiate UsersDAO.
         UsersDAO usersDAO = new UsersDAO();

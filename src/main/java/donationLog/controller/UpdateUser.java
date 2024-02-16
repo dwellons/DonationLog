@@ -48,7 +48,7 @@ public class UpdateUser extends HttpServlet {
             throws ServletException, IOException {
 
         // Extract the data for updating the Donation from the HTML form.
-        int userID = Integer.parseInt(request.getParameter("userID"));
+        int userID = Integer.parseInt(request.getParameter("ID"));
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
         String firstName = request.getParameter("firstname");
