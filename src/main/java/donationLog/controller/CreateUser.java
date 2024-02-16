@@ -65,7 +65,7 @@ public class CreateUser extends HttpServlet {
 
 
         int id = 0;
-        int user_id = 0;
+
 
         /**
          * have to validate the input from the form before accessing database
@@ -84,7 +84,7 @@ public class CreateUser extends HttpServlet {
 
 
         // Create the new user object
-        Users newUser = new Users(id, user_name, user_id, password, first_name, last_name);
+        Users newUser = new Users(id, user_name, password, first_name, last_name);
 
         /*
          * Call Insert in UsersDAO

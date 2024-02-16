@@ -72,7 +72,7 @@
                                 <form action="readDeleteUser" method="get">
                                     <!-- Adding to see the submit attribute in the servlet -->
                                     <input type="hidden" name="submit" value="Remove">
-                                    <input type="hidden" name="userID" id="userID" value="${user.ID}" >
+                                    <input type="hidden" name="ID" id="ID" value="${user.ID}" >
                                     <input type="submit" name="submit" value="Remove">
                                 </form>
 

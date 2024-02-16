@@ -26,8 +26,6 @@ public class Users {
     @Column(name = "userName") // Don't have to specify if column is named the same thing as var name (string below)
     private String userName;
 
-    @Column(name = "user_id")
-    private int user_id;
 
     @Column(name = "password")
     private String password;
@@ -53,16 +51,14 @@ public class Users {
      *
      * @param id the id
      * @param userName the userName
-     * @param user_id  the user_id
      * @param password  the password
      * @param firstName the first name of the user
      * @param lastName the last name of the user
 
      */
-    public Users(int id, String userName, int user_id, String password, String firstName, String lastName) {
+    public Users(int id, String userName, String password, String firstName, String lastName) {
         this.id = id;
         this.userName = userName;
-        this.user_id = user_id;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -109,24 +105,6 @@ public class Users {
      */
     public void setUserName(String userName) {
         this.userName = userName;
-    }
-
-    /**
-     * Gets user_id
-     *
-     * @return the user_id
-     */
-    public int getUserID() {
-        return user_id;
-    }
-
-    /**
-     * Sets user_id
-     *
-     * @param user_id the user_id
-     */
-    public void setUserID(int user_id) {
-        this.user_id = user_id;
     }
 
     /**
@@ -196,7 +174,6 @@ public class Users {
         return "User{" +
                 "id='" + id + '\'' +
                 ", userName='" + userName + '\'' +
-                ", user_id='" + user_id + '\'' +
                 ", password='" + password + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +

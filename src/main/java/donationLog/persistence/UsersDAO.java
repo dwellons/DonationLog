@@ -52,7 +52,7 @@ public class UsersDAO {
         // persist is for adding
         session.persist(user);
         transaction.commit();
-        id = user.getUserID();
+        id = user.getID();
         session.close();
         return id;
     }

@@ -28,7 +28,7 @@ public class DonationDaoTest {
         donationDAO = new DonationDAO();
 
         // Assuming getById method exists in DonationDAO
-        Donation retrievedDonation = donationDAO.getById(11);
+        Donation retrievedDonation = donationDAO.getById(12);
 
         assertNotNull(retrievedDonation);
 
@@ -43,7 +43,7 @@ public class DonationDaoTest {
     public void updateSuccess() {
         // get a record out of the database
         donationDAO = new DonationDAO();
-        Donation donationToUpdate = donationDAO.getById(11);
+        Donation donationToUpdate = donationDAO.getById(12);
 
         // change the name on that user
         donationToUpdate.setDonationType("Dairy");
@@ -52,7 +52,7 @@ public class DonationDaoTest {
         donationDAO.update(donationToUpdate);
 
         // retrieve the user and check that the name change worked
-        Donation actualDonation = donationDAO.getById(11);
+        Donation actualDonation = donationDAO.getById(12);
 
         // do comparison
         assertEquals("Dairy", actualDonation.getDonationType());
@@ -83,9 +83,9 @@ public class DonationDaoTest {
         //create new user
         donationDAO = new DonationDAO();
         // get the user with id of nine, delete it
-        donationDAO.delete(donationDAO.getById(11));
+        donationDAO.delete(donationDAO.getById(12));
         // if delete is working, shouldn't get a user back
-        assertNull(donationDAO.getById(11));
+        assertNull(donationDAO.getById(12));
 
     }
     @Test
@@ -100,8 +100,8 @@ public class DonationDaoTest {
     public void testGetByPropertyEqual() {
         donationDAO = new DonationDAO();
         List<Donation> donations = donationDAO.getByPropertyLike("donorName", "Kwik Trip");
-        assertEquals(5, donations.size());
-        assertEquals(11, donations.get(0).getDonationID());
+        assertEquals(4, donations.size());
+        assertEquals(12, donations.get(0).getDonationID());
 
     }
 
@@ -109,6 +109,6 @@ public class DonationDaoTest {
     public void testGetByPropertyLike() {
         donationDAO = new DonationDAO();
         List<Donation> donations = donationDAO.getByPropertyLike("donorName", "Kwik Trip");
-        assertEquals(5, donations.size());
+        assertEquals(4, donations.size());
     }
 }

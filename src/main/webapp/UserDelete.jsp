@@ -62,8 +62,8 @@
                                 <!-- Adding to see the submit attribute in the servlet -->
                                 <input type="hidden" name="submit" value="Submit">
 
-                                <label for="userID"></label>
-                                <input type="text" name="userID" id="userID">
+                                <label for="ID"></label>
+                                <input type="text" name="ID" id="ID">
                                 <input type="submit" name="submit" value="Remove">
 
                             </form>

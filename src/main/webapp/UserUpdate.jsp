@@ -39,15 +39,15 @@
 
             <form action="updateUser" method="post">
 
-                <label for="userID">User ID: </label>
-                <input type="text" name="userID" id="userID" value="${userToUpdate.userID}" required>
+                <label for="ID">User ID: </label>
+                <input type="text" name="ID" id="ID" value="${userToUpdate.ID}" required>
 
                 <label for="userName">Username: </label>
                 <input type="text" id="userName" name="userName" value="${userToUpdate.userName}" required>
                 <br>
 
                 <label for="password">Password </label>
-                <input type="text" id="password" name="password" value="${userToUpdate.userType}" required>
+                <input type="text" id="password" name="password" value="${userToUpdate.password}" required>
                 <br>
 
                 <label for="firstName">First Name: </label>
