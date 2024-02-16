@@ -28,13 +28,13 @@ public class UsersDaoTest {
 
         // Assuming getById method exists in DonationDAO
         Users retrievedUser = usersDAO.getById(1);
-
+        String expctedUserName = "dwellons";
         assertNotNull(retrievedUser);
 
+        // Using equals();
         // Update the expected donor name based on the actual donor name you expect
-        assertEquals("dwellons", retrievedUser.getUserName());
+        assertTrue(expctedUserName.equals(retrievedUser.getUserName()));
 
-        logger.info("RESULTS: " + retrievedUser + " " + retrievedUser.getUserName() + " RESULTS");
     }
 
     @Test
@@ -42,7 +42,7 @@ public class UsersDaoTest {
         // get a record out of the database
         usersDAO = new UsersDAO();
         Users userToUpdate = usersDAO.getById(1);
-
+        String expectedFirstName = "Nirad";
         // change the name on that user
         userToUpdate.setFirstName("Nirad");
 
@@ -52,8 +52,11 @@ public class UsersDaoTest {
         // retrieve the user and check that the name change worked
         Users actualDonation = usersDAO.getById(1);
 
+        // Using equals();
         // do comparison
-        assertEquals("Nirad", actualDonation.getFirstName());
+        assertTrue(expectedFirstName.equals(actualDonation.getFirstName()));
+
+
     }
 
     @Test
@@ -63,11 +66,14 @@ public class UsersDaoTest {
         Users newUser = new Users(0, "test", "test", "test", "test");
 
         int insertedUserId = usersDAO.insert(newUser);
-
+        String expectedUser = "test";
         assertNotEquals(0, insertedUserId);
 
+
         Users insertedUser = usersDAO.getById(insertedUserId);
-        assertEquals("test", insertedUser.getFirstName());
+
+        // Using equals();
+        assertTrue(expectedUser.equals(insertedUser.getFirstName()));
 
     }
     @Test
@@ -85,6 +91,7 @@ public class UsersDaoTest {
     @Test
     public void getAll() {
         usersDAO = new UsersDAO();
+        int numberOfUsers = 5;
         List<Users> users = usersDAO.getAll();
         assertEquals(5, users.size());
 
