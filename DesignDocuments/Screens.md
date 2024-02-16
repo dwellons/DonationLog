@@ -2,9 +2,19 @@
 
 ### Home Page, shows Donations recorded so far today.
 
-screenDesign/Homepage.pdf
-
 ![Home Page](ScreenDesign/Homepage.png)
+
+### Donation Search Page
+
+![Donation Search Page](ScreenDesign/DonationSearch.png)
+
+### Edit Donation Page
+
+![Donation Search Page](ScreenDesign/EditDonation.png)
+
+### Remove Donation Page
+
+![Donation Search Page](ScreenDesign/RemoveDonation.png)
 
 ### New Donation Page
 
@@ -17,10 +27,6 @@ screenDesign/Homepage.pdf
 ### Log In Page
 
 ![Log In Page](ScreenDesign/LogIn.png)
-
-### Donation Search Page
-
-![Donation Search Page](ScreenDesign/DonationSearch.png)
 
 ### Print Report Page
 
