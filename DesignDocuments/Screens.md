@@ -1,6 +1,6 @@
 # Screen Design
 
-### Home Page, shows Donations recorded so far today.
+### Home Page
 ![Home Page](ScreenDesign/Homepage.png)
 
 ### Donation Search Page
