@@ -34,155 +34,92 @@ public class Donation {
     @Column(name = "donation_date")
     private Date donationDate;
 
-    @Column(name = "user_id")
-    private int user_id;
+    @JoinColumn(name = "user_id")
+    @ManyToOne
+    private Donation user_id;
 
     /**
-     * Instantiates a new Donation.
+     * Instantiates constructors.
      */
     public Donation() {
     }
 
     /**
      * Instantiates a new Donation.
-     *
-     * @param donationID the donationID
-     * @param donorName the donors name
-     * @param donationType  the donation type
-     * @param donationWeight  the donation weight
-     * @param donationDate the date of the donation
-     * @param user_id  the user_id
+     * @param donationID
+     * @param donorName
+     * @param donationType
+     * @param donationWeight
+     * @param donationDate
+
      */
-    public Donation(int donationID, String donorName, String donationType, String donationWeight, Date donationDate, int user_id) {
+    public Donation(int donationID, String donorName, String donationType, String donationWeight, Date donationDate) {
         this.donationID = donationID;
         this.donorName = donorName;
         this.donationType = donationType;
         this.donationWeight = donationWeight;
         this.donationDate = donationDate;
-        this.user_id = user_id;
 
     }
 
-    /**
-     * Gets donationID.
-     *
-     * @return the donationID
-     */
+
     public int getDonationID() {
         return donationID;
     }
 
-    /**
-     * Sets donationID.
-     *
-     * @param donationID the donationID
-     */
     public void setDonationID(int donationID) {
-
         this.donationID = donationID;
     }
 
-    /**
-     * Gets the donors name
-     *
-     * @return the donors name
-     */
     public String getDonorName() {
         return donorName;
     }
 
-    /**
-     * Sets donors name
-     *
-     * @param donorName the donor name
-     */
     public void setDonorName(String donorName) {
         this.donorName = donorName;
     }
 
-    /**
-     * Gets donation type
-     *
-     * @return the donation type
-     */
     public String getDonationType() {
         return donationType;
     }
 
-    /**
-     * Sets donation type
-     *
-     * @param donationType the donation type
-     */
     public void setDonationType(String donationType) {
         this.donationType = donationType;
     }
 
-    /**
-     * Gets a donations weight
-     *
-     * @return the donation weight
-     */
     public String getDonationWeight() {
         return donationWeight;
     }
 
-    /**
-     * Sets the donation's weight
-     *
-     * @param donationWeight the donations weight
-     */
     public void setDonationWeight(String donationWeight) {
         this.donationWeight = donationWeight;
     }
 
-
-
-    /**
-     * Gets donationDate
-     *
-     * @return the date of the donation
-     */
     public Date getDonationDate() {
         return donationDate;
     }
 
-    /**
-     * Sets donationDate.
-     *
-     * @param donationDate the date of the donation
-     */
     public void setDonationDate(Date donationDate) {
         this.donationDate = donationDate;
     }
 
-    /**
-     * Gets user_id
-     *
-     * @return the user_id
-     */
-    public int getUserID() {
+    public Donation getUser_id() {
         return user_id;
     }
 
-    /**
-     * Sets user_id
-     *
-     * @param user_id the user_id
-     */
-    public void setUserID(int user_id) {
+    public void setUser_id(Donation user_id) {
         this.user_id = user_id;
     }
 
     @Override
     public String toString() {
         return "Donation{" +
-                "donorName='" + donorName + '\'' +
+                "donationID=" + donationID +
+                ", donorName='" + donorName + '\'' +
                 ", donationType='" + donationType + '\'' +
                 ", donationWeight='" + donationWeight + '\'' +
-                ", donationID='" + donationID + '\'' +
-                ", donationDate='" + donationDate + '\'' +
-                ", user_id='" + user_id + '\'' +
+                ", donationDate=" + donationDate +
+                ", user_id=" + user_id +
                 '}';
     }
 }

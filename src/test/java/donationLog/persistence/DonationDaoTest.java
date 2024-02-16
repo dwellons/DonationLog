@@ -65,7 +65,7 @@ public class DonationDaoTest {
         Date donationDate = new Date(1989,10,16);
         int donationID = 0;
         int userID = 1;
-        Donation newDonation = new Donation(donationID, "Piggly Wiggly", "Bread", "130", donationDate, userID);
+        Donation newDonation = new Donation(donationID, "Piggly Wiggly", "Bread", "130", donationDate);
 
         newDonation.setDonationDate(donationDate);
 
