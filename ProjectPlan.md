@@ -18,7 +18,7 @@
 - [X] Update journal/time log/reflection
 
 ### Week 4 and 5 - Class topic is Hibernate
-#### This week my focus is the Find Donations by Donor Name donation story
+#### This week my focus is the Find Donations by Donor Name
 - [X] First cut at database design
 - [X] Create the dev version of the database - at least the donations table
 - [X] Create Donation entity 
@@ -41,7 +41,7 @@
 -   Adobe Create PDF: https://developer.adobe.
 
 ### Week 6
-#### This week my focus is on the Add Donation donation story
+#### This week my focus is on the Add Donation
 - [ ] Create JSP for adding donations
 - [ ] Create controller to manage the work of adding a donation
 - [ ] Create JSP for add donation results

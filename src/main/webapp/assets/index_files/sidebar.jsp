@@ -10,14 +10,9 @@
         </form>
     </section>
 
-    <!-- phpMyAdmin content -->
-    <section class="box text-style1">
-        <div class="inner">
-            <p>
-                <a href="http://localhost:8888/phpMyAdmin5/?lang=en&language=English"><strong>phpMyAdmin:</strong></a>
-                phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. 
-            </p>
-        </div>
+    <!--Calendar Content -->
+    <section class="box calendar" id="calendar-container">
+        <!-- ID calendar-container will receive calendar script -->
     </section>
 
     <!-- Resources -->

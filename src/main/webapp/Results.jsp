@@ -11,6 +11,10 @@
 <c:import url="/assets/index_files/head.jsp"/>
 <!-- End Head -->
 
+<!-- Sidebar -->
+<c:import url="/assets/index_files/sidebar.jsp"/>
+<!-- End Sidebar -->
+
 <!-- Content -->
 <div id="content">
     <div class="inner">
@@ -22,6 +26,10 @@
             <c:import url="assets/index_files/header.jsp"/>
             <!--End Header -->
 
+            <!-- Tab on Side -->
+            <div class="info">
+                Results
+            </div>
 
             <!-- Display the Donation UPDATE Message -->
             <c:if test="${not empty donationUpdateMessage}">
@@ -92,16 +100,13 @@
     </div>
 </div>
 
-<!-- Sidebar -->
-<c:import url="/assets/index_files/sidebar.jsp"/>
-<!-- End Sidebar -->
-
 <!-- Scripts -->
-<script href="assets/js/jquery.min.js"></script>
-<script href="assets/js/browser.min.js"></script>
-<script href="assets/js/breakpoints.min.js"></script>
-<script href="assets/js/util.js"></script>
-<script href="assets/js/main.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/calendar/calendar.js"></script>
 
 </body>
 </html>
