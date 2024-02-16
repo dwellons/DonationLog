@@ -2,10 +2,8 @@ package donationLog.controller;
 
 import donationLog.entity.Users;
 import donationLog.persistence.UsersDAO;
-
 import java.io.*;
 import java.sql.SQLException;
-import java.util.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -14,8 +12,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * Create a servlet that will add a new User to the application
- *
+ * A servlet that will add a new User to the application.
  *@author Darin Wellons
  */
 
@@ -29,9 +26,8 @@ public class CreateUser extends HttpServlet {
 
     // Instantiate Logger
     private final Logger logger = LogManager.getLogger(this.getClass());
-    /**
-     * create a valid or not valid variable for validating form entries
-     */
+
+    // Create a valid or not valid variable for validating form entries.
     private boolean isValid;
 
     /**
@@ -57,7 +53,7 @@ public class CreateUser extends HttpServlet {
          */
         ServletContext context = getServletContext();
 
-        // Extract the data for the new Donation from the HTML form.
+        // Extract the data for the new User from the HTML form.
         String user_name = request.getParameter("userName");
         String password = request.getParameter("password");
         String first_name = request.getParameter("firstName");
@@ -67,9 +63,8 @@ public class CreateUser extends HttpServlet {
         int id = 0;
 
 
-        /**
-         * have to validate the input from the form before accessing database
-         */
+
+        // Have to validate the input from the form before accessing database.
         if (!validateUserInput(user_name, password, first_name, last_name, request)) {
 
             logger.debug("TEST In Add User");
@@ -79,21 +74,20 @@ public class CreateUser extends HttpServlet {
             return;
         }
 
-        // Instantiate usersDAO
+        // Instantiate usersDAO.
         usersDAO = new UsersDAO();
 
 
-        // Create the new user object
+        // Create the new user object.
         Users newUser = new Users(id, user_name, password, first_name, last_name);
 
-        /*
-         * Call Insert in UsersDAO
-         */
+
+        // Call Insert in UsersDAO.
+
         usersDAO.insert(newUser);
 
-        /*
-         * Redirect to Results page
-         */
+        // Redirect to Results page.
+
         response.sendRedirect("/DonationLog_war/readUsers?submit=Show+All+Users");
 
         request.getSession().setAttribute("userAddMessage",
@@ -117,30 +111,29 @@ public class CreateUser extends HttpServlet {
                                       HttpServletRequest request)
             throws IOException {
 
-        // Instantiate validation variable to valid, true
+        // Instantiate validation variable to valid, true.
         isValid = true;
 
-        /*
-         * If the donor name and donation type aren't text
-         */
+
+        // If the donor name and donation type aren't text
         if (!user_name.matches("[a-zA-Z ]+") ||
                 !first_name.matches("[a-zA-Z ]+") ||
                 !last_name.matches("[a-zA-Z ]+")){
 
-            //set the variable to not valid, false
+            // Set the variable to not valid, false.
             isValid = false;
         }
 
-        /*
-         * If the form entries are invalid
-         */
+
+        // If the form entries are invalid.
+
         if (!isValid) {
             request.getSession().setAttribute("userAddMessage",
                     "Invalid Form Input. Please check your entries. "
                             + "Username, First Name and Last Name can only contain text.");
         }
 
-        // Return the variable set to valid or invalid
+        // Return the variable set to valid or invalid.
         return isValid;
     }
 }
