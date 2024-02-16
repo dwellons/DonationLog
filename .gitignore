@@ -55,9 +55,9 @@ fabric.properties
 # Database Resource Information
 *.properties
 .src/main/resources/*.properties
-.src/main/resources/*.xml
+.src/main/resources/hibernate.cfg.xml
 
 # Testing Database Informatioin
-.src/test/resources/*.cfg.xml
+.src/test/resources/hibernate.cfg.xml
 .src/test/resources/cleandb.sql
 
