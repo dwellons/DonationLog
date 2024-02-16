@@ -24,7 +24,7 @@
 
             <!-- Tab on Side -->
             <div class="info">
-                Remove
+                Remove Donation
             </div>
 
             <!-- Display the Donation Delete Message -->

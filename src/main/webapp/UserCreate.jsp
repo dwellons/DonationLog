@@ -29,10 +29,10 @@
                 New User
             </div>
 
-            <!-- Add Donation Form -->
+            <!-- Add User Form -->
             <h2>Add a new User</h2>
 
-            <!-- Display the Donation Add Message -->
+            <!-- Display the User Add Message -->
             <c:if test="${not empty userAddMessage}">
                 <h3>${userAddMessage}</h3>
             </c:if>

@@ -25,7 +25,7 @@
 
             <!-- Tab on Side -->
             <div class="info">
-                Update
+                Update Donation
             </div>
 
             <!-- Update Donation FORM -->
