@@ -42,9 +42,12 @@
 
 ### Week 6
 #### This week my focus is on the Add Donation
-- [ ] Create JSP for adding donations
-- [ ] Create controller to manage the work of adding a donation
-- [ ] Create JSP for add donation results
+- [ ] Display donations on home page
+- [ ] Prepare for week 2 checkpoint
+- [ ] START TRYING API's
+- [ ] Sign in and sign out?
+- [ ] Contact page
+- [ ] Report an issue
 
 ### Week 7
 #### Checkpoint 2 is Due: Database designed and created, at least one DAO with full CRUD (create, read, update, delete) implemented with Hibernate, DAO is fully unit tested, Log4J is implemented (no System.out.printlns)
@@ -57,13 +60,7 @@
 - [ ] Add deployed link to indie project list in student repo
 
 ## Week 8
-#### This week my focus is on the Administer Edit Donation and Administer Remove Donation donation storys
-- [ ] Create JSP for modifying donations
-- [ ] Create JSP for removing donations
-- [ ] Create controller to manage the work of modifying a donation
-- [ ] Create controller to manage the work of removing a donation
-- [ ] Create JSP for add donation results
-- [ ] Create JSP for remove donation results
+
 
 
 ### Week 9 (Start of the team project)
@@ -71,7 +68,7 @@
 - [ ] Double-check all checkpoint 3 items (above) are complete and visible in github.
 
 ### Week 10
-- [ ] Print / Send Report
+- [ ] Print / Send Report AT LEAST 
 
 ### Week 11
 
