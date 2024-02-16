@@ -26,7 +26,7 @@
 
             <!-- Tab on Side -->
             <div class="info">
-                New
+                New Donation
             </div>
 
             <!-- Add Donation Form -->
