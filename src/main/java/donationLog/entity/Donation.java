@@ -18,7 +18,7 @@ import java.util.Date;
 @Table(name = "donations") // CASE SENSITIVE
 public class Donation {
 
-    @Id // need to do this for primary key
+    @Id // Need to do this for primary key
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
     private int donationID;
@@ -58,7 +58,6 @@ public class Donation {
         this.donationDate = donationDate;
 
     }
-
 
     /**
      * Gets donationID.

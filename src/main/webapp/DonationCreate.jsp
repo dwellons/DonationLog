@@ -12,7 +12,7 @@
 
 <!-- Sidebar -->
 <c:import url="/assets/index_files/sidebar.jsp"/>
-<!-- End Sidebar -->
+
 
 <!-- Content -->
 <div id="content">

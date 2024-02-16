@@ -13,8 +13,6 @@ import javax.servlet.annotation.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
-
 /**
  * Create a servlet that will add a new Donation to the application
  *
@@ -101,13 +99,12 @@ public class CreateDonation extends HttpServlet {
     }
 
     /**
-     * have to validate the input coming from the form
-     * if they enter a number in a text field or text in number field
-     * then the add message will be updated with an error message
+     * Have to validate the input coming from the form.
+     * If they enter a number in a text field or text in number field,
+     * then the add message will be updated with an error message.
      * @param donor_name the donors name
      * @param donation_type the donation type
      * @param donation_weight the donation weight
-
      * @param request the servlet request attribute
      * @return if the user input is valid or not
      * @throws IOException for io exceptions
@@ -117,11 +114,11 @@ public class CreateDonation extends HttpServlet {
                                       HttpServletRequest request)
             throws IOException {
 
-        // instantiate validation variable to valid, true
+        // Instantiate validation variable to valid, true
         isValid = true;
 
         /*
-         * if the donor name and donation type aren't text
+         * If the donor name and donation type aren't text
          */
         if (!donor_name.matches("[a-zA-Z ]+") ||
               !donation_type.matches("[a-zA-Z ]+")) {
@@ -131,16 +128,16 @@ public class CreateDonation extends HttpServlet {
         }
 
         /*
-         * if the weight isn't digits
+         * If the weight isn't digits
          */
         if (!donation_weight.matches("[0-9]+")){
 
-            //set the variable to not valid, false
+            // Set the variable to not valid, false
             isValid = false;
         }
 
         /*
-         * if the form entries are invalid
+         * If the form entries are invalid
          */
         if (!isValid) {
             request.getSession().setAttribute("donationAddMessage",
@@ -149,7 +146,7 @@ public class CreateDonation extends HttpServlet {
                             + "Weight can only contain digits");
         }
 
-        // return the variable set to valid or invalid
+        // Return the variable set to valid or invalid
         return isValid;
     }
 }

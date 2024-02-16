@@ -32,7 +32,7 @@ public class ReadDonations extends HttpServlet {
 
         logger.debug("TEST In Search Donations Before DAO call" + request.getAttribute("submit"));
 
-        // Enstantiate a new DonationDAO.
+        // Instantiate a new DonationDAO.
         DonationDAO donationDAO = new DonationDAO();
 
         // If submit attribute = Submit, search.

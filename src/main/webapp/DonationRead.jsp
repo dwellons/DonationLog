@@ -50,9 +50,8 @@
                 <br>
                 <br>
 
-                <label for="searchTerm">
-                    Enter Search Term (Donor's Name,
-                    Donation Type (Add Calendar!) ): </label>
+                <label for="searchTerm">Enter the Donor's Name or the Type of Donation
+                        (frozen, dairy, etc.) </label>
 
                 <br>
 

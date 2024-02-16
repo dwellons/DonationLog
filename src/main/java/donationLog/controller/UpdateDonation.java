@@ -20,10 +20,12 @@ import javax.servlet.RequestDispatcher;
 public class UpdateDonation extends HttpServlet {
     DonationDAO donationDAO;
 
-    // Instantiate Logger
+    /*
+     *Instantiate Logger
+     */
     private final Logger logger = LogManager.getLogger(this.getClass());
 
-    /**
+    /*
      * create a valid or not valid variable for validating form entries
      */
     private boolean isValid;

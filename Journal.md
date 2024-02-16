@@ -125,8 +125,16 @@ using the from from adding a donation, but I wasn't able to see the results from
 
 ### Week 5 - Spring 2024
 
-**2/15/24 7:30pm - 12:00am**
+**2/15/24 7:30pm - 1:45am**
+**2/16/24**
 
-* Recommended Corrections.
+* Modified user stories and project plan
+* Updated Screens.md
 * Cleaned up time logs / entries and put them all into Journal.md
+* Worked on remove donation functionality
+* Worked on add donation functionality
+* Added calendar to sidebar
+* Added future links to sidebar
 * Weekly Classwork
+
+It was challenging getting the user data to go from my results.jsp to the donationDelete.jsp. I was trying to access a value that wasn't there and when I thought about doing it how I already was when searching for a user, it worked how I wanted and went smoothly. 

@@ -28,7 +28,7 @@ public class CreateDonationJSPDisplay extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        // forward to add user JSP Page
+        // Forward to DonationCreate JSP Page
         String url = "CreateDonation.jsp";
 
 
