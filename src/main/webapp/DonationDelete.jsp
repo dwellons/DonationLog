@@ -9,11 +9,9 @@
 
 <!-- Head -->
 <c:import url="/assets/index_files/head.jsp"/>
-<!-- End Head -->
 
 <!-- Sidebar -->
 <c:import url="/assets/index_files/sidebar.jsp"/>
-<!-- End Sidebar -->
 
 <!-- Content -->
 <div id="content">
@@ -24,7 +22,6 @@
 
             <!-- Header -->
             <c:import url="assets/index_files/header.jsp"/>
-            <!--End Header -->
 
             <!-- Tab on Side -->
             <div class="info">
@@ -43,7 +40,7 @@
 
             <form action="deleteDonation" method="post">
 
-                <!-- adding to see the submit attribute in the sevlet -->
+                <!-- Adding to see the submit attribute in the servlet -->
                 <input type="hidden" name="submit" value="Submit">
 
                 <label for="donationID">Donation ID: </label>
@@ -65,7 +62,6 @@
                 <input type="submit" name="submit" value="Remove">
 
             </form>
-            <!-- End Delete Donation Form -->
 
             <!-- Remove the message after displaying it, if it is present.-->
             <c:remove var="donationDeleteMessage"/>

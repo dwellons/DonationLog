@@ -9,11 +9,9 @@
 
 <!-- Head -->
 <c:import url="/assets/index_files/head.jsp"/>
-<!-- End Head -->
 
 <!-- Sidebar -->
 <c:import url="/assets/index_files/sidebar.jsp"/>
-<!-- End Sidebar -->
 
 <!-- Content -->
 <div id="content">
@@ -24,7 +22,6 @@
 
             <!-- Header -->
             <c:import url="assets/index_files/header.jsp"/>
-            <!--End Header -->
 
             <!-- Tab on Side -->
             <div class="info">
@@ -52,10 +49,6 @@
             <c:if test="${not empty donations}">
 
                 <table>
-                    <!-- The content of the page should use a table to display
-                        the results with each found employee in a row.
-                        The HTML table and header row should
-                        be part of the template text of the page.-->
                     <thead>
                     <tr>
                         <th>Donation ID</th>
@@ -90,7 +83,6 @@
              </c:if>
 
             <a href="DonationRead.jsp">Search Again</a>
-            <!-- End Search Results Table -->
 
             <!-- Remove the messages after displaying them, if they are present. -->
             <c:remove var="donationDeleteMessage"/>

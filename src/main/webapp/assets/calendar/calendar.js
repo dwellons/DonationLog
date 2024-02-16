@@ -1,4 +1,9 @@
- function buildCalendar(month, year) {
+/*
+	Striped by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+function buildCalendar(month, year) {
     let calendar = '<table class="calendar">';
     calendar += '<caption>' + new Date(year, month - 1).toLocaleString('default', { month: 'long', year: 'numeric' }) + '</caption>';
     calendar += '<thead><tr>';
@@ -37,7 +42,6 @@
 }
 
     calendar += '</tr></tbody></table>';
-
     return calendar;
 }
 

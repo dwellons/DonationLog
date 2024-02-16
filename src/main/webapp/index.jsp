@@ -9,11 +9,9 @@
 
 <!-- Head -->
 <c:import url="/assets/index_files/head.jsp"/>
-<!-- End Head -->
 
 <!-- Sidebar -->
 <c:import url="/assets/index_files/sidebar.jsp"/>
-<!-- End Sidebar -->
 
 <!-- Content -->
 <div id="content">
@@ -24,7 +22,6 @@
 
             <!-- Header -->
             <c:import url="assets/index_files/header.jsp"/>
-            <!--End Header -->
 
             <!-- Tab on Side -->
             <div class="info">
@@ -40,7 +37,6 @@
             <form action="searchDonations" method="get" id="loadAllForm">
                 <input type ="submit" name="submit" value="Show All Donations">
             </form>
-            <!-- End Main Page Display -->
 
         </article>
     </div>
@@ -53,8 +49,6 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/calendar/calendar.js"></script>
-
-
 
 </body>
 </html>

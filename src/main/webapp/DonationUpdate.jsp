@@ -7,13 +7,11 @@
 
 <html>
 
-<!-- head -->
+<!-- Head -->
 <c:import url="/assets/index_files/head.jsp"/>
-<!-- end head -->
 
 <!-- Sidebar -->
 <c:import url="/assets/index_files/sidebar.jsp"/>
-<!-- End Sidebar -->
 
 <!-- Content -->
 <div id="content">
@@ -22,9 +20,8 @@
         <!-- Post -->
         <article class="box post post-excerpt">
 
-            <!-- header -->
+            <!-- Header -->
             <c:import url="assets/index_files/header.jsp"/>
-            <!--end header -->
 
             <!-- Tab on Side -->
             <div class="info">
@@ -60,9 +57,8 @@
                 <input type="submit" value="Update Donation">
 
             </form>
-            <!-- End Update Donation Form -->
 
-            <!-- remove the message after displaying it, if it is present-->
+            <!-- Remove the message after displaying it, if it is present-->
             <c:remove var="donationUpdateMessage"/>
 
         </article>

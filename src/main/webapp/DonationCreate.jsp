@@ -9,7 +9,6 @@
 
 <!-- Head -->
 <c:import url="/assets/index_files/head.jsp"/>
-<!-- End Head -->
 
 <!-- Sidebar -->
 <c:import url="/assets/index_files/sidebar.jsp"/>
@@ -24,7 +23,6 @@
 
             <!-- Header -->
             <c:import url="assets/index_files/header.jsp"/>
-            <!--End Header -->
 
             <!-- Tab on Side -->
             <div class="info">
@@ -61,7 +59,6 @@
                 <input type="submit" value="Add Donation">
 
             </form>
-            <!-- End Add Donation Form -->
 
             <!-- Remove the message after displaying it, if it is present. -->
             <c:remove var="donationAddMessage"/>

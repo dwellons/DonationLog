@@ -7,13 +7,11 @@
 
 <html>
 
-<!-- head -->
+<!-- Head -->
 <c:import url="/assets/index_files/head.jsp"/>
-<!-- end head -->
 
 <!-- Sidebar -->
 <c:import url="/assets/index_files/sidebar.jsp"/>
-<!-- End Sidebar -->
 
 <!-- Content -->
 <div id="content">
@@ -22,16 +20,15 @@
         <!-- Post -->
         <article class="box post post-excerpt">
 
-            <!-- header -->
+            <!-- Header -->
             <c:import url="assets/index_files/header.jsp"/>
-            <!--end header -->
 
             <!-- Tab on Side -->
             <div class="info">
                 Search
             </div>
 
-            <!-- USER SEARCH FORM -->
+            <!-- Donation Search Form -->
             <h2>Search for a Past Donation</h2>
 
             <form action="searchDonations" method="get">
@@ -76,11 +73,6 @@
                 <input type ="submit" name="submit" value="Show All Donations">
 
             </form>
-
-
-
-
-            <!-- end user search form -->
 
         </article>
     </div>
