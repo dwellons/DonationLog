@@ -58,6 +58,6 @@ fabric.properties
 .src/main/resources/*.xml
 
 # Testing Database Informatioin
-./src/test/resources/*.cfg.xml
-./src/test/resources/cleandb.sql
+.src/test/resources/*.cfg.xml
+.src/test/resources/cleandb.sql
 
