@@ -25,21 +25,50 @@
 
             <!-- Tab on Side -->
             <div class="info">
-                Homepage
+                Search Users
             </div>
 
-            <!-- Display the Donation Update Message -->
-            <c:if test="${not empty donationUpdateMessage}">
-                <p>${donationUpdateMessage}</p>
-            </c:if>
+            <!-- Donation Search Form -->
+            <h2>Search for a User</h2>
 
-            <!-- Main Page Display -->
-            <form action="readDonations" method="get" id="loadAllForm">
-                <input type ="submit" name="submit" value="Show All Donations">
+            <form action="readUsers" method="get">
+
+                <label for="searchType">What will you be searching by?</label>
+
+                </br>
+
+                <input type="radio" id="userName"
+                       name="searchType" value="userName" required>
+                <label for="userName">Username</label>
+
+                <br>
+
+                <input type="radio" id="firstName"
+                       name="searchType" value="firstName" required>
+                <label for="firstName">First Name</label>
+
+                <br>
+                <br>
+
+                <label for="searchTerm">Enter the Username, or First Name: </label>
+
+                <br>
+
+                <input type="text" id="searchTerm" name="searchTerm" required>
+
+                <br>
+
+                <input type="submit" name="submit" value="Submit">
+
             </form>
 
-            <form action="readUsers" method="get" id="loadAllForm">
+            <br>
+            <br>
+
+            <form action="readUsers" method="get">
+
                 <input type ="submit" name="submit" value="Show All Users">
+
             </form>
 
         </article>
@@ -53,6 +82,7 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/calendar/calendar.js"></script>
+
 
 </body>
 </html>

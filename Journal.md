@@ -84,7 +84,7 @@ What challenged me:
 -   Email Verifier: https://rapidapi.com/mr_admin/api/email-verifier
 -   Adobe Create PDF: https://developer.adobe.com/document-services/docs/overview/pdf-services-api/howtos/create-pdf/
 
-Thins I would like to explore further:
+Things I would like to explore further:
 
 -   The best way to take a html table, with results from the database, and turn it into a pdf file.
 -   The best way to take that pdf file and automatically insert it as an attachment in a blank email.
@@ -96,7 +96,7 @@ Key learning points/takeaways:
 -   PDF images will not load in a md file.
 -   Create a test database before even starting anything.
 
-What challenged me:
+
 When working on Using the DAO, and implementing getByPropertyEqual, I kept getting null pointer exceptions. I found 
 that I wasnt putting Submit into the request, I thought that i was putting searchUser there but I wasn't. I had to put 
 the name i was putting into the request with the submit button.
@@ -126,7 +126,7 @@ using the from from adding a donation, but I wasn't able to see the results from
 ### Week 5 - Spring 2024
 
 **2/15/24 7:30pm - 1:45am**
-**2/16/24**
+**2/16/24 10am - 5:00pm**  
 
 * Modified user stories and project plan
 * Updated Screens.md
@@ -134,7 +134,33 @@ using the from from adding a donation, but I wasn't able to see the results from
 * Worked on remove donation functionality
 * Worked on add donation functionality
 * Added calendar to sidebar
-* Added future links to sidebar
-* Weekly Classwork
+* Added new links to sidebar
+* Weekly Classwork - Modified indie project in lue of weekly exercise.
+* Added full CRUD for creating, reading, updating and deleting Users.
+* Added a new Users table in the Donation Log Database.
+* Created tests for Users DAO.
 
+  
+
+Things I would like to explore further:
+
+-   The best way to take a html table, with results from the database, and turn it into a pdf file.
+-   The best way to take that pdf file and automatically insert it as an attachment in a blank email.
+-   The best way to print only the html table with results from the database, not the whole webpage.
+-   Seeing my results from the request in my modify JSP.
+
+Key learning points/takeaways:
+
+-   Don't be so quick to be doing things with a Database. Be extra sure what you want to do is going to have the results you want.
+
+What challenged me:
 It was challenging getting the user data to go from my results.jsp to the donationDelete.jsp. I was trying to access a value that wasn't there and when I thought about doing it how I already was when searching for a user, it worked how I wanted and went smoothly. 
+
+It was challenging figuring out the one-to-many relationship at first, because I had created a foreign key on a new user_id instead of using the exising id. My program was searching and seemed to be working fine, but when I would try to display information about a user I had selected to delete I ran into issues. I was trying to remove a user with a user_id that didnt match the id of the user. The ID auto increments, but the user_id would not. I tried to auto increment the user_id but got an error that said only one column in a table is allowed to auto increment. I thought about how to do it for a while and though that I should be able to make one column the primary and the foreign key. 
+
+I set the ID in the user table to be the foreign key in the relationship and removed the user_id column, and changed the references I was using for that. It was working and I started testing. I ran my tests and the @before setup got me again. It removed my foreign key relationship, and wouldn't let me create a new donations table. I was able to take the foreign key definitions out of the sql dump file and create it without the old ones to a not existing column, and then re-created them and made a new sql dump file. After that things were working as expected.
+
+Everything else this week seemed to go smoothly. I was able to re-create the functionality I already had made for the donations CRUD to use with the Users, and that worked pretty smoothly. I had used Project 4 in the previous semester as guide for how to structure my file directory, and had created two files that I have thought that I didnt need. I was able to confirm that and remove them to clean up my controller directory.
+
+
+

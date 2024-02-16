@@ -26,42 +26,47 @@
 
             <!-- Tab on Side -->
             <div class="info">
-                New Donation
+                New User
             </div>
 
-            <!-- Add Donation Form -->
-            <h2>Add a new Donation</h2>
+            <!-- Add User Form -->
+            <h2>Add a new User</h2>
 
-            <!-- Display the Donation Add Message -->
-            <c:if test="${not empty donationAddMessage}">
-                <h3>${donationAddMessage}</h3>
+            <!-- Display the User Add Message -->
+            <c:if test="${not empty userAddMessage}">
+                <h3>${userAddMessage}</h3>
             </c:if>
 
             <br>
 
-            <form action="createDonation" method="post">
+            <form action="createUser" method="post">
 
-                <label for="donorName">Donor Name: </label>
-                <input type="text" id="donorName"
-                       name="donorName" required>
+                <label for="userName">Username: </label>
+                <input type="text" id="userName"
+                       name="userName" required>
                 <br>
 
-                <label for="donationType">Donation Type: </label>
-                <input type="text" id="donationType"
-                       name="donationType" required>
+                <label for="password">Password: </label>
+                <input type="text" id="password"
+                       name="password" required>
                 <br>
 
-                <label for="donationWeight">Donation Weight: </label>
-                <input type="text" id="donationWeight"
-                       name="donationWeight" required>
+                <label for="firstName">First Name: </label>
+                <input type="text" id="firstName"
+                       name="firstName" required>
                 <br>
 
-                <input type="submit" value="Add Donation">
+                <label for="lastName">Last Name: </label>
+                <input type="text" id="lastName"
+                       name="lastName" required>
+                <br>
+
+                <input type="submit" value="Add User">
 
             </form>
 
             <!-- Remove the message after displaying it, if it is present. -->
-            <c:remove var="donationAddMessage"/>
+            <c:remove var="userAddMessage"/>
 
         </article>
     </div>

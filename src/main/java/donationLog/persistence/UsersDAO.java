@@ -1,6 +1,6 @@
 package donationLog.persistence;
 
-import donationLog.entity.Donation;
+import donationLog.entity.Users;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Expression;
 import jakarta.persistence.criteria.Root;
@@ -10,130 +10,129 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.criteria.HibernateCriteriaBuilder;
-
 import java.util.List;
 
-public class DonationDAO {
+public class UsersDAO {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
     /**
-     * Gets donations by ID
+     * Gets Users by ID.
      * @param id
      * @return
      */
-    public Donation getById(int id) {
+    public Users getById(int id) {
         Session session = sessionFactory.openSession();
-        Donation donation = session.get(Donation.class, id);
+        Users user = session.get(Users.class, id);
         session.close();
-        return donation;
+        return user;
     }
 
     /**
-     * Updates donations.
-     * @param donation
+     * Updates users.
+     * @param user
      */
-    public void update(Donation donation) {
+    public void update(Users user) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         // merge is for updating
-        session.merge(donation);
+        session.merge(user);
         transaction.commit();
         session.close();
     }
 
     /**
-     * Inserts donations
-     * @param donation
+     * Inserts new users.
+     * @param user
      * @return
      */
-    public int insert(Donation donation) {
+    public int insert(Users user) {
         int id = 0;
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         // persist is for adding
-        session.persist(donation);
+        session.persist(user);
         transaction.commit();
-        id = donation.getDonationID();
+        id = user.getID();
         session.close();
         return id;
     }
 
     /**
-     * Deletes donations.
-     * @param donation
+     * Deletes users.
+     * @param user
      */
-    public void delete(Donation donation) {
+    public void delete(Users user) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        session.delete(donation);
+        session.delete(user);
         transaction.commit();
         session.close();
     }
 
+
     /**
-     * Gets all donations.
+     * Returns a list of all users.
      * @return
      */
-    public List<Donation> getAll() {
+    public List<Users> getAll() {
 
         Session session = sessionFactory.openSession();
 
         HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<Donation> query = builder.createQuery(Donation.class);
-        Root<Donation> root = query.from(Donation.class);
-        List<Donation> donations = session.createSelectionQuery( query ).getResultList();
+        CriteriaQuery<Users> query = builder.createQuery(Users.class);
+        Root<Users> root = query.from(Users.class);
+        List<Users> users = session.createSelectionQuery( query ).getResultList();
 
-        logger.debug("The list of donations " + donations);
+        logger.debug("The list of users " + users);
         session.close();
 
-        return donations;
+        return users;
     }
 
     /**
-     * Searches for property that equals a determined value.
+     * Searches for users that match a determined value.
      * @param propertyName
      * @param value
      * @return
      */
-    public List<Donation> getByPropertyEqual(String propertyName, String value) {
+    public List<Users> getByPropertyEqual(String propertyName, String value) {
         Session session = sessionFactory.openSession();
 
         // will insert values into curly braces {}
         logger.debug("Searching for user with {} {} ", propertyName, value);
 
         HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<Donation> query = builder.createQuery(Donation.class);
-        Root<Donation> root = query.from(Donation.class);
+        CriteriaQuery<Users> query = builder.createQuery(Users.class);
+        Root<Users> root = query.from(Users.class);
         query.select(root).where(builder.equal(root.get(propertyName), value));
-        List<Donation> donations = session.createSelectionQuery( query ).getResultList();
+        List<Users> users = session.createSelectionQuery( query ).getResultList();
 
         session.close();
-        return donations;
+        return users;
     }
 
     /**
-     * Searches for a property that is like a determined value.
+     * Searches for users that are like a current value.
      * @param propertyName
      * @param value
      * @return
      */
-    public List<Donation> getByPropertyLike(String propertyName, String value) {
+    public List<Users> getByPropertyLike(String propertyName, String value) {
         Session session = sessionFactory.openSession();
 
         logger.debug("Searching for user with {} = {}",  propertyName, value);
 
         HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<Donation> query = builder.createQuery(Donation.class);
-        Root<Donation> root = query.from(Donation.class);
+        CriteriaQuery<Users> query = builder.createQuery(Users.class);
+        Root<Users> root = query.from(Users.class);
         Expression<String> propertyPath = root.get(propertyName);
 
         query.where(builder.like(propertyPath, "%" + value + "%"));
 
-        List<Donation> donations = session.createQuery( query ).getResultList();
+        List<Users> users = session.createQuery( query ).getResultList();
         session.close();
-        return donations;
+        return users;
     }
-
 }

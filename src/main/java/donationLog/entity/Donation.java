@@ -3,10 +3,6 @@ package donationLog.entity;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.Period;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
@@ -34,21 +30,21 @@ public class Donation {
     @Column(name = "donation_date")
     private Date donationDate;
 
-    /**
-     * Instantiates a new Donation.
-     */
+    @JoinColumn(name = "user_id")
+    @ManyToOne
+    private Users user_id;
+
+    // Empty Constructor.
     public Donation() {
     }
 
     /**
      * Instantiates a new Donation.
-     *
-     * @param donationID the donationID
-     * @param donorName the donors name
-     * @param donationType  the donation type
-     * @param donationWeight  the donation weight
-     * @param donationDate the date of the donation
-
+     * @param donationID
+     * @param donorName
+     * @param donationType
+     * @param donationWeight
+     * @param donationDate
      */
     public Donation(int donationID, String donorName, String donationType, String donationWeight, Date donationDate) {
         this.donationID = donationID;
@@ -59,107 +55,117 @@ public class Donation {
 
     }
 
+
     /**
-     * Gets donationID.
-     *
-     * @return the donationID
+     * Empty Constructor
+     * @return
      */
     public int getDonationID() {
         return donationID;
     }
 
     /**
-     * Sets donationID.
-     *
-     * @param donationID the donationID
+     * Constructor
+     * @param donationID
      */
     public void setDonationID(int donationID) {
-
         this.donationID = donationID;
     }
 
+
     /**
-     * Gets the donors name
      *
-     * @return the donors name
+     * @return
      */
     public String getDonorName() {
         return donorName;
     }
 
     /**
-     * Sets donors name
      *
-     * @param donorName the donor name
+     * @param donorName
      */
     public void setDonorName(String donorName) {
         this.donorName = donorName;
     }
 
     /**
-     * Gets donation type
      *
-     * @return the donation type
+     * @return
      */
     public String getDonationType() {
         return donationType;
     }
 
     /**
-     * Sets donation type
      *
-     * @param donationType the donation type
+     * @param donationType
      */
     public void setDonationType(String donationType) {
         this.donationType = donationType;
     }
 
     /**
-     * Gets a donations weight
      *
-     * @return the donation weight
+     * @return
      */
     public String getDonationWeight() {
         return donationWeight;
     }
 
     /**
-     * Sets the donation's weight
      *
-     * @param donationWeight the donations weight
+     * @param donationWeight
      */
     public void setDonationWeight(String donationWeight) {
         this.donationWeight = donationWeight;
     }
 
-
-
     /**
-     * Gets donationDate
      *
-     * @return the date of the donation
+     * @return
      */
     public Date getDonationDate() {
         return donationDate;
     }
 
     /**
-     * Sets donationDate.
      *
-     * @param donationDate the date of the donation
+     * @param donationDate
      */
     public void setDonationDate(Date donationDate) {
         this.donationDate = donationDate;
     }
 
+    /**
+     *
+     * @return
+     */
+    public Users getUser_id() {
+        return user_id;
+    }
+
+    /**
+     *
+     * @param user_id
+     */
+    public void setUser_id(Users user_id) {
+        this.user_id = user_id;
+    }
+
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Donation{" +
-                "donorName='" + donorName + '\'' +
+                "donationID=" + donationID +
+                ", donorName='" + donorName + '\'' +
                 ", donationType='" + donationType + '\'' +
                 ", donationWeight='" + donationWeight + '\'' +
-                ", donationID='" + donationID + '\'' +
-                ", donationDate='" + donationDate + '\'' +
+                ", donationDate=" + donationDate +
+                ", user_id=" + user_id +
                 '}';
     }
 }

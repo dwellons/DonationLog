@@ -25,41 +25,45 @@
 
             <!-- Tab on Side -->
             <div class="info">
-                Update Donation
+                Update User
             </div>
 
-            <!-- Update Donation FORM -->
-            <h2>Update Donation</h2>
+            <!-- Update User Form -->
+            <h2>Update User</h2>
 
-            <c:if test="${not empty donationUpdateMessage}">
-                <h3>${donationUpdateMessage}</h3>
+            <c:if test="${not empty userUpdateMessage}">
+                <h3>${userUpdateMessage}</h3>
             </c:if>
 
             <br>
 
-            <form action="updateDonation" method="post">
+            <form action="updateUser" method="post">
 
-                <label for="donationID">Donation ID: </label>
-                <input type="text" name="donationID" id="donationID" value="${donationToUpdate.donationID}" required>
+                <label for="ID">User ID: </label>
+                <input type="text" name="ID" id="ID" value="${userToUpdate.ID}" required>
 
-                <label for="donorName">Donor Name: </label>
-                <input type="text" id="donorName" name="donorName" value="${donationToUpdate.donorName}" required>
+                <label for="userName">Username: </label>
+                <input type="text" id="userName" name="userName" value="${userToUpdate.userName}" required>
                 <br>
 
-                <label for="donationType">Donation Type: </label>
-                <input type="text" id="donationType" name="donationType" value="${donationToUpdate.donationType}" required>
+                <label for="password">Password </label>
+                <input type="text" id="password" name="password" value="${userToUpdate.password}" required>
                 <br>
 
-                <label for="donationWeight">Donation Weight: </label>
-                <input type="text" id="donationWeight" name="donationWeight" value="${donationToUpdate.donationWeight}" required>
+                <label for="firstName">First Name: </label>
+                <input type="text" id="firstName" name="firstName" value="${userToUpdate.firstName}" required>
                 <br>
 
-                <input type="submit" value="Update Donation">
+                <label for="lastName">Last Name: </label>
+                <input type="text" id="lastName" name="lastName" value="${userToUpdate.lastName}" required>
+                <br>
+
+                <input type="submit" value="Update User">
 
             </form>
 
             <!-- Remove the message after displaying it, if it is present-->
-            <c:remove var="donationUpdateMessage"/>
+            <c:remove var="userUpdateMessage"/>
 
         </article>
     </div>

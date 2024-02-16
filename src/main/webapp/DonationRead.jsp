@@ -25,7 +25,7 @@
 
             <!-- Tab on Side -->
             <div class="info">
-                Search
+                Search Donations
             </div>
 
             <!-- Donation Search Form -->

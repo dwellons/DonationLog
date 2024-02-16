@@ -12,11 +12,11 @@ import donationLog.util.Database;
 
 public class DonationDaoTest {
 
-    @Before
+     @Before
     public void setup() {
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
-    }
+     }
 
     DonationDAO donationDAO;
 
@@ -28,7 +28,7 @@ public class DonationDaoTest {
         donationDAO = new DonationDAO();
 
         // Assuming getById method exists in DonationDAO
-        Donation retrievedDonation = donationDAO.getById(9);
+        Donation retrievedDonation = donationDAO.getById(12);
 
         assertNotNull(retrievedDonation);
 
@@ -43,7 +43,7 @@ public class DonationDaoTest {
     public void updateSuccess() {
         // get a record out of the database
         donationDAO = new DonationDAO();
-        Donation donationToUpdate = donationDAO.getById(9);
+        Donation donationToUpdate = donationDAO.getById(12);
 
         // change the name on that user
         donationToUpdate.setDonationType("Dairy");
@@ -52,7 +52,7 @@ public class DonationDaoTest {
         donationDAO.update(donationToUpdate);
 
         // retrieve the user and check that the name change worked
-        Donation actualDonation = donationDAO.getById(9);
+        Donation actualDonation = donationDAO.getById(12);
 
         // do comparison
         assertEquals("Dairy", actualDonation.getDonationType());
@@ -63,8 +63,8 @@ public class DonationDaoTest {
         donationDAO = new DonationDAO();
 
         Date donationDate = new Date(1989,10,16);
-
         int donationID = 0;
+        int userID = 1;
         Donation newDonation = new Donation(donationID, "Piggly Wiggly", "Bread", "130", donationDate);
 
         newDonation.setDonationDate(donationDate);
@@ -82,17 +82,17 @@ public class DonationDaoTest {
     public void testDelete() {
         //create new user
         donationDAO = new DonationDAO();
-        // get the user with id of two, delete it
-        donationDAO.delete(donationDAO.getById(9));
+        // get the user with id of nine, delete it
+        donationDAO.delete(donationDAO.getById(12));
         // if delete is working, shouldn't get a user back
-        assertNull(donationDAO.getById(9));
+        assertNull(donationDAO.getById(12));
 
     }
     @Test
     public void getAll() {
         donationDAO = new DonationDAO();
         List<Donation> donations = donationDAO.getAll();
-        assertEquals(6, donations.size());
+        assertEquals(7, donations.size());
 
     }
 
@@ -100,8 +100,8 @@ public class DonationDaoTest {
     public void testGetByPropertyEqual() {
         donationDAO = new DonationDAO();
         List<Donation> donations = donationDAO.getByPropertyLike("donorName", "Kwik Trip");
-        assertEquals(6, donations.size());
-        assertEquals(9, donations.get(0).getDonationID());
+        assertEquals(4, donations.size());
+        assertEquals(12, donations.get(0).getDonationID());
 
     }
 
@@ -109,6 +109,6 @@ public class DonationDaoTest {
     public void testGetByPropertyLike() {
         donationDAO = new DonationDAO();
         List<Donation> donations = donationDAO.getByPropertyLike("donorName", "Kwik Trip");
-        assertEquals(6, donations.size());
+        assertEquals(4, donations.size());
     }
 }

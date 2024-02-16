@@ -2,19 +2,17 @@ package donationLog.controller;
 
 import donationLog.entity.Donation;
 import donationLog.persistence.DonationDAO;
-
 import java.io.*;
 import java.sql.SQLException;
 import java.util.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * Create a servlet that will add a new Donation to the application
+ * Create a servlet that will add a new Donation to the application.
  *
  *@author Darin Wellons
  */
@@ -30,7 +28,7 @@ public class CreateDonation extends HttpServlet {
     // Instantiate Logger
     private final Logger logger = LogManager.getLogger(this.getClass());
     /**
-     * create a valid or not valid variable for validating form entries
+     * Create a valid or not valid variable for validating form entries.
      */
     private boolean isValid;
 
@@ -52,9 +50,8 @@ public class CreateDonation extends HttpServlet {
                        HttpServletResponse response)
             throws ServletException, IOException {
 
-        /**
-         * Create a local variable that references the ServletContext.
-         */
+
+        // Create a local variable that references the ServletContext.
         ServletContext context = getServletContext();
 
         // Extract the data for the new Donation from the HTML form.
@@ -62,36 +59,36 @@ public class CreateDonation extends HttpServlet {
         String donation_type = request.getParameter("donationType");
         String donation_weight = request.getParameter("donationWeight");
         int donationID = 0;
+        int user_id = 1;
 
-        /**
-         * have to validate the input from the form before accessing database
-         */
+        // Have to validate the input from the form before accessing database.
+
         if (!validateUserInput(donor_name, donation_type, donation_weight, request)) {
 
         logger.debug("TEST In Add Donation");
 
-            // Send a redirect the browser to the Add Donation page
+            // Send a redirect the browser to the Add Donation page.
             response.sendRedirect(request.getContextPath() + "/DonationCreate.jsp");
             return;
         }
 
-        // Instantiate donationDAO
+        // Instantiate donationDAO.
         donationDAO = new DonationDAO();
 
-        // Get Today's date
+        // Get Today's date.
         Date donationDate = new Date();
 
-        // Create the new donation object
+        // Create the new donation object.
         Donation newDonation = new Donation(donationID, donor_name,donation_type,donation_weight,donationDate);
 
-        /*
-         * Call Insert in DonationDAO
-         */
+
+        // Call Insert in DonationDAO.
+
         donationDAO.insert(newDonation);
 
-        /*
-         * Redirect to Results page
-         */
+
+        // Redirect to Results page.
+
         response.sendRedirect("/DonationLog_war/readDonations?submit=Show+All+Donations");
 
         request.getSession().setAttribute("donationAddMessage",
@@ -114,31 +111,26 @@ public class CreateDonation extends HttpServlet {
                                       HttpServletRequest request)
             throws IOException {
 
-        // Instantiate validation variable to valid, true
+        // Instantiate validation variable to valid, true.
         isValid = true;
 
-        /*
-         * If the donor name and donation type aren't text
-         */
+
+        // If the donor name and donation type aren't text.
         if (!donor_name.matches("[a-zA-Z ]+") ||
               !donation_type.matches("[a-zA-Z ]+")) {
 
-             //set the variable to not valid, false
+            // Set the variable to not valid, false.
             isValid = false;
         }
 
-        /*
-         * If the weight isn't digits
-         */
+        // If the weight isn't digits.
         if (!donation_weight.matches("[0-9]+")){
 
             // Set the variable to not valid, false
             isValid = false;
         }
 
-        /*
-         * If the form entries are invalid
-         */
+        //If the form entries are invalid.
         if (!isValid) {
             request.getSession().setAttribute("donationAddMessage",
                     "Invalid Form Input. Please check your entries. "
@@ -146,7 +138,7 @@ public class CreateDonation extends HttpServlet {
                             + "Weight can only contain digits");
         }
 
-        // Return the variable set to valid or invalid
+        // Return the variable set to valid or invalid.
         return isValid;
     }
 }

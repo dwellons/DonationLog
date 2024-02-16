@@ -24,46 +24,46 @@
 
             <!-- Tab on Side -->
             <div class="info">
-                Remove Donation
+                Remove User
             </div>
 
-            <!-- Display the Donation Delete Message -->
-            <c:if test="${not empty donationDeleteMessage}">
-                <h3>${donationDeleteMessage}</h3>
+            <!-- Display the User Delete Message -->
+            <c:if test="${not empty userDeleteMessage}">
+                <h3>${userDeleteMessage}</h3>
             </c:if>
 
-            <!-- Delete Donation Table -->
+            <!-- Delete User Table -->
             <h2>Confirm Removal</h2>
 
-            <c:if test="${not empty donations}">
+            <c:if test="${not empty users}">
 
                 <table>
                     <thead>
                     <tr>
-                        <th>Donation Number</th>
-                        <th>Donor Name</th>
-                        <th>Donation Type</th>
-                        <th>Donation Weight</th>
-                        <th>Donation Date</th>
-                        <th>Enter Donation Number To Verify Removal</th>
+                        <th>User ID</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Enter User ID To Verify Removal</th>
                     </tr>
                     </thead>
 
                     <tr>
-                        <td>${donations.donationID}</td>
-                        <td>${donations.donorName}</td>
-                        <td>${donations.donationType}</td>
-                        <td>${donations.donationWeight}</td>
-                        <td>${donations.donationDate}</td>
+                        <td>${users.ID}</td>
+                        <td>${users.userName}</td>
+                        <td>${users.password}</td>
+                        <td>${users.firstName}</td>
+                        <td>${users.lastName}</td>
                         <td>
 
-                            <form action="deleteDonation" method="post">
+                            <form action="deleteUser" method="post">
 
                                 <!-- Adding to see the submit attribute in the servlet -->
                                 <input type="hidden" name="submit" value="Submit">
 
-                                <label for="donationID"></label>
-                                <input type="text" name="donationID" id="donationID">
+                                <label for="ID"></label>
+                                <input type="text" name="ID" id="ID">
                                 <input type="submit" name="submit" value="Remove">
 
                             </form>
@@ -74,7 +74,7 @@
                 </table>
             </c:if>
 
-            <c:if test="${empty donations}">
+            <c:if test="${empty users}">
                 <p>No results found.</p>
             </c:if>
 

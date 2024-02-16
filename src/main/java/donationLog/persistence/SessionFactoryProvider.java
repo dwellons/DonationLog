@@ -8,7 +8,6 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 /**
  * This file provides a SessionFactory for use with DAOs using Hibernate
- *
  * @author paulawaite
  * @version 3.0
  */
@@ -17,9 +16,8 @@ public class SessionFactoryProvider {
     private static SessionFactory sessionFactory;
     private static StandardServiceRegistry registry;
 
-    /**
-     * Create session factory.
-     */
+
+    // Create session factory.
     public static void createSessionFactory() {
 
         // Create registry
@@ -37,7 +35,6 @@ public class SessionFactoryProvider {
 
     /**
      * Gets session factory.
-     *
      * @return the session factory
      */
     public static SessionFactory getSessionFactory() {
@@ -45,6 +42,5 @@ public class SessionFactoryProvider {
             createSessionFactory();
         }
         return sessionFactory;
-
     }
 }
