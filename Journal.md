@@ -126,7 +126,7 @@ using the from from adding a donation, but I wasn't able to see the results from
 ### Week 5 - Spring 2024
 
 **2/15/24 7:30pm - 1:45am**
-**2/16/24**
+**2/16/24 10am -**  
 
 * Modified user stories and project plan
 * Updated Screens.md
