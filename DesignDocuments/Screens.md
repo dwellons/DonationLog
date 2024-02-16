@@ -7,7 +7,7 @@
 ![Donation Search Page](ScreenDesign/DonationSearch.png)
 
 ### Search Results Page
-![Donation Search Results](ScreenDesigns/SearchResults.png)
+![Donation Search Results](ScreenDesign/SearchResults.png)
 
 ### Edit Donation Page
 ![Donation Search Page](ScreenDesign/EditDonation.png)
