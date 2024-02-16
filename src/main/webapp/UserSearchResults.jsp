@@ -61,7 +61,7 @@
                     </thead>
                     <c:forEach var="user" items="${users}">
                         <tr>
-                            <td>${user.userID}</td>
+                            <td>${user.ID}</td>
                             <td>${user.userName}</td>
                             <td>${user.password}</td>
                             <td>${user.firstName}</td>
@@ -72,12 +72,12 @@
                                 <form action="readDeleteUser" method="get">
                                     <!-- Adding to see the submit attribute in the servlet -->
                                     <input type="hidden" name="submit" value="Remove">
-                                    <input type="hidden" name="userID" id="userID" value="${user.userID}" >
+                                    <input type="hidden" name="userID" id="userID" value="${user.ID}" >
                                     <input type="submit" name="submit" value="Remove">
                                 </form>
 
                                 <!-- Update -->
-                                <a href="UserUpdate.jsp?userID=${user.userID}">Modify</a>
+                                <a href="UserUpdate.jsp?userID=${user.ID}">Modify</a>
 
                             </td>
                         </tr>
