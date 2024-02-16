@@ -34,6 +34,9 @@ public class Donation {
     @Column(name = "donation_date")
     private Date donationDate;
 
+    @Column(name = "user_id")
+    private int user_id;
+
     /**
      * Instantiates a new Donation.
      */
@@ -48,14 +51,15 @@ public class Donation {
      * @param donationType  the donation type
      * @param donationWeight  the donation weight
      * @param donationDate the date of the donation
-
+     * @param user_id  the user_id
      */
-    public Donation(int donationID, String donorName, String donationType, String donationWeight, Date donationDate) {
+    public Donation(int donationID, String donorName, String donationType, String donationWeight, Date donationDate, int user_id) {
         this.donationID = donationID;
         this.donorName = donorName;
         this.donationType = donationType;
         this.donationWeight = donationWeight;
         this.donationDate = donationDate;
+        this.user_id = user_id;
 
     }
 
@@ -152,6 +156,24 @@ public class Donation {
         this.donationDate = donationDate;
     }
 
+    /**
+     * Gets user_id
+     *
+     * @return the user_id
+     */
+    public int getUserID() {
+        return user_id;
+    }
+
+    /**
+     * Sets user_id
+     *
+     * @param user_id the user_id
+     */
+    public void setUserID(int user_id) {
+        this.user_id = user_id;
+    }
+
     @Override
     public String toString() {
         return "Donation{" +
@@ -160,6 +182,7 @@ public class Donation {
                 ", donationWeight='" + donationWeight + '\'' +
                 ", donationID='" + donationID + '\'' +
                 ", donationDate='" + donationDate + '\'' +
+                ", user_id='" + user_id + '\'' +
                 '}';
     }
 }

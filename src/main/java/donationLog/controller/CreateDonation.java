@@ -62,6 +62,7 @@ public class CreateDonation extends HttpServlet {
         String donation_type = request.getParameter("donationType");
         String donation_weight = request.getParameter("donationWeight");
         int donationID = 0;
+        int user_id = 1;
 
         /**
          * have to validate the input from the form before accessing database
@@ -82,7 +83,7 @@ public class CreateDonation extends HttpServlet {
         Date donationDate = new Date();
 
         // Create the new donation object
-        Donation newDonation = new Donation(donationID, donor_name,donation_type,donation_weight,donationDate);
+        Donation newDonation = new Donation(donationID, donor_name,donation_type,donation_weight,donationDate, user_id);
 
         /*
          * Call Insert in DonationDAO
