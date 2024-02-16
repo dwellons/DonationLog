@@ -54,10 +54,11 @@ fabric.properties
 
 # Database Resource Information
 *.properties
+*.cfg.xml
+*.xml
+*.sql
 .src/main/resources/*.properties
 .src/main/resources/*.cfg.xml
-
-# Testing Database Informatioin
 .src/test/resources/hibernate.cfg.xml
 .src/test/resources/cleandb.sql
 
