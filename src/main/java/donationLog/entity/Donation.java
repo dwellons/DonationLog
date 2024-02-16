@@ -3,10 +3,6 @@ package donationLog.entity;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.Period;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
@@ -36,7 +32,7 @@ public class Donation {
 
     @JoinColumn(name = "user_id")
     @ManyToOne
-    private Donation user_id;
+    private Users user_id;
 
     /**
      * Instantiates constructors.
@@ -103,11 +99,11 @@ public class Donation {
         this.donationDate = donationDate;
     }
 
-    public Donation getUser_id() {
+    public Users getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(Donation user_id) {
+    public void setUser_id(Users user_id) {
         this.user_id = user_id;
     }
 

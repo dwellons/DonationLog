@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
+import java.util.*;
 import java.util.Date;
 
 /**
@@ -37,6 +38,10 @@ public class Users {
     @Column(name = "lastName")
     private String lastName;
 
+    @OneToMany(mappedBy = "user_id", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Donation> donations = new ArrayList<>();
+
+
     /**
      * Instantiates a User constructor.
      */
@@ -62,6 +67,11 @@ public class Users {
         this.firstName = firstName;
         this.lastName = lastName;
 
+    }
+
+    public void addDonation (Donation donation) {
+        donations.add(donation);
+        donation.setUser_id(this);
     }
 
     /**
@@ -171,6 +181,14 @@ public class Users {
      */
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public List<Donation> getDonations() {
+        return donations;
+    }
+
+    public void setDonations(List<Donation> donations) {
+        this.donations = donations;
     }
 
     @Override
