@@ -1,33 +1,33 @@
 # Screen Design
 
 ### Home Page, shows Donations recorded so far today.
-![Home Page](ScreenDesign/Homepage.png)
+![Home Page](screenDesign/Homepage.png)
 
 ### Donation Search Page
-![Donation Search Page](ScreenDesign/DonationSearch.png)
+![Donation Search Page](screenDesign/DonationSearch.png)
 
 ### Edit Donation Page
-![Donation Search Page](ScreenDesign/EditDonation.png)
+![Donation Search Page](screenDesign/EditDonation.png)
 
 ### Remove Donation Page
-![Donation Search Page](ScreenDesign/RemoveDonation.png)
+![Donation Search Page](screenDesign/RemoveDonation.png)
 
 ### New Donation Page
-![New Donation Page](ScreenDesign/NewDonation.png)
+![New Donation Page](screenDesign/NewDonation.png)
 
 ### New User Page
-![New User Page](ScreenDesign/NewUser.png)
+![New User Page](screenDesign/NewUser.png)
 
 ### Log In Page
-![Log In Page](ScreenDesign/LogIn.png)
+![Log In Page](screenDesign/LogIn.png)
 
 ### Print Report Page
-![Print Report Page](ScreenDesign/PrintReport.png)
+![Print Report Page](screenDesign/PrintReport.png)
 
 ### Send Report Page
-![Send Report Page](ScreenDesign/SendReport.png)
+![Send Report Page](screenDesign/SendReport.png)
 
 ### Report Issues Page
-![Report Issues Page](ScreenDesign/ReportIssue.png)
+![Report Issues Page](screenDesign/ReportIssue.png)
 
 
