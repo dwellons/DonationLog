@@ -127,6 +127,6 @@ using the from from adding a donation, but I wasn't able to see the results from
 
 **2/15/24 7:30pm - 12:00am**
 
-* Double-checked project specifications.
+* Recommended Corrections.
 * Cleaned up time logs / entries and put them all into Journal.md
 * Weekly Classwork
