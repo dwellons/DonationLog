@@ -51,3 +51,13 @@ fabric.properties
 # Logs (may contain user information)
 *.log
 .logs/*.log
+
+# Database Resource Information
+*.properties
+.src/main/resources/*.properties
+.src/main/resources/*.xml
+
+# Testing Database Informatioin
+./src/test/resources/*.xml
+./src/test/resources/*.sql
+
