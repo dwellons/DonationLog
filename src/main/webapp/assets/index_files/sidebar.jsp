@@ -22,6 +22,7 @@
         </header>
         <ul>
 
+            <!-- removing /donationlog_war makes links work on AWS -->
             <a href = "/DonationLog_war/DonationCreate.jsp">Add a new Donation</a>
             <br>
             <a href = "/DonationLog_war/DonationRead.jsp">Search for a Donation</a>
