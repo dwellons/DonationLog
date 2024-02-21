@@ -162,5 +162,11 @@ I set the ID in the user table to be the foreign key in the relationship and rem
 
 Everything else this week seemed to go smoothly. I was able to re-create the functionality I already had made for the donations CRUD to use with the Users, and that worked pretty smoothly. I had used Project 4 in the previous semester as guide for how to structure my file directory, and had created two files that I have thought that I didnt need. I was able to confirm that and remove them to clean up my controller directory.
 
+### Week 6 - Spring 2024
+
+**2/20/24 7:30pm - 12:00am**
+
+* Initial deployment to AWS
+* Initial setup of AWS Database
 
 
