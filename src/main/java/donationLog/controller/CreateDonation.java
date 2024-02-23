@@ -130,7 +130,7 @@ public class CreateDonation extends HttpServlet {
             isValid = false;
         }
 
-        //If the form entries are invalid.
+        // If the form entries are invalid.
         if (!isValid) {
             request.getSession().setAttribute("donationAddMessage",
                     "Invalid Form Input. Please check your entries. "

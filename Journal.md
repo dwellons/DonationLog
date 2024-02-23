@@ -169,4 +169,6 @@ Everything else this week seemed to go smoothly. I was able to re-create the fun
 * Initial deployment to AWS
 * Initial setup of AWS Database
 
-
+**2/22/24 7:30pm - 11:45pm** 
+* Peer Code Review 1 Meeting
+* Peer Code Review Checklist completed
