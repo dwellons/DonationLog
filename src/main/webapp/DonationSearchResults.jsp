@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -65,7 +66,9 @@
                             <td>${donation.donorName}</td>
                             <td>${donation.donationType}</td>
                             <td>${donation.donationWeight}</td>
-                            <td>${donation.donationDate}</td>
+                            <td>
+                                <fmt:formatDate value="${donation.donationDate}" pattern="yyyy-MM-dd"/>
+                            </td>
                             <td>
 
                                 <!-- Remove -->

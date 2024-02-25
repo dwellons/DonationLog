@@ -26,53 +26,40 @@
 
             <!-- Tab on Side -->
             <div class="info">
-                New User
+                Report an Issue
             </div>
 
-            <!-- Add User Form -->
-            <h2>Add a new User</h2>
+            <!-- Add Donation Form -->
+            <h2>Report an Issue</h2>
 
-            <br>
-            <a href = "/DonationLog_war/UserRead.jsp">Search Existing Users</a>
-            <br>
-
-            <!-- Display the User Add Message -->
-            <c:if test="${not empty userAddMessage}">
-                <h3>${userAddMessage}</h3>
+            <!-- Display the Donation Add Message -->
+            <c:if test="${not empty donationAddMessage}">
+                <h3>${donationAddMessage}</h3>
             </c:if>
 
             <br>
 
-            <form action="createUser" method="post">
+            <!-- this action needs to forward to report issue controller -->
+            <form action="createDonation" method="post">
 
-                <label for="userName">Username: </label>
-                <input type="text" id="userName"
-                       name="userName" required>
+                <label for="donorName">Your Name: </label>
+                <input type="text" id="donorName"
+                       name="donorName" required>
                 <br>
 
-                <label for="password">Password: </label>
-                <input type="text" id="password"
-                       name="password" required>
+
+
+                <label for="donationWeight">Describe the issue: </label>
+                <input type="text" id="donationWeight"
+                       name="donationWeight" required>
                 <br>
 
-                <label for="firstName">First Name: </label>
-                <input type="text" id="firstName"
-                       name="firstName" required>
-                <br>
-
-                <label for="lastName">Last Name: </label>
-                <input type="text" id="lastName"
-                       name="lastName" required>
-                <br>
-
-                <input type="submit" value="Add User">
+                <input type="submit" value="Report">
 
             </form>
 
-
-
             <!-- Remove the message after displaying it, if it is present. -->
-            <c:remove var="userAddMessage"/>
+            <c:remove var="donationAddMessage"/>
 
         </article>
     </div>

@@ -78,6 +78,7 @@ public class CreateDonation extends HttpServlet {
         // Get Today's date.
         Date donationDate = new Date();
 
+
         // Create the new donation object.
         Donation newDonation = new Donation(donationID, donor_name,donation_type,donation_weight,donationDate);
 

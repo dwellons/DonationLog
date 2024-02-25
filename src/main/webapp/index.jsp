@@ -38,10 +38,6 @@
                 <input type ="submit" name="submit" value="Show All Donations">
             </form>
 
-            <form action="readUsers" method="get" id="loadAllForm">
-                <input type ="submit" name="submit" value="Show All Users">
-            </form>
-
         </article>
     </div>
 </div>

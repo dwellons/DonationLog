@@ -42,8 +42,8 @@
 
 ### Week 6
 #### This week my focus is on the Add Donation
-- [ ] Display donations on home page
-- [ ] Prepare for week 2 checkpoint
+- [X] Display donations on home page
+- [X] Prepare for week 2 checkpoint
 - [ ] START TRYING API's
 - [ ] Sign in and sign out?
 - [ ] Contact page

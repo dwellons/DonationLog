@@ -164,6 +164,11 @@ Everything else this week seemed to go smoothly. I was able to re-create the fun
 
 ### Week 6 - Spring 2024
 
+Resources Used:
+
+Format date without time:
+https://stackoverflow.com/questions/22824190/how-to-use-format-date-as-yyyy-mm-dd-with-jstl
+
 **2/20/24 7:30pm - 12:00am**
 
 * Initial deployment to AWS
@@ -172,3 +177,11 @@ Everything else this week seemed to go smoothly. I was able to re-create the fun
 **2/22/24 7:30pm - 11:45pm** 
 * Peer Code Review 1 Meeting
 * Peer Code Review Checklist completed
+
+**2/25/24 12:00pm - 1:00pm**
+* Remove empty time from date being displayed
+* Created Report an Issue JSP page
+* Moved search for a user link to only be visible from add new user page
+* Moved show all users to only be visible from search for users page
+* Prepare for and turn in Checkpoint 2
+

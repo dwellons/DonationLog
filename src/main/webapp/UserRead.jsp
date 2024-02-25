@@ -63,8 +63,8 @@
             </form>
 
             <br>
-            <br>
 
+            <!-- Shows all users - -->
             <form action="readUsers" method="get">
 
                 <input type ="submit" name="submit" value="Show All Users">

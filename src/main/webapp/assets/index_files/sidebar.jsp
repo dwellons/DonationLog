@@ -1,7 +1,7 @@
 <div id="sidebar">
 
     <!-- Home Button  -->
-    <h1 id="logo"><a href="/DonationLog_war">homepage</a></h1>
+    <h1 id="logo"><a href="/index.jsp">homepage AWS</a></h1>
 
     <!-- Search -->
     <section>
@@ -23,24 +23,33 @@
         <ul>
 
             <!-- removing /donationlog_war makes links work on AWS -->
+            <h2>AWS Links</h2>
+            <a href = "/DonationCreate.jsp">Add a new Donation</a>
+            <br>
+            <a href = "/DonationRead.jsp">Search for a Donation</a>
+            <br>
+            <a href = "/UserCreate.jsp">Add a new User</a>
+            <br>
+            <a href = "/ReportIssue.jsp">Report an Issue</a>
+            <br>
+
+            <h2>Local Links (remove when ready)</h2>
+            <!-- removing /donationlog_war makes links work on AWS -->
             <a href = "/DonationLog_war/DonationCreate.jsp">Add a new Donation</a>
             <br>
             <a href = "/DonationLog_war/DonationRead.jsp">Search for a Donation</a>
             <br>
             <a href = "/DonationLog_war/UserCreate.jsp">Add a new User</a>
             <br>
-            <a href = "/DonationLog_war/UserRead.jsp">Search for a User</a>
+            <a href = "/DonationLog_war/ReportIssue.jsp">Report an Issue</a>
             <br>
 
             <a href = "#">Sign In</a>
             <br>
             <a href = "#">Sign Out</a>
             <br>
-            <a href = "#">Sign Up</a>
-            <br>
             <a href = "#">Contact</a>
-            <br>
-            <a href = "#">Report an Issue</a>
+
 
         </ul>
     </section>
