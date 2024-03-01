@@ -10,6 +10,41 @@
 <!-- Head -->
 <c:import url="/assets/index_files/head.jsp"/>
 
+<!-- LOGIN -->
+<c:choose>
+<c:when test="${empty userName}">
+
+<!-- Content -->
+<div id="content">
+    <div class="inner">
+
+        <!-- Post -->
+        <article class="box post post-excerpt">
+
+            <!-- Header -->
+                <c:import url="assets/index_files/header.jsp"/>
+
+<!-- Tab on Side -->
+<div class="info">
+    Login
+</div>
+
+<!-- Login Display -->
+<form action="logIn" method="get" id="logInForm">
+    <input type ="submit" name="submit" value="Login">
+</form>
+
+
+        </article>
+    </div>
+</div>
+</c:when>
+
+<c:otherwise>
+
+<!-- Sidebar -->
+<c:import url="/assets/index_files/sidebar.jsp"/>
+
 <!-- Content -->
 <div id="content">
     <div class="inner">
@@ -25,15 +60,26 @@
                 Homepage
             </div>
 
+            <h3>Welcome ${userName}</h3>
+
+            <!-- Display the Donation Update Message -->
+            <c:if test="${not empty donationUpdateMessage}">
+                <p>${donationUpdateMessage}</p>
+            </c:if>
+
             <!-- Main Page Display -->
-            <form action="logIn" method="get" id="logInForm">
-                <input type ="submit" name="submit" value="Login">
+            <form action="readDonations" method="get" id="loadAllForm">
+                <input type ="submit" name="submit" value="Show All Donations">
             </form>
+
+
 
         </article>
     </div>
 </div>
 
+</c:otherwise>
+</c:choose>
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
