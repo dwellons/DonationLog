@@ -10,6 +10,9 @@
 <!-- Head -->
 <c:import url="/assets/index_files/head.jsp"/>
 
+<!-- Sidebar -->
+<c:import url="/assets/index_files/sidebar.jsp"/>
+
 <!-- Content -->
 <div id="content">
     <div class="inner">
@@ -25,9 +28,14 @@
                 Homepage
             </div>
 
+            <!-- Display the Donation Update Message -->
+            <c:if test="${not empty donationUpdateMessage}">
+                <p>${donationUpdateMessage}</p>
+            </c:if>
+
             <!-- Main Page Display -->
-            <form action="logIn" method="get" id="logInForm">
-                <input type ="submit" name="submit" value="Login">
+            <form action="readDonations" method="get" id="loadAllForm">
+                <input type ="submit" name="submit" value="Show All Donations">
             </form>
 
         </article>

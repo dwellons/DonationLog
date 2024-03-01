@@ -61,4 +61,6 @@ fabric.properties
 .src/main/resources/*.cfg.xml
 .src/test/resources/hibernate.cfg.xml
 .src/test/resources/cleandb.sql
-
+cognito.properties
+jwks.json
+https-instance.config

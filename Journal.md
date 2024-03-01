@@ -185,3 +185,11 @@ https://stackoverflow.com/questions/22824190/how-to-use-format-date-as-yyyy-mm-d
 * Moved show all users to only be visible from search for users page
 * Prepare for and turn in Checkpoint 2
 
+### Week 7 - Spring 2024
+
+**2/29/2024 6:00pm - 12:00pm**
+* Weekly classwork
+* Start working on AWS Cognito implementation
+
+**2/30/2024 10:00am -**
+* AWS Cognito implementation

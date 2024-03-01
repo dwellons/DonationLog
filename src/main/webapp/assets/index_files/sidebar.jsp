@@ -1,7 +1,7 @@
 <div id="sidebar">
 
     <!-- Home Button  -->
-    <h1 id="logo"><a href="/index.jsp">homepage AWS</a></h1>
+    <h1 id="logo"><a href="/homepage.jsp">homepage AWS</a></h1>
 
     <!-- Search -->
     <section>
@@ -44,7 +44,7 @@
             <a href = "/DonationLog_war/ReportIssue.jsp">Report an Issue</a>
             <br>
 
-            <a href = "#">Sign In</a>
+            <a href = "logIn">Sign In</a>
             <br>
             <a href = "#">Sign Out</a>
             <br>
