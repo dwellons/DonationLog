@@ -7,7 +7,7 @@ function buildCalendar(month, year) {
     let calendar = '<table class="calendar">';
     calendar += '<caption>' + new Date(year, month - 1).toLocaleString('default', { month: 'long', year: 'numeric' }) + '</caption>';
     calendar += '<thead><tr>';
-    const daysOfWeek = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+    const daysOfWeek = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
     daysOfWeek.forEach(day => {
     calendar += '<th scope="col" title="' + day + '">' + day + '</th>';
 });
