@@ -1,4 +1,4 @@
-package donationLog.entity;
+package weatherAPI.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

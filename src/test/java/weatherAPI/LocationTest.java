@@ -1,6 +1,7 @@
-package donationLog.persistence;
+package weatherAPI;
 
-import donationLog.entity.Location;
+import weatherAPI.persistence.LocationDAO;
+import weatherAPI.entity.Location;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
