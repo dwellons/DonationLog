@@ -1,7 +1,12 @@
 <div id="sidebar">
 
     <!-- Home Button  -->
-    <h1 id="logo"><a href="/homepage.jsp">homepage AWS</a></h1>
+    <h1 id="logo"><a href="/DonationLog_war/homepage.jsp?submit=Login">homepage</a></h1>
+
+    <!-- Weather information -->
+    <section class="weather" id="weather">
+        <!-- id weather will get weather information -->
+    </section>
 
     <!-- Search -->
     <section>
@@ -24,11 +29,11 @@
 
             <!-- removing /donationlog_war makes links work on AWS -->
             <h2>AWS Links</h2>
-            <a href = "/DonationCreate.jsp">Add a new Donation</a>
+            <a href = "/donationJSPs/DonationCreate.jsp">Add a new Donation</a>
             <br>
-            <a href = "/DonationRead.jsp">Search for a Donation</a>
+            <a href = "/donationJSPs/DonationRead.jsp">Search for a Donation</a>
             <br>
-            <a href = "/UserCreate.jsp">Add a new User</a>
+            <a href = "/userJSPs/UserCreate.jsp">Add a new User</a>
             <br>
             <a href = "/ReportIssue.jsp">Report an Issue</a>
             <br>
@@ -59,3 +64,11 @@
         <li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
     </ul>
 </div>
+
+<!-- Scripts -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/browser.min.js"></script>
+<script src="../js/breakpoints.min.js"></script>
+<script src="../js/util.js"></script>
+<script src="../js/main.js"></script>
+<script src="../features/calendar.js"></script>
