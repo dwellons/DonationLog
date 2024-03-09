@@ -108,8 +108,7 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-<script src="../assets/calendar/calendar.js"></script>
-
+<script src="assets/features/calendar.js"></script>
 
 </body>
 </html>

@@ -3,10 +3,7 @@
     <!-- Home Button  -->
     <h1 id="logo"><a href="/DonationLog_war/homepage.jsp?submit=Login">homepage</a></h1>
 
-    <!-- Weather information -->
-    <section class="weather" id="weather">
-        <!-- id weather will get weather information -->
-    </section>
+
 
     <!-- Search -->
     <section>
@@ -54,7 +51,9 @@
             <a href = "#">Sign Out</a>
             <br>
             <a href = "#">Contact</a>
-
+            <br>
+            <a href = "displayWeather">See the Current Weather</a>
+            <br>
 
         </ul>
     </section>

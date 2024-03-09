@@ -3,8 +3,6 @@ package weatherAPI.controller;
 import weatherAPI.entity.Weather;
 import weatherAPI.persistence.WeatherDAO;
 
-
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,9 +14,8 @@ import java.io.IOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
 /**
- * A Servlet to Search Donations
+ * A Servlet to Display Weather
  * @author Darin Wellons
  */
 @WebServlet(
@@ -33,9 +30,6 @@ public class displayWeather extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        logger.debug("TEST In Search Donations Before DAO call" + request.getAttribute("submit"));
-
-        // this will only pass while the current condition matches
 
         // new weather dao object
         WeatherDAO dao = new WeatherDAO();
@@ -43,20 +37,29 @@ public class displayWeather extends HttpServlet {
         // new weather object with weather info loaded from dao
         Weather weather = dao.getWeatherInfo();
 
-        // get the name of the station
+        // get the temperature
         String temperature = weather.getWeatherObservation().getTemperature();
 
-        // does the place name equal edgerton? (input edgerton zip code)
+        // get the location
+        String location = weather.getWeatherObservation().getStationName();
 
-        /*
-         * The servlet will forward the request and response
-         * to the Results JSP page.
-         */
+        String condition = weather.getWeatherObservation().getWeatherCondition();
 
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/DonationSearchResults.jsp");
-        dispatcher.forward(request,response);
+
+        // Convert Temp from Celsius to Fahrenheit
+        double tempFar = 0.00;
+        tempFar = Double.parseDouble(temperature) * ((double) 9/5) + 32;
+
+
+
+        // set the weather values in the request attribute
+        request.setAttribute("temperature", tempFar);
+        request.setAttribute("location", location);
+        request.setAttribute("condition", condition);
+
+        // forward the request and response to the JSP page
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/DisplayWeather.jsp");
+        dispatcher.forward(request, response);
     }
 }
-
-
