@@ -1,19 +1,19 @@
 package donationLog.persistence;
 
-import donationLog.entity.Weather;
+import donationLog.entity.Location;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class WeatherTest {
+class LocationTest {
 
 
     @Test
     void getCountryCodeSuccess() {
         // new weather dao object
-        WeatherDAO dao = new WeatherDAO();
+        LocationDAO dao = new LocationDAO();
 
-        Weather countryCode = dao.getLocationInfo();
+        Location countryCode = dao.getLocationInfo();
 
         String placeName = countryCode.getPostalCodes().get(0).getCountryCode();
 
@@ -22,9 +22,9 @@ class WeatherTest {
 
     @Test
     void getPostalCodeSuccess() {
-        WeatherDAO dao = new WeatherDAO();
+        LocationDAO dao = new LocationDAO();
 
-        Weather PostalCode = dao.getLocationInfo();
+        Location PostalCode = dao.getLocationInfo();
 
         String placeName = PostalCode.getPostalCodes().get(0).getPostalCode();
 
@@ -33,9 +33,9 @@ class WeatherTest {
 
     @Test
     void getStateName() {
-        WeatherDAO dao = new WeatherDAO();
+        LocationDAO dao = new LocationDAO();
 
-        Weather AdminName1 = dao.getLocationInfo();
+        Location AdminName1 = dao.getLocationInfo();
 
         String placeName = AdminName1.getPostalCodes().get(0).getAdminName1();
 
@@ -46,10 +46,10 @@ class WeatherTest {
     void getLocationNameSuccess() {
 
         // new weather dao object
-        WeatherDAO dao = new WeatherDAO();
+        LocationDAO dao = new LocationDAO();
 
         // new weather object with location info loaded from dao
-        Weather location = dao.getLocationInfo();
+        Location location = dao.getLocationInfo();
 
         // get the name of the location (placeName) out of location object
         // is only one item in the list (0)
@@ -61,9 +61,9 @@ class WeatherTest {
 
     @Test
     void getLatSuccess() {
-        WeatherDAO dao = new WeatherDAO();
+        LocationDAO dao = new LocationDAO();
 
-        Weather location = dao.getLocationInfo();
+        Location location = dao.getLocationInfo();
 
         String placeLat = location.getPostalCodes().get(0).getLat();
 
@@ -73,9 +73,9 @@ class WeatherTest {
 
     @Test
     void getLngSuccess() {
-        WeatherDAO dao = new WeatherDAO();
+        LocationDAO dao = new LocationDAO();
 
-        Weather location = dao.getLocationInfo();
+        Location location = dao.getLocationInfo();
 
         String placeLng= location.getPostalCodes().get(0).getLng();
 

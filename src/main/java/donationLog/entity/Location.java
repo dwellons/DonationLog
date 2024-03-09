@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * This class represents the weather for a location.
  */
-public class Weather{
+public class Location {
 
 
 	@JsonProperty("postalCodes")

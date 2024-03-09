@@ -2,7 +2,7 @@ package donationLog.persistence;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import donationLog.entity.Weather;
+import donationLog.entity.Location;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
 /**
  * This class searches for weather information based on the stored zip code.
  */
-public class WeatherDAO {
+public class LocationDAO {
     /**
      * Variable for username.
      * @type {string} username
@@ -35,7 +35,7 @@ public class WeatherDAO {
      * gets the weather information for the stored zip code.
      * @return
      */
-    Weather getLocationInfo() {
+    Location getLocationInfo() {
         Client client = ClientBuilder.newClient();
 
         WebTarget target =
@@ -44,10 +44,10 @@ public class WeatherDAO {
         String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
         ObjectMapper mapper = new ObjectMapper();
 
-        Weather location = null;
+        Location location = null;
 
         try {
-            location = mapper.readValue(response, Weather.class);
+            location = mapper.readValue(response, Location.class);
 
         } catch (JsonProcessingException e) {
             //TODO setup logging
