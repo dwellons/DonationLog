@@ -17,7 +17,7 @@ public class PostalCodesItem{
 	private String adminName2;
 
 	@JsonProperty("lng")
-	private Object lng;
+	private String lng;
 
 	@JsonProperty("countryCode")
 	private String countryCode;
@@ -35,7 +35,7 @@ public class PostalCodesItem{
 	private String placeName;
 
 	@JsonProperty("lat")
-	private Object lat;
+	private String lat;
 
 	public void setAdminCode2(String adminCode2){
 		this.adminCode2 = adminCode2;
@@ -61,11 +61,11 @@ public class PostalCodesItem{
 		return adminName2;
 	}
 
-	public void setLng(Object lng){
+	public void setLng(String lng){
 		this.lng = lng;
 	}
 
-	public Object getLng(){
+	public String getLng(){
 		return lng;
 	}
 
@@ -109,11 +109,11 @@ public class PostalCodesItem{
 		return placeName;
 	}
 
-	public void setLat(Object lat){
+	public void setLat(String lat){
 		this.lat = lat;
 	}
 
-	public Object getLat(){
+	public String getLat(){
 		return lat;
 	}
 

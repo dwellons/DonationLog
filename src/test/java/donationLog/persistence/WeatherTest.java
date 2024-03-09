@@ -10,14 +10,36 @@ class WeatherTest {
 
     @Test
     void getCountryCodeSuccess() {
+        // new weather dao object
+        WeatherDAO dao = new WeatherDAO();
+
+        Weather countryCode = dao.getLocationInfo();
+
+        String placeName = countryCode.getPostalCodes().get(0).getCountryCode();
+
+        assertEquals("US", placeName);
     }
 
     @Test
     void getPostalCodeSuccess() {
+        WeatherDAO dao = new WeatherDAO();
+
+        Weather PostalCode = dao.getLocationInfo();
+
+        String placeName = PostalCode.getPostalCodes().get(0).getPostalCode();
+
+        assertEquals("53534", placeName);
     }
 
     @Test
-    void getAdminName1Success() {
+    void getStateName() {
+        WeatherDAO dao = new WeatherDAO();
+
+        Weather AdminName1 = dao.getLocationInfo();
+
+        String placeName = AdminName1.getPostalCodes().get(0).getAdminName1();
+
+        assertEquals("Wisconsin", placeName);
     }
 
     @Test
@@ -39,14 +61,25 @@ class WeatherTest {
 
     @Test
     void getLatSuccess() {
+        WeatherDAO dao = new WeatherDAO();
+
+        Weather location = dao.getLocationInfo();
+
+        String placeLat = location.getPostalCodes().get(0).getLat();
+
+        assertEquals("42.838605", placeLat);
+
     }
 
     @Test
     void getLngSuccess() {
+        WeatherDAO dao = new WeatherDAO();
 
-    }
+        Weather location = dao.getLocationInfo();
 
-    @Test
-    void testToStringSuccess() {
+        String placeLng= location.getPostalCodes().get(0).getLng();
+
+        assertEquals("-89.064157", placeLng);
+
     }
 }
