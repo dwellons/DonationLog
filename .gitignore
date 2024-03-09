@@ -64,3 +64,7 @@ fabric.properties
 cognito.properties
 jwks.json
 https-instance.config
+
+# Weather information
+weather.properties
+

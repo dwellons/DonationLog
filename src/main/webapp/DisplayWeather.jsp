@@ -29,9 +29,7 @@
                 Weather
             </div>
 
-
-
-            <!-- Search Results Table -->
+            <!-- Current Conditions Table -->
             <h2>Current Weather Conditions</h2>
 
             <c:if test="${not empty temperature}">
@@ -42,17 +40,13 @@
                         <th>Reporting Location</th>
                         <th>Temperature</th>
                         <th>Condition</th>
-
                     </tr>
                     </thead>
-
                         <tr>
                             <td>${location}</td>
                             <td>${temperature} degrees</td>
                             <td>${condition}</td>
-
                         </tr>
-
                 </table>
             </c:if>
 
@@ -73,7 +67,6 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/features/calendar.js"></script>
-
 
 </body>
 </html>

@@ -21,7 +21,7 @@ class WeatherTest {
         String observation = weather.getWeatherObservation().getObservation();
 
         // does the place name equal edgerton? (input edgerton zip code)
-        assertEquals("KJVL 090315Z AUTO 34012G17KT 10SM RA BKN010 OVC013 03/03 A2988 RMK AO2", observation);
+        assertEquals("KJVL 090555Z AUTO 35007G15KT 10SM -RA BKN011 BKN024 OVC090 03/03 A2985 RMK AO2", observation);
     }
 
     // this will only pass while the current condition matches
@@ -84,7 +84,7 @@ class WeatherTest {
         String condition = weather.getWeatherObservation().getWeatherCondition();
 
         // does the place name equal edgerton? (input edgerton zip code)
-        assertEquals("rain", condition);
+        assertEquals("light rain", condition);
     }
 
     // this will only pass while the current condition matches
@@ -100,7 +100,7 @@ class WeatherTest {
         int windDirection = weather.getWeatherObservation().getWindDirection();
 
         // does the place name equal edgerton? (input edgerton zip code)
-        assertEquals(340, windDirection);
+        assertEquals(350, windDirection);
     }
 
     // this will only pass while the current condition matches
@@ -116,6 +116,6 @@ class WeatherTest {
         String windSpeed = weather.getWeatherObservation().getWindSpeed();
 
         // does the place name equal edgerton? (input edgerton zip code)
-        assertEquals("12", windSpeed);
+        assertEquals("07", windSpeed);
     }
 }

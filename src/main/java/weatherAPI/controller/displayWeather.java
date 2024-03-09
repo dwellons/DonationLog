@@ -2,7 +2,6 @@ package weatherAPI.controller;
 
 import weatherAPI.entity.Weather;
 import weatherAPI.persistence.WeatherDAO;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,12 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * A Servlet to Display Weather
+ * A Servlet to Display Current Weather Conditions
  * @author Darin Wellons
  */
 @WebServlet(
@@ -29,7 +27,6 @@ public class displayWeather extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 
         // new weather dao object
         WeatherDAO dao = new WeatherDAO();
@@ -45,13 +42,9 @@ public class displayWeather extends HttpServlet {
 
         String condition = weather.getWeatherObservation().getWeatherCondition();
 
-
-
         // Convert Temp from Celsius to Fahrenheit
         double tempFar = 0.00;
         tempFar = Double.parseDouble(temperature) * ((double) 9/5) + 32;
-
-
 
         // set the weather values in the request attribute
         request.setAttribute("temperature", tempFar);
