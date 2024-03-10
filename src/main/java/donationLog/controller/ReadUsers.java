@@ -1,7 +1,7 @@
 package donationLog.controller;
 
 
-import donationLog.persistence.UsersDAO;
+import donationLog.persistence.DAO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -33,16 +33,16 @@ public class ReadUsers extends HttpServlet {
         logger.debug("TEST In Search Users Before DAO call" + request.getAttribute("submit"));
 
         // Instantiate a new DonationDAO.
-        UsersDAO usersDAO = new UsersDAO();
+        DAO usersDAO = new DAO();
 
         // If submit attribute = Submit, search.
         if (request.getParameter("submit").equals("Submit")) {
 
             // Get my Users, call usersDAO method, pass in the donation.
-            request.setAttribute("users", usersDAO.getByPropertyEqual(request.getParameter("searchType"), request.getParameter("searchTerm")));
+            request.setAttribute("users", usersDAO.getUserByPropertyEqual(request.getParameter("searchType"), request.getParameter("searchTerm")));
         } else {
             // Get all entries.
-            request.setAttribute("users", usersDAO.getAll());
+            request.setAttribute("users", usersDAO.getAllUsers());
         }
 
         /*

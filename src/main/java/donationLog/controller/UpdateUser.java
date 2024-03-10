@@ -1,7 +1,7 @@
 package donationLog.controller;
 
 import donationLog.entity.Users;
-import donationLog.persistence.UsersDAO;
+import donationLog.persistence.DAO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import javax.servlet.ServletException;
@@ -17,7 +17,7 @@ import javax.servlet.RequestDispatcher;
         urlPatterns = { "/updateUser" }
 )
 public class UpdateUser extends HttpServlet {
-    UsersDAO usersDAO;
+    DAO usersDAO;
 
 
     // Instantiate Logger.
@@ -67,10 +67,10 @@ public class UpdateUser extends HttpServlet {
         }
 
         // Instantiate DonationDAO.
-        usersDAO = new UsersDAO();
+        usersDAO = new DAO();
 
         // Retrieve the existing Donation from the database.
-        Users userToUpdate = usersDAO.getById(userID);
+        Users userToUpdate = usersDAO.getUserById(userID);
 
         // Update the existing Donation with the new data.
         userToUpdate.setUserName(userName);
@@ -79,7 +79,7 @@ public class UpdateUser extends HttpServlet {
         userToUpdate.setLastName(lastName);
 
         // Call update in donationDAO.
-        usersDAO.update(userToUpdate);
+        usersDAO.updateUser(userToUpdate);
 
         // Set the updated donation as an attribute in the request.
         request.setAttribute("userToUpdate", userToUpdate);

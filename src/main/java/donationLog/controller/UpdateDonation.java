@@ -1,7 +1,7 @@
 package donationLog.controller;
 
 import donationLog.entity.Donation;
-import donationLog.persistence.DonationDAO;
+import donationLog.persistence.DAO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,7 +18,7 @@ import javax.servlet.RequestDispatcher;
         urlPatterns = { "/updateDonation" }
 )
 public class UpdateDonation extends HttpServlet {
-    DonationDAO donationDAO;
+    DAO donationDAO;
 
     // Instantiate Logger.
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -31,7 +31,7 @@ public class UpdateDonation extends HttpServlet {
     /**
      * The doPost() method will perform the following:
      * Extract the data for updating the Donation from the HTML form.
-     * Call the update donation method in the DonationDAO
+     * Call the update donation method in the DAO
      * instance and pass in the form data as arguments.
      * Add the returned message to the session.
      * Send a redirect to the browser to the Update Donation page.
@@ -67,11 +67,11 @@ public class UpdateDonation extends HttpServlet {
             return;
         }
 
-        // Instantiate DonationDAO.
-        donationDAO = new DonationDAO();
+        // Instantiate DAO.
+        donationDAO = new DAO();
 
         // Retrieve the existing Donation from the database.
-        Donation donationToUpdate = donationDAO.getById(donationID);
+        Donation donationToUpdate = donationDAO.getDonationById(donationID);
 
         // Update the existing Donation with the new data.
         donationToUpdate.setDonorName(donorName);
@@ -79,7 +79,7 @@ public class UpdateDonation extends HttpServlet {
         donationToUpdate.setDonationWeight(donationWeight);
 
         // Call update in donationDAO.
-        donationDAO.update(donationToUpdate);
+        donationDAO.updateDonation(donationToUpdate);
 
         // Set the updated donation as an attribute in the request.
         request.setAttribute("donationToUpdate", donationToUpdate);

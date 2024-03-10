@@ -1,7 +1,7 @@
 package donationLog.controller;
 
 import donationLog.entity.Users;
-import donationLog.persistence.UsersDAO;
+import donationLog.persistence.DAO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import javax.servlet.ServletException;
@@ -28,14 +28,14 @@ public class DeleteUser extends HttpServlet {
 
         logger.debug("TEST In Delete User Before DAO call: {}",  request.getAttribute("ID"));
 
-        // Instantiate UsersDAO.
-        UsersDAO usersDAO = new UsersDAO();
+        // Instantiate DAO.
+        DAO usersDAO = new DAO();
 
         // Retrieve the user to delete.
-        Users donationToDelete = usersDAO.getById(userID);
+        Users donationToDelete = usersDAO.getUserById(userID);
 
         // Delete the user from the database.
-        usersDAO.delete(donationToDelete);
+        usersDAO.deleteUser(donationToDelete);
 
         // Set a session attribute for the userDeleteMessage.
         request.getSession().setAttribute("userDeleteMessage",

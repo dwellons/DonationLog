@@ -1,7 +1,7 @@
 package donationLog.controller;
 
 import donationLog.entity.Users;
-import donationLog.persistence.UsersDAO;
+import donationLog.persistence.DAO;
 import java.io.*;
 import java.sql.SQLException;
 import javax.servlet.*;
@@ -22,7 +22,7 @@ import org.apache.logging.log4j.Logger;
 )
 
 public class CreateUser extends HttpServlet {
-    UsersDAO usersDAO;
+    DAO usersDAO;
 
     // Instantiate Logger
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -75,16 +75,16 @@ public class CreateUser extends HttpServlet {
         }
 
         // Instantiate usersDAO.
-        usersDAO = new UsersDAO();
+        usersDAO = new DAO();
 
 
         // Create the new user object.
         Users newUser = new Users(id, user_name, password, first_name, last_name);
 
 
-        // Call Insert in UsersDAO.
+        // Call Insert in DAO.
 
-        usersDAO.insert(newUser);
+        usersDAO.insertUser(newUser);
 
         // Redirect to Results page.
 

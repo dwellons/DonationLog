@@ -1,6 +1,6 @@
 package donationLog.controller;
 
-import donationLog.persistence.UsersDAO;
+import donationLog.persistence.DAO;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -29,18 +29,18 @@ public class ReadDeleteUser extends HttpServlet {
 
         logger.debug("TEST In Read Delete Donations Before DAO call" + request.getAttribute("submit"));
 
-        // Instantiate a new UsersDAO.
-        UsersDAO usersDAO = new UsersDAO();
+        // Instantiate a new DAO.
+        DAO usersDAO = new DAO();
 
         // If submit attribute = Submit, search.
         if (request.getParameter("submit").equals("Remove")) {
 
             // Get my donations (donations), call donationDAO method, pass in the donation.
-            request.setAttribute("users", usersDAO.getById(Integer.parseInt(request.getParameter("ID"))));
+            request.setAttribute("users", usersDAO.getUserById(Integer.parseInt(request.getParameter("ID"))));
         } else {
 
             // Get all entries.
-            request.setAttribute("users", usersDAO.getAll());
+            request.setAttribute("users", usersDAO.getAllUsers());
         }
 
         /*

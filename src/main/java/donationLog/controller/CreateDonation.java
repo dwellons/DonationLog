@@ -1,7 +1,7 @@
 package donationLog.controller;
 
 import donationLog.entity.Donation;
-import donationLog.persistence.DonationDAO;
+import donationLog.persistence.DAO;
 import java.io.*;
 import java.sql.SQLException;
 import java.util.*;
@@ -23,7 +23,7 @@ import org.apache.logging.log4j.Logger;
 )
 
 public class CreateDonation extends HttpServlet {
-    DonationDAO donationDAO;
+    DAO donationDAO;
 
     // Instantiate Logger
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -73,7 +73,7 @@ public class CreateDonation extends HttpServlet {
         }
 
         // Instantiate donationDAO.
-        donationDAO = new DonationDAO();
+        donationDAO = new DAO();
 
         // Get Today's date.
         Date donationDate = new Date();
@@ -83,9 +83,9 @@ public class CreateDonation extends HttpServlet {
         Donation newDonation = new Donation(donationID, donor_name,donation_type,donation_weight,donationDate);
 
 
-        // Call Insert in DonationDAO.
+        // Call Insert in DAO.
 
-        donationDAO.insert(newDonation);
+        donationDAO.insertDonation(newDonation);
 
 
         // Redirect to Results page.
