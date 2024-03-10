@@ -17,17 +17,18 @@ public class UsersDaoTest {
         database.runSQL("cleandb.sql");
     }
 
-    UsersDAO usersDAO;
+    // Instantiate new DAO
+    DAO usersDAO;
 
     // for log messages
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     @Test
     public void testGetByIdSuccess() {
-        usersDAO = new UsersDAO();
+        usersDAO = new DAO();
 
         // Assuming getById method exists in DonationDAO
-        Users retrievedUser = usersDAO.getById(1);
+        Users retrievedUser = usersDAO.getUserById(1);
         String expctedUserName = "dwellons";
         assertNotNull(retrievedUser);
 
@@ -40,17 +41,17 @@ public class UsersDaoTest {
     @Test
     public void updateSuccess() {
         // get a record out of the database
-        usersDAO = new UsersDAO();
-        Users userToUpdate = usersDAO.getById(1);
+        usersDAO = new DAO();
+        Users userToUpdate = usersDAO.getUserById(1);
         String expectedFirstName = "Nirad";
         // change the name on that user
         userToUpdate.setFirstName("Nirad");
 
         // do the update
-        usersDAO.update(userToUpdate);
+        usersDAO.updateUser(userToUpdate);
 
         // retrieve the user and check that the name change worked
-        Users actualDonation = usersDAO.getById(1);
+        Users actualDonation = usersDAO.getUserById(1);
 
         // Using equals();
         // do comparison
@@ -61,16 +62,16 @@ public class UsersDaoTest {
 
     @Test
     public void testInsertSuccess() {
-        usersDAO = new UsersDAO();
+        usersDAO = new DAO();
 
         Users newUser = new Users(0, "test", "test", "test", "test");
 
-        int insertedUserId = usersDAO.insert(newUser);
+        int insertedUserId = usersDAO.insertUser(newUser);
         String expectedUser = "test";
         assertNotEquals(0, insertedUserId);
 
 
-        Users insertedUser = usersDAO.getById(insertedUserId);
+        Users insertedUser = usersDAO.getUserById(insertedUserId);
 
         // Using equals();
         assertTrue(expectedUser.equals(insertedUser.getFirstName()));
@@ -79,28 +80,28 @@ public class UsersDaoTest {
     @Test
     public void testDelete() {
         //create new user
-        usersDAO = new UsersDAO();
+        usersDAO = new DAO();
         // get the user with id of nine, delete it
-        usersDAO.delete(usersDAO.getById(6));
+        usersDAO.deleteUser(usersDAO.getUserById(6));
         // if delete is working, shouldn't get a user back
-        assertNull(usersDAO.getById(6));
+        assertNull(usersDAO.getUserById(6));
 
         // Deletes previous test user that was inserted
 
     }
     @Test
     public void getAll() {
-        usersDAO = new UsersDAO();
+        usersDAO = new DAO();
         int numberOfUsers = 5;
-        List<Users> users = usersDAO.getAll();
+        List<Users> users = usersDAO.getAllUsers();
         assertEquals(5, users.size());
 
     }
 
     @Test
     public void testGetByPropertyEqual() {
-        usersDAO = new UsersDAO();
-        List<Users> users = usersDAO.getByPropertyLike("userName", "dwellons");
+        usersDAO = new DAO();
+        List<Users> users = usersDAO.getUserByPropertyLike("userName", "dwellons");
         assertEquals(2, users.size());
         assertEquals(1, users.get(0).getID());
 
@@ -108,8 +109,8 @@ public class UsersDaoTest {
 
     @Test
     public void testGetByPropertyLike() {
-        usersDAO = new UsersDAO();
-        List<Users> users = usersDAO.getByPropertyLike("firstName", "Nirad");
+        usersDAO = new DAO();
+        List<Users> users = usersDAO.getUserByPropertyLike("firstName", "Nirad");
         assertEquals(2, users.size());
     }
 }
