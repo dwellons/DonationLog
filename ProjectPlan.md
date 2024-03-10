@@ -44,31 +44,38 @@
 #### This week my focus is on the Add Donation
 - [X] Display donations on home page
 - [X] Prepare for week 2 checkpoint
-- [ ] START TRYING API's
-- [ ] Sign in and sign out?
-- [ ] Contact page
-- [ ] Report an issue
+- [ ] Sign in and sign out? - next week
 
 ### Week 7
 #### Checkpoint 2 is Due: Database designed and created, at least one DAO with full CRUD (create, read, update, delete) implemented with Hibernate, DAO is fully unit tested, Log4J is implemented (no System.out.printlns)
 
-- [ ] Double-check all checkpoint 2 items (above) are complete and visible in github.
-- [ ] Set up Authentication in indie project (more tasks coming for this)
-- [ ] Create project DB on AWS.
-- [ ] Update project config files for AWS as needed
-- [ ] Deploy project to AWS
-- [ ] Add deployed link to indie project list in student repo
+- [X] Double-check all checkpoint 2 items (above) are complete and visible in github.
+- [X] Start setting up Authentication in indie project (more tasks coming for this)
+- [X] Create project DB on AWS.
+- [X] Update project config files for AWS as needed
+- [X] Deploy project to AWS
+- [X] Add deployed link to indie project list in student repo
 
 ## Week 8
-
-
+- [X] Peer Review Corrections
+- [X] START TRYING API - Current Weather 
+- [X] Spend time looking into AWS issues
+- [X] Created one DAO to replace DonationDAO and UsersDAO
+- [X] Cleaned up Scripts 
+- [X] Updated Technologies in ReadMe
+- [ ] Update Learning Tracker
 
 ### Week 9 (Start of the team project)
 #### Checkpoint 3 is Due: Deployed to AWS, at least one JSP that displays data from the database is implemented, authentication implemented, add AWS deployed app link to indie project list in student repo.
-- [ ] Double-check all checkpoint 3 items (above) are complete and visible in github.
+- [ ] Double-check all checkpoint 3 items (above) are complete and visible in GitHub.
 
 ### Week 10
-- [ ] Print / Send Report AT LEAST 
+- [ ] Print / Send Report AT LEAST - need to figure out what best way to send a report is
+- [ ] Contact page
+- [ ] Report an issue
+- [ ] Think about Weather more, make Zip a property that can be easily updated? How would that effect the lat / lng?
+- [ ] Could store zip as a property and then get lat and lng as part of js code calling URL
+- 
 
 ### Week 11
 
