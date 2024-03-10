@@ -19,34 +19,35 @@ organization.
 * Security/Authentication
     * AWS Cognito
 * Database
-    * MySQL 8.x
-    * MAMP
+    * MySQL 5.7.39
 * ORM Framework
-    * Hibernate Version TBD
+    * Hibernate Version 6.4.3.Final
 * Dependency Management
-    * Maven
+    * Maven 11
 * Web Services consumed using Java
     * GeoNames
 * CSS
     * HTML5 UP
 * Data Validation
-    * Bootstrap Validator for front end
-    * Explore Hibernate Validator?
+    * Bootstrap Validator
+    * Hibernate Validator
 * Logging
     * Log4J2
+    * Hibernate
 * Hosting
     * AWS
 * Tech I'd like to explore as part of this work
-    * CI tools in AWS
-    * Materialize
-    * Hibernate Validator
-    * Hibernate Search
+    * Email API's
+    * Codenameone for Mobile deployment
 * Unit Testing
-    * JUnit tests to cover all testable logic
-* Editors
+    * JUnit
+* Software Used
     * IDE: IntelliJ IDEA
     * Screen Layout Design: Figma
-
+    * MAMP Pro
+    * SoapUI
+    * MySQLWorkbench
+    * GitHub Desktop
 * Different API's for emailing Donation Reports:
     * Java Mail: https://javaee.github.io/javamail/
     * Apache Commons EMail: https://commons.apache.org/proper/commons-email/

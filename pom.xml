@@ -9,6 +9,7 @@
   <url>http://maven.apache.org</url>
 
   <properties>
+    <!-- Maven -->
     <maven.compiler.release>11</maven.compiler.release>
     <junit.version>4.13.1</junit.version>
     <javax.version>7.0</javax.version>
