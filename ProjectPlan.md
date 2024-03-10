@@ -1,6 +1,7 @@
 # Donation Log Project Plan
 
 ### Week 2
+- [X] Weekly journal entry
 - [X] Create project repository on GitHub
 - [X] Create project structure in intellij and push
 - [X] Add link to list of indie projects in student repo.
@@ -8,6 +9,7 @@
 - [X] Weekly reflection/time log
 
 ### Week 3
+- [X] Weekly journal entry
 - [X] Research possible Web Services/APIs to use
 - [X] List technologies, versions and how they will be used
 - [X] Write project plan
@@ -19,6 +21,7 @@
 
 ### Week 4 and 5 - Class topic is Hibernate
 #### This week my focus is the Find Donations by Donor Name
+- [X] Weekly journal entry
 - [X] First cut at database design
 - [X] Create the dev version of the database - at least the donations table
 - [X] Create Donation entity 
@@ -42,13 +45,14 @@
 
 ### Week 6
 #### This week my focus is on the Add Donation
+- [X] Weekly journal entry
 - [X] Display donations on home page
 - [X] Prepare for week 2 checkpoint
 - [ ] Sign in and sign out? - next week
 
 ### Week 7
 #### Checkpoint 2 is Due: Database designed and created, at least one DAO with full CRUD (create, read, update, delete) implemented with Hibernate, DAO is fully unit tested, Log4J is implemented (no System.out.printlns)
-
+- [X] Weekly journal entry
 - [X] Double-check all checkpoint 2 items (above) are complete and visible in github.
 - [X] Start setting up Authentication in indie project (more tasks coming for this)
 - [X] Create project DB on AWS.
@@ -57,6 +61,7 @@
 - [X] Add deployed link to indie project list in student repo
 
 ## Week 8
+- [X] Weekly journal entry
 - [X] Peer Review Corrections
 - [X] START TRYING API - Current Weather 
 - [X] Spend time looking into AWS issues
@@ -67,25 +72,38 @@
 
 ### Week 9 (Start of the team project)
 #### Checkpoint 3 is Due: Deployed to AWS, at least one JSP that displays data from the database is implemented, authentication implemented, add AWS deployed app link to indie project list in student repo.
+- [ ] Weekly journal entry
 - [ ] Double-check all checkpoint 3 items (above) are complete and visible in GitHub.
+- [ ] Update Testing - See week 5 recommendations
+- 
 
 ### Week 10
+- [ ] Weekly journal entry
 - [ ] Print / Send Report AT LEAST - need to figure out what best way to send a report is
 - [ ] Contact page
 - [ ] Report an issue
 - [ ] Think about Weather more, make Zip a property that can be easily updated? How would that effect the lat / lng?
 - [ ] Could store zip as a property and then get lat and lng as part of js code calling URL
-- 
+- [ ]
 
 ### Week 11
+- [ ] Weekly journal entry
+- [ ]
 
 ### Week 12
+- [ ] Weekly journal entry
+- [ ]
 
 ### Week 13
+- [ ] Weekly journal entry
+- [ ]
 
 ### Week 14
+- [ ] Weekly journal entry
+- [ ]
 
 ### Week 15
+- [ ] Weekly journal entry
 - [ ] Implement Feedback from Week 14 review
 - [ ] Final Presentation
 - [ ] Create video, add video link to readme.md

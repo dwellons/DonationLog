@@ -1,7 +1,6 @@
 # Journal
 
 ### Week 1 - Spring 2024
-
 **1/16/24 4-12pm** 
 * Initial Setup and Testing of environment.
 * Install and configure IntelliJ IDEA (Apache, Tomcat, Maven).
@@ -63,6 +62,7 @@ What challenged me:
 -   IntelliJ auto imported an SQL script for my logger, that was not the script that I was intending to use. Double check
     that the scripts you want to use are correct and haven't been changed.
 
+
 ### Week 4 - Spring 2024
 **2/5/24 6pm - 12am**
 **2/6/24 7pm - 12am**
@@ -96,7 +96,6 @@ Key learning points/takeaways:
 -   PDF images will not load in a md file.
 -   Create a test database before even starting anything.
 
-
 When working on Using the DAO, and implementing getByPropertyEqual, I kept getting null pointer exceptions. I found 
 that I wasnt putting Submit into the request, I thought that i was putting searchUser there but I wasn't. I had to put 
 the name i was putting into the request with the submit button.
@@ -123,6 +122,7 @@ were all mostly the same, so I was able to just use the ones for adding a donati
 functions. I would like the delete function to show the information for the user you selected to delete instead of
 using the from from adding a donation, but I wasn't able to see the results from the request for that either. 
 
+
 ### Week 5 - Spring 2024
 
 **2/15/24 7:30pm - 1:45am**
@@ -139,8 +139,6 @@ using the from from adding a donation, but I wasn't able to see the results from
 * Added full CRUD for creating, reading, updating and deleting Users.
 * Added a new Users table in the Donation Log Database.
 * Created tests for Users DAO.
-
-  
 
 Things I would like to explore further:
 
@@ -161,6 +159,7 @@ It was challenging figuring out the one-to-many relationship at first, because I
 I set the ID in the user table to be the foreign key in the relationship and removed the user_id column, and changed the references I was using for that. It was working and I started testing. I ran my tests and the @before setup got me again. It removed my foreign key relationship, and wouldn't let me create a new donations table. I was able to take the foreign key definitions out of the sql dump file and create it without the old ones to a not existing column, and then re-created them and made a new sql dump file. After that things were working as expected.
 
 Everything else this week seemed to go smoothly. I was able to re-create the functionality I already had made for the donations CRUD to use with the Users, and that worked pretty smoothly. I had used Project 4 in the previous semester as guide for how to structure my file directory, and had created two files that I have thought that I didnt need. I was able to confirm that and remove them to clean up my controller directory.
+
 
 ### Week 6 - Spring 2024
 
@@ -185,11 +184,51 @@ https://stackoverflow.com/questions/22824190/how-to-use-format-date-as-yyyy-mm-d
 * Moved show all users to only be visible from search for users page
 * Prepare for and turn in Checkpoint 2
 
+
 ### Week 7 - Spring 2024
 
 **2/29/2024 6:00pm - 12:00pm**
 * Weekly classwork
 * Start working on AWS Cognito implementation
 
-**2/30/2024 10:00am -**
-* AWS Cognito implementation
+**3/01/2024 10:00am - 2:30pm**
+* Start AWS Cognito implementation
+
+**3/02/2024 9:00am - 3:00pm**
+* Troubleshooting AWS charges and sign in issues
+
+**3/03/2024 4:00pm - 10:00pm**
+* Troubleshooting AWS charges and sign in issues
+
+**3/04/2024 4:00pm - 10:00pm**
+* Troubleshooting AWS charges and sign in issues
+
+Things I would like to explore further:
+Different web hosting services or ways to do it yourself.
+
+Key learning points/takeaways:
+It has to be super expensive to host a popular website on the internet using AWS.
+
+What challenged me:
+Trying to connect to AWS using HTTPS, I am still trying to figure it out.
+
+### Week 8 - Spring 2024
+**3/08/2024 6:00pm - 12:00am**
+* Weekly Classwork
+* Implemented Weather API
+
+**3/10/2024 11:00am - 5:00pm**
+* Peer Review Corrections Made
+* Updating DAO's
+* Checkpoint Suggestions
+* Updating Project Plan
+* Updating Journal
+
+Things I would like to explore further:
+Brainstorming different API's that might be cool to use in my project.
+
+Key learning points/takeaways:
+Its cool that there is so much information available on the internet to use in your projects for free.
+
+What challenged me:
+It was tricky trying to figure out how to use javascript and java together to automatically load the js when the homepage loads, I'm still exploring that. 
