@@ -58,16 +58,12 @@
         </ul>
     </section>
 
+    <!-- Scripts -->
+    <c:import url="/assets/index_files/scripts.jsp"/>
+
     <!-- Copyright -->
     <ul id="copyright">
         <li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
     </ul>
 </div>
 
-<!-- Scripts -->
-<script src="../js/jquery.min.js"></script>
-<script src="../js/browser.min.js"></script>
-<script src="../js/breakpoints.min.js"></script>
-<script src="../js/util.js"></script>
-<script src="../js/main.js"></script>
-<script src="../features/calendar.js"></script>
