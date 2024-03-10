@@ -14,9 +14,6 @@ using different search options. It will return a summary that the manager can us
 finances or other reasons, or to share with donors. It is designed for initial use and testing by the Edgerton Community Outreach, is open-source and in the future will be free to use for any non-profit
 organization. 
 
-If you want to help support the project, you can here: (future link)
-
-
 ### Project Technologies/Techniques Used.
 
 * Security/Authentication
@@ -29,9 +26,9 @@ If you want to help support the project, you can here: (future link)
 * Dependency Management
     * Maven
 * Web Services consumed using Java
-    * TBD
+    * GeoNames
 * CSS
-    * Bootstrap or Materialize
+    * HTML5 UP
 * Data Validation
     * Bootstrap Validator for front end
     * Explore Hibernate Validator?
@@ -48,7 +45,6 @@ If you want to help support the project, you can here: (future link)
     * JUnit tests to cover all testable logic
 * Editors
     * IDE: IntelliJ IDEA
-    * Editor: VSCodium
     * Screen Layout Design: Figma
 
 * Different API's for emailing Donation Reports:

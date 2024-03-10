@@ -26,7 +26,7 @@
 
             <!-- Tab on Side -->
             <div class="info">
-                Results
+                Report
             </div>
 
             <!-- Display the Donation UPDATE Message -->
@@ -45,7 +45,7 @@
             </c:if>
 
             <!-- Search Results Table -->
-            <h2>Search Results</h2>
+            <h3>Donation Report</h3>
 
             <c:if test="${not empty donations}">
 

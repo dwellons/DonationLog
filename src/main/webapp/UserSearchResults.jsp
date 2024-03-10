@@ -44,7 +44,7 @@
             </c:if>
 
             <!-- Search Results Table -->
-            <h2>Search Results</h2>
+            <h3>User Search Results</h3>
 
             <c:if test="${not empty users}">
 
