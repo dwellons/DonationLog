@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.Objects;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -40,7 +42,15 @@ public class displayWeather extends HttpServlet {
         // get the location
         String location = weather.getWeatherObservation().getStationName();
 
-        String condition = weather.getWeatherObservation().getWeatherCondition();
+        // get the current condition
+        String currentCondition = weather.getWeatherObservation().getWeatherCondition();
+        String condition = "" ;
+
+        if (Objects.equals(currentCondition, "n/a")) {
+            condition = "Clear";
+        } else {
+            condition = currentCondition;
+        }
 
         // Convert Temp from Celsius to Fahrenheit
         double tempFar = 0.00;
