@@ -13,10 +13,6 @@ import java.util.Properties;
  */
 public class WeatherDAO implements PropertiesLoader{
     private Properties properties;
-    /**
-     * Variable for username.
-     * @type {string} username
-     */
 
     /*
      * load the properties file containing the driver, connection url, userid and pwd.
