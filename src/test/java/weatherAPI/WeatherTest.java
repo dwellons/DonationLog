@@ -17,7 +17,7 @@ class WeatherTest {
 
         String observation = weather.getWeatherObservation().getObservation();
 
-        assertEquals("KJVL 090615Z AUTO 34008KT 10SM OVC011 03/03 A2985 RMK AO2", observation);
+        assertEquals("KJVL 200045Z 29007KT 10SM SCT080 08/M09 A2965", observation);
     }
 
     // this will only pass while the current condition matches
@@ -29,7 +29,7 @@ class WeatherTest {
 
         String clouds = weather.getWeatherObservation().getClouds();
 
-        assertEquals("overcast", clouds);
+        assertEquals("scattered clouds", clouds);
     }
 
     // this will only pass while the current condition matches
@@ -41,7 +41,7 @@ class WeatherTest {
 
         String temperature = weather.getWeatherObservation().getTemperature();
 
-        assertEquals("3", temperature);
+        assertEquals("8", temperature);
     }
 
     @Test
@@ -76,7 +76,7 @@ class WeatherTest {
 
         int windDirection = weather.getWeatherObservation().getWindDirection();
 
-        assertEquals(340, windDirection);
+        assertEquals(290, windDirection);
     }
 
     // this will only pass while the current condition matches
@@ -88,6 +88,6 @@ class WeatherTest {
 
         String windSpeed = weather.getWeatherObservation().getWindSpeed();
 
-        assertEquals("08", windSpeed);
+        assertEquals("07", windSpeed);
     }
 }
