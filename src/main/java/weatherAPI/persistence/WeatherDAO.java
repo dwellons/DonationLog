@@ -14,6 +14,9 @@ import java.util.Properties;
 public class WeatherDAO implements PropertiesLoader{
     private Properties properties;
 
+    public WeatherDAO(Properties properties) {
+    }
+
     /*
      * load the properties file containing the driver, connection url, userid and pwd.
      */

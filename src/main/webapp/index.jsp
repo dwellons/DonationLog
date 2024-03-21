@@ -27,7 +27,7 @@
 
             <!-- change back to logIn instead of homepage when figuring that out -->
             <!-- Main Page Display -->
-            <form action="homepage.jsp" method="get" id="logInForm">
+            <form action="LoadWeather" method="get" id="logInForm">
                 <input type ="submit" name="submit" value="Login">
             </form>
 

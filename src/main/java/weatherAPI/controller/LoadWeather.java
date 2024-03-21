@@ -11,6 +11,7 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Objects;
+import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -20,19 +21,22 @@ import org.apache.logging.log4j.Logger;
  * @author Darin Wellons
  */
 @WebServlet(
-        urlPatterns = {"/displayWeather"}
+        urlPatterns = {"/LoadWeather"}
 )
 
-public class displayWeather extends HttpServlet {
+public class LoadWeather extends HttpServlet {
 
     // Instantiate Logger
     private final Logger logger = LogManager.getLogger(this.getClass());
 
+    // properties object for new weatherDAO object
+    private Properties weatherProperties;
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        // new weather dao object
-        WeatherDAO dao = new WeatherDAO();
+        // new weatherDAO object
+        WeatherDAO dao = new WeatherDAO(weatherProperties);
 
         // new weather object with weather info loaded from dao
         Weather weather = dao.getWeatherInfo();
@@ -57,7 +61,7 @@ public class displayWeather extends HttpServlet {
         double tempFar = 0.00;
         tempFar = Double.parseDouble(temperature) * ((double) 9/5) + 32;
 
-        // store the weather values in the session
+        // store the weather values in the session to display in sidebar
         HttpSession session = request.getSession();
         session.setAttribute("temperature", tempFar);
         session.setAttribute("location", location);
@@ -69,7 +73,7 @@ public class displayWeather extends HttpServlet {
         request.setAttribute("condition", condition);
 
         // forward the request and response to the JSP page
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/DisplayWeather.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/homepage.jsp");
         dispatcher.forward(request, response);
     }
 }

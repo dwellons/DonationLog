@@ -4,14 +4,24 @@ import weatherAPI.persistence.WeatherDAO;
 import weatherAPI.entity.Weather;
 import org.junit.jupiter.api.Test;
 
+import java.util.Properties;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class WeatherTest {
 
+    // properties object for new weatherDAO object
+    private Properties weatherProperties;
+
+    // constructor for properties object
+    public WeatherTest(Properties weatherProperties) {
+        this.weatherProperties = weatherProperties;
+    }
+
     // this will only pass while the current condition matches
     @Test
     void getObservation() {
-        WeatherDAO dao = new WeatherDAO();
+        WeatherDAO dao = new WeatherDAO(weatherProperties);
 
         Weather weather = dao.getWeatherInfo();
 
@@ -23,7 +33,7 @@ class WeatherTest {
     // this will only pass while the current condition matches
     @Test
     void getClouds() {
-        WeatherDAO dao = new WeatherDAO();
+        WeatherDAO dao = new WeatherDAO(weatherProperties);
 
         Weather weather = dao.getWeatherInfo();
 
@@ -35,7 +45,7 @@ class WeatherTest {
     // this will only pass while the current condition matches
     @Test
     void getTemperature() {
-        WeatherDAO dao = new WeatherDAO();
+        WeatherDAO dao = new WeatherDAO(weatherProperties);
 
         Weather weather = dao.getWeatherInfo();
 
@@ -46,7 +56,7 @@ class WeatherTest {
 
     @Test
     void getStationName() {
-        WeatherDAO dao = new WeatherDAO();
+        WeatherDAO dao = new WeatherDAO(weatherProperties);
 
         Weather weather = dao.getWeatherInfo();
 
@@ -58,7 +68,7 @@ class WeatherTest {
     // this will only pass while the current condition matches
     @Test
     void getWeatherCondition() {
-        WeatherDAO dao = new WeatherDAO();
+        WeatherDAO dao = new WeatherDAO(weatherProperties);
 
         Weather weather = dao.getWeatherInfo();
 
@@ -70,7 +80,7 @@ class WeatherTest {
     // this will only pass while the current condition matches
     @Test
     void getWindDirection() {
-        WeatherDAO dao = new WeatherDAO();
+        WeatherDAO dao = new WeatherDAO(weatherProperties);
 
         Weather weather = dao.getWeatherInfo();
 
@@ -82,7 +92,7 @@ class WeatherTest {
     // this will only pass while the current condition matches
     @Test
     void getWindSpeed() {
-        WeatherDAO dao = new WeatherDAO();
+        WeatherDAO dao = new WeatherDAO(weatherProperties);
 
         Weather weather = dao.getWeatherInfo();
 
