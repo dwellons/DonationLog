@@ -43,7 +43,7 @@ import java.util.stream.Collectors;
 @WebServlet(
         urlPatterns = {"/auth"}
 )
-// TODO if something goes wrong it this process, route to an error page. Currently, errors are only caught and logged.
+// TODO if something goes wrong it this process, route to an debug page. Currently, debugs are only caught and logged.
 /**
  * Inspired by: https://stackoverflow.com/questions/52144721/how-to-get-access-token-using-client-credentials-using-java-code
  */
@@ -59,6 +59,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
     String POOL_ID;
     Keys jwks;
 
+    // Instantiate Logger
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     @Override
@@ -81,7 +82,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         String userName = null;
 
         if (authCode == null) {
-            //TODO forward to an error page or back to the login
+            //TODO forward to an debug page or back to the login
         } else {
             HttpRequest authRequest = buildAuthRequest(authCode);
             try {
@@ -89,11 +90,11 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 userName = validate(tokenResponse);
                 req.setAttribute("userName", userName);
             } catch (IOException e) {
-                logger.error("Error getting or validating the token: " + e.getMessage(), e);
-                //TODO forward to an error page
+                logger.debug("Error getting or validating the token: " + e.getMessage(), e);
+                //TODO forward to an debug page
             } catch (InterruptedException e) {
-                logger.error("Error getting token from Cognito oauth url " + e.getMessage(), e);
-                //TODO forward to an error page
+                logger.debug("Error getting token from Cognito oauth url " + e.getMessage(), e);
+                //TODO forward to an debug page
             }
         }
         RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
@@ -152,9 +153,9 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         try {
             publicKey = KeyFactory.getInstance("RSA").generatePublic(new RSAPublicKeySpec(modulus, exponent));
         } catch (InvalidKeySpecException e) {
-            logger.error("Invalid Key Error " + e.getMessage(), e);
+            logger.debug("Invalid Key Error " + e.getMessage(), e);
         } catch (NoSuchAlgorithmException e) {
-            logger.error("Algorithm Error " + e.getMessage(), e);
+            logger.debug("Algorithm Error " + e.getMessage(), e);
         }
 
         // get an algorithm instance
@@ -228,9 +229,9 @@ public class Auth extends HttpServlet implements PropertiesLoader {
             jwks = mapper.readValue(jwksFile, Keys.class);
             logger.debug("Keys are loaded. Here's e: " + jwks.getKeys().get(0).getE());
         } catch (IOException ioException) {
-            logger.error("Cannot load json..." + ioException.getMessage(), ioException);
+            logger.debug("Cannot load json..." + ioException.getMessage(), ioException);
         } catch (Exception e) {
-            logger.error("Error loading json" + e.getMessage(), e);
+            logger.debug("Error loading json" + e.getMessage(), e);
         }
     }
 
@@ -250,9 +251,9 @@ public class Auth extends HttpServlet implements PropertiesLoader {
             REGION = properties.getProperty("region");
             POOL_ID = properties.getProperty("poolId");
         } catch (IOException ioException) {
-            logger.error("Cannot load properties..." + ioException.getMessage(), ioException);
+            logger.debug("Cannot load properties..." + ioException.getMessage(), ioException);
         } catch (Exception e) {
-            logger.error("Error loading properties" + e.getMessage(), e);
+            logger.debug("Error loading properties" + e.getMessage(), e);
         }
     }
 }

@@ -1,5 +1,6 @@
 package donationLog.persistence;
 
+import donationLog.entity.Donation;
 import donationLog.entity.Users;
 import java.util.List;
 import static org.junit.Assert.*;
@@ -20,12 +21,10 @@ public class UsersDaoTest {
 
     @Test
     public void testGetByIdSuccess() {
-        // Assuming getById method exists in DonationDAO
         Users retrievedUser = usersDAO.getUserById(1);
         String expctedUserName = "dwellons";
         assertNotNull(retrievedUser);
 
-        // Update the expected donor name based on the actual donor name you expect
         assertTrue(expctedUserName.equals(retrievedUser.getUserName()));
     }
 
@@ -64,12 +63,17 @@ public class UsersDaoTest {
 
     @Test
     public void testDelete() {
-        // get the user with id of nine, delete it
-        usersDAO.deleteUser(usersDAO.getUserById(6));
+        // get the user with id of 1, delete it
+        usersDAO.deleteUser(usersDAO.getUserById(1));
         // if delete is working, shouldn't get a user back
-        assertNull(usersDAO.getUserById(6));
+        assertNull(usersDAO.getUserById(1));
 
-        // Deletes previous test user that was inserted
+        // make sure all the donations are still present that they recorded
+        // get all the donations in the list
+       //List<Donation> donations = usersDAO.getAllDonations();
+       //assertEquals(7, donations.size());
+
+        // right now deletes donations that the user makes
     }
 
     @Test

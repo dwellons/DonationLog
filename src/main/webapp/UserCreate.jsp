@@ -30,10 +30,11 @@
             </div>
 
             <!-- Add User Form -->
+            <!-- removing /donationlog_war makes links work on AWS -->
             <h2>Add a new User</h2>
 
             <br>
-            <a href = "/DonationLog_war/UserRead.jsp">Search Existing Users</a>
+            <a href = "/UserRead.jsp">Search Existing Users</a>
             <br>
 
             <!-- Display the User Add Message -->

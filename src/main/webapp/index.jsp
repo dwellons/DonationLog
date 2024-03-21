@@ -26,8 +26,6 @@
             </div>
 
             <!-- change back to logIn instead of homepage when figuring that out -->
-            <!-- also go back into cognito branch
-                this was last uploaded package to aws -->
             <!-- Main Page Display -->
             <form action="homepage.jsp" method="get" id="logInForm">
                 <input type ="submit" name="submit" value="Login">

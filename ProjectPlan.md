@@ -73,8 +73,9 @@
 ### Week 9 (Start of the team project)
 #### Checkpoint 3 is Due: Deployed to AWS, at least one JSP that displays data from the database is implemented, authentication implemented, add AWS deployed app link to indie project list in student repo.
 - [ ] Weekly journal entry
+- [ ] Diagnose Cognito
 - [ ] Double-check all checkpoint 3 items (above) are complete and visible in GitHub.
-- [ ] Update Testing - See week 5 recommendations
+- [ ] Recommended suggestions
 - 
 
 ### Week 10

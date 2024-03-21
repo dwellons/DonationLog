@@ -1,6 +1,7 @@
 package donationLog.persistence;
 
 import donationLog.entity.Donation;
+import donationLog.entity.Users;
 import java.util.Date;
 import java.util.List;
 import static org.junit.Assert.*;
@@ -19,7 +20,7 @@ public class DonationDaoTest {
          donationDAO = new DAO();
      }
 
-    // Instantiate new DAO
+    // Instantiate new DAO's
     DAO donationDAO;
 
     // for log messages
@@ -78,11 +79,16 @@ public class DonationDaoTest {
     }
     @Test
     public void testDelete() {
-        // get the user with id of nine, delete it
+        // get the donation with id of 12, delete it
         donationDAO.deleteDonation(donationDAO.getDonationById(12));
-        // if delete is working, shouldn't get a user back
+        // if delete is working, shouldn't get a donation back
         assertNull(donationDAO.getDonationById(12));
 
+        // check that user is still there after deleting a donation they made
+        Users retrievedUser = donationDAO.getUserById(1);
+        String expctedUserName = "dwellons";
+        assertNotNull(retrievedUser);
+        assertTrue(expctedUserName.equals(retrievedUser.getUserName()));
     }
     @Test
     public void getAll() {

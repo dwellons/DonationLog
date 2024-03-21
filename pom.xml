@@ -8,6 +8,7 @@
   <name>Donation Log Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
+
   <properties>
     <!-- Maven -->
     <maven.compiler.release>11</maven.compiler.release>
@@ -25,6 +26,8 @@
 
     <!-- Jackson -->
     <jackson-version>2.10.0</jackson-version>
+
+
 
   </properties>
 
@@ -144,6 +147,8 @@
 
   </dependencies>
 
+
+
   <build>
     <finalName>donationLog</finalName>
     <pluginManagement>
@@ -153,6 +158,27 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>${maven-compiler-plugin-version}</version>
         </plugin>
+
+        <!-- cognito plugin -->
+        <plugin>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.2.2</version>
+          <configuration>
+            <webResources>
+              <resource>
+                <directory>src/main/.platform</directory>
+                <targetPath>.platform</targetPath>
+                <filtering>true</filtering>
+              </resource>
+              <resource>
+                <directory>src/main/.ebextensions</directory>
+                <targetPath>.ebextensions</targetPath>
+                <filtering>true</filtering>
+              </resource>
+            </webResources>
+          </configuration>
+        </plugin>
+
       </plugins>
     </pluginManagement>
   </build>

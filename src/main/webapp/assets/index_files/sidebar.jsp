@@ -1,7 +1,8 @@
 <div id="sidebar">
 
     <!-- Home Button  -->
-    <h1 id="logo"><a href="/DonationLog_war/homepage.jsp?submit=Login">homepage</a></h1>
+    <!-- removing /donationlog_war makes links work on AWS -->
+    <h1 id="logo"><a href="/homepage.jsp?submit=Login">homepage</a></h1>
 
 
 
@@ -12,6 +13,13 @@
         </form>
     </section>
 
+    <!-- Display Weather Information -->
+    <section>
+    <h2>Local Weather Information</h2>
+    <li>Location: ${sessionScope.location}</li>
+    <li>Temperature: ${sessionScope.temperature} F</li>
+    <li>Condition: ${sessionScope.condition}</li>
+    </section>
     <!--Calendar  -->
     <section class="box calendar" id="calendar-container">
         <!-- ID calendar-container will receive calendar script -->
@@ -26,11 +34,11 @@
 
             <!-- removing /donationlog_war makes links work on AWS -->
             <h2>AWS Links</h2>
-            <a href = "/donationJSPs/DonationCreate.jsp">Add a new Donation</a>
+            <a href = "/DonationCreate.jsp">Add a new Donation</a>
             <br>
-            <a href = "/donationJSPs/DonationRead.jsp">Search for a Donation</a>
+            <a href = "/DonationRead.jsp">Search for a Donation</a>
             <br>
-            <a href = "/userJSPs/UserCreate.jsp">Add a new User</a>
+            <a href = "/UserCreate.jsp">Add a new User</a>
             <br>
             <a href = "/ReportIssue.jsp">Report an Issue</a>
             <br>

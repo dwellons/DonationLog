@@ -76,8 +76,9 @@ What challenged me:
 * Completed wire frames.
 * Created WeeklyReflection.md
 * Weekly Classwork
-* Started working on Project in leu of Exercise. Implementing CRUD, DAO, Hibernate
-  Different API's for emailing Donation Reports:
+* Started working on Project in leu of Exercise. Implementing CRUD, DAO, Hibernate.
+
+* Different API's for emailing Donation Reports:
 
 -   Java Mail: https://javaee.github.io/javamail/
 -   Apache Commons EMail: https://commons.apache.org/proper/commons-email/
@@ -232,3 +233,10 @@ Its cool that there is so much information available on the internet to use in y
 
 What challenged me:
 It was tricky trying to figure out how to use javascript and java together to automatically load the js when the homepage loads, I'm still exploring that. 
+
+### Week 9 - Spring 2024
+**3/19/2024 6:00pm - 12:00am**
+* Working on Cognito implementation
+* Getting ready for checkpoint 3
+
+**3/20/2024 4:00pm -**
