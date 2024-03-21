@@ -2,7 +2,7 @@
 
     <!-- Home Button  -->
     <!-- removing /donationlog_war makes links work on AWS -->
-    <h1 id="logo"><a href="/donationlog/homepage.jsp?submit=Login">homepage</a></h1>
+    <h1 id="logo"><a href="/DonationLog_war/homepage.jsp?submit=Login">homepage</a></h1>
 
 
 
@@ -58,7 +58,7 @@
             <br>
             <a href = "#">Sign Out</a>
             <br>
-            <a href = "#">Contact</a>
+            <a href = "#">Contacts</a>
             <br>
 
         </ul>

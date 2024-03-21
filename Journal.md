@@ -240,3 +240,6 @@ It was tricky trying to figure out how to use javascript and java together to au
 * Getting ready for checkpoint 3
 
 **3/20/2024 4:00pm -**
+* Worked on displaying weather on sidebar on page load
+* Start cleaning up CSS
+* 
