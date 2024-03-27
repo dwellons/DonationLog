@@ -150,9 +150,6 @@
 
   </dependencies>
 
-
-
-
   <build>
     <finalName>donationLog</finalName>
     <pluginManagement>

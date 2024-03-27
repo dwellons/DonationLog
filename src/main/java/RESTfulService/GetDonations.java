@@ -1,30 +1,33 @@
 package RESTfulService;
 
+import donationLog.persistence.DAO;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
+import donationLog.entity.Donation;
+import java.util.List;
 
 @Path("/getDonations")
 public class GetDonations {
-    // The Java method will process HTTP GET requests
+
     @GET
-    // The Java method will produce content identified by the MIME Media type "text/plain"
-    // Adding ability for html and json as well
-    @Produces({"text/plain", "text/html", "application/json"})
+    @Produces({"text/plain"})
+    public Response getListedDonations() {
 
-    public Response getMessage() {
+        // create a new object
+        DAO donationDAO;
 
-        // Return a simple message
-        String output = "Hello Darin" ;
+        // instantiate DAO
+        donationDAO = new DAO();
 
-        // HTML
-        String html = "<html><body><h1>Hello Darin"  + "</h1></body></html>";
+        // get all the donations
+        List<Donation> donations = donationDAO.getAllDonations();
 
-        //JSON
-        String json = "{\"Hello Darin\": \"";
+        // put them into a string
+        String donationsOutput = "These are the listed donations: " + donations;
 
-        // have to add each item to be built, or it will not be!
-        return Response.status(200).entity(output).entity(json).entity(html).build();
+        // return to the page
+        return Response.status(200).entity(donationsOutput).build();
     }
 }

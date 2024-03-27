@@ -90,7 +90,7 @@ public class CreateDonation extends HttpServlet {
 
         // Redirect to Results page.
         // removing /donationlog_war makes links work on AWS
-        response.sendRedirect("/readDonations?submit=Show+All+Donations");
+        response.sendRedirect("/DonationLog_war/readDonations?submit=Show+All+Donations");
 
         request.getSession().setAttribute("donationAddMessage",
                 "You have added your donation.");

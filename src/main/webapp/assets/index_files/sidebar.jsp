@@ -60,6 +60,7 @@
             <br>
             <a href = "#">Contacts</a>
             <br>
+            <a href = "http://localhost:8080/DonationLog_war/services/getDonations">RESTful Response (Remove)</a>
 
         </ul>
     </section>
