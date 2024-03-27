@@ -251,7 +251,10 @@ It was tricky trying to figure out how to use javascript and java together to au
 **3/25/2024 6:00pm - 10:00pm**
 * Working on Cognito issue
 
-**3/26/2024 5:00pm -**
-* Weekly classwork
+**3/26/2024 5:00pm - 1:00am**
+* Week 9 classwork
 * Project Revision prior to completing weekly exercise
+
+**3/27/2024 9:00am - 10:30am**
+* Weekly Classwork
 * 
