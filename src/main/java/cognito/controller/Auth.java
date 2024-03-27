@@ -97,8 +97,9 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 //TODO forward to an debug page
             }
         }
-        // changed to homepage.jsp
-        RequestDispatcher dispatcher = req.getRequestDispatcher("homepage.jsp");
+
+        // changed to LoadWeather
+        RequestDispatcher dispatcher = req.getRequestDispatcher("LoadWeather");
         dispatcher.forward(req, resp);
 
     }
