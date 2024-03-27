@@ -108,10 +108,16 @@
       <version>2.11.0</version>
     </dependency>
 
-    <!-- Jersey Dependencies Week 8 -->
+    <!-- Jersey Dependencies-->
     <dependency>
       <groupId>org.glassfish.jersey.core</groupId>
       <artifactId>jersey-client</artifactId>
+      <version>${jersey-version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.glassfish.jersey.containers</groupId>
+      <artifactId>jersey-container-servlet</artifactId>
       <version>${jersey-version}</version>
     </dependency>
 
