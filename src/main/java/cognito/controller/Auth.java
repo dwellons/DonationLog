@@ -97,7 +97,8 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 //TODO forward to an debug page
             }
         }
-        RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
+        // changed to homepage.jsp
+        RequestDispatcher dispatcher = req.getRequestDispatcher("homepage.jsp");
         dispatcher.forward(req, resp);
 
     }
@@ -169,11 +170,15 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 .withClaim("token_use", "id") // make sure you're verifying id token
                 .build();
 
+
+        // breakpoint here
+
+
         // Verify the token
         DecodedJWT jwt = verifier.verify(tokenResponse.getIdToken());
         String userName = jwt.getClaim("cognito:username").asString();
-        logger.debug("here's the username: " + userName);
 
+        logger.debug("here's the username: " + userName);
         logger.debug("here are all the available claims: " + jwt.getClaims());
 
         // TODO decide what you want to do with the info!

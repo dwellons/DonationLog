@@ -239,7 +239,19 @@ It was tricky trying to figure out how to use javascript and java together to au
 * Working on Cognito implementation
 * Getting ready for checkpoint 3
 
-**3/20/2024 4:00pm -**
+**3/20/2024 4:00pm - 12am**
 * Worked on displaying weather on sidebar on page load
 * Start cleaning up CSS
+* Tried to figure out Cognito issue
+
+**3/24/2024 7:00pm - 8:30pm**
+* Meet with Team for Group Project
+
+### Week 10 - Spring 2024
+**3/25/2024 6:00pm - 10:00pm**
+* Working on Cognito issue
+
+**3/26/2024 5:00pm -**
+* Weekly classwork
+* Project Revision prior to completing weekly exercise
 * 

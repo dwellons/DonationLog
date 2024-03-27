@@ -25,9 +25,9 @@
                 Homepage
             </div>
 
-            <!-- change back to logIn instead of homepage when figuring that out -->
+            <!-- change back to logIn instead of loadWeather when figuring that out -->
             <!-- Main Page Display -->
-            <form action="LoadWeather" method="get" id="logInForm">
+            <form action="logIn" method="get" id="logInForm">
                 <input type ="submit" name="submit" value="Login">
             </form>
 

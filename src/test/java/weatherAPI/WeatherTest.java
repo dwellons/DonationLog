@@ -1,5 +1,6 @@
 package weatherAPI;
 
+
 import weatherAPI.persistence.WeatherDAO;
 import weatherAPI.entity.Weather;
 import org.junit.jupiter.api.Test;
