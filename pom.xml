@@ -11,10 +11,16 @@
 
 
   <properties>
+    <!-- MAVEN -->
     <maven.compiler.release>11</maven.compiler.release>
+
+    <!-- J UNIT -->
     <junit.version>4.13.1</junit.version>
+
+    <!-- JAVA X -->
     <javax.version>7.0</javax.version>
 
+    <!-- MYSQL -->
     <mysql-version>8.0.28</mysql-version>
     <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
 
@@ -26,10 +32,10 @@
 
     <!-- Jackson -->
     <jackson-version>2.10.0</jackson-version>
-
   </properties>
 
   <dependencies>
+    <!-- J Unit -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -37,12 +43,14 @@
       <scope>test</scope>
     </dependency>
 
+    <!-- JAVA X -->
     <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-web-api</artifactId>
       <version>${javax.version}</version>
     </dependency>
 
+    <!-- MYSQL -->
     <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
     <dependency>
       <groupId>mysql</groupId>
@@ -58,7 +66,7 @@
       <version>${hibernate-version}</version>
     </dependency>
 
-    <!-- c3p0 - used to handle connection pooling with hibernate -->
+    <!-- c3p0 - Used to handle connection pooling with Hibernate -->
     <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
     <dependency>
       <groupId>org.hibernate</groupId>
@@ -90,7 +98,7 @@
       <version>1.2</version>
     </dependency>
 
-    <!-- for parsing access token -->
+    <!-- For parsing access token -->
     <dependency>
       <groupId>com.auth0</groupId>
       <artifactId>java-jwt</artifactId>
@@ -114,40 +122,35 @@
       <artifactId>jersey-client</artifactId>
       <version>${jersey-version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.glassfish.jersey.containers</groupId>
       <artifactId>jersey-container-servlet</artifactId>
       <version>${jersey-version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.glassfish.jersey.inject</groupId>
       <artifactId>jersey-hk2</artifactId>
       <version>${jersey-version}</version>
     </dependency>
 
-    <!-- Jackson Dependencies Week 8 -->
+    <!-- Jackson Dependencies -->
     <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
       <version>${jackson-version}</version>
     </dependency>
-
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
       <version>${jackson-version}</version>
     </dependency>
-
     <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
       <version>${jackson-version}</version>
     </dependency>
-
   </dependencies>
 
   <build>

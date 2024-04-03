@@ -58,7 +58,7 @@
             <br>
             <a href = "#">Sign Out</a>
             <br>
-            <a href = "#">Contacts</a>
+            <a href = "/DonationLog_war/Contacts.jsp">Contacts</a>
             <br>
             <a href = "http://localhost:8080/DonationLog_war/services/getDonations">RESTful Response (Remove)</a>
 
