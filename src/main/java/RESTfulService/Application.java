@@ -15,6 +15,7 @@ public class Application extends javax.ws.rs.core.Application {
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
         h.add(GetDonations.class );
+        h.add(GetDonationsJSON.class);
         return h;
     }
 }

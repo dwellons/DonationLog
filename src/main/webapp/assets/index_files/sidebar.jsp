@@ -60,7 +60,9 @@
             <br>
             <a href = "/DonationLog_war/Contacts.jsp">Contacts</a>
             <br>
-            <a href = "http://localhost:8080/DonationLog_war/services/getDonations">RESTful Response (Remove)</a>
+            <a href = "http://localhost:8080/DonationLog_war/services/donations">RESTful Response (Plain Text)</a>
+            <br>
+            <a href = "http://localhost:8080/DonationLog_war/services/donationsJSON">RESTful Response (JSON)</a>
 
         </ul>
     </section>
