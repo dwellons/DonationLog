@@ -30,7 +30,6 @@ public class ReadDonations extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        logger.debug("TEST In Search Donations Before DAO call" + request.getAttribute("submit"));
 
         // Instantiate a new DAO.
         DAO donationDAO = new DAO();
@@ -46,6 +45,7 @@ public class ReadDonations extends HttpServlet {
             request.setAttribute("donations", donationDAO.getAllDonations());
         }
 
+        logger.info("TEST In Search Donations Before DAO call" + donationDAO.getAllDonations());
         /*
          * The servlet will forward the request and response
          * to the Results JSP page.
