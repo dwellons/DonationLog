@@ -117,13 +117,8 @@ public class Auth extends HttpServlet implements PropertiesLoader {
 
         response = client.send(authRequest, HttpResponse.BodyHandlers.ofString());
 
-
-        logger.debug("Response headers: " + response.headers().toString());
-        logger.debug("Response body: " + response.body().toString());
-
         ObjectMapper mapper = new ObjectMapper();
         TokenResponse tokenResponse = mapper.readValue(response.body().toString(), TokenResponse.class);
-        logger.debug("Id token: " + tokenResponse.getIdToken());
 
         return tokenResponse;
 
@@ -170,10 +165,6 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 .withIssuer(iss)
                 .withClaim("token_use", "id") // make sure you're verifying id token
                 .build();
-
-
-        // breakpoint here
-
 
         // Verify the token
         DecodedJWT jwt = verifier.verify(tokenResponse.getIdToken());

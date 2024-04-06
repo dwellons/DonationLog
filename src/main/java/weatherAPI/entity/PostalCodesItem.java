@@ -3,7 +3,10 @@ package weatherAPI.entity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * This class represents the data returned for the weather location.
+ * This class represents the data returned for a weather location.
+ * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
  */
 public class PostalCodesItem{
 

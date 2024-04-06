@@ -13,7 +13,9 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * A servlet that will add a new User to the application.
- *@author Darin Wellons
+ * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
  */
 
 @WebServlet(
@@ -59,15 +61,10 @@ public class CreateUser extends HttpServlet {
         String first_name = request.getParameter("firstName");
         String last_name = request.getParameter("lastName");
 
-
         int id = 0;
-
-
 
         // Have to validate the input from the form before accessing database.
         if (!validateUserInput(user_name, password, first_name, last_name, request)) {
-
-            logger.debug("TEST In Add User");
 
             // Send a redirect the browser to the Add User page
             response.sendRedirect(request.getContextPath() + "/UserCreate.jsp");
@@ -77,10 +74,8 @@ public class CreateUser extends HttpServlet {
         // Instantiate usersDAO.
         usersDAO = new DAO();
 
-
         // Create the new user object.
         Users newUser = new Users(id, user_name, password, first_name, last_name);
-
 
         // Call Insert in DAO.
 
@@ -114,7 +109,6 @@ public class CreateUser extends HttpServlet {
         // Instantiate validation variable to valid, true.
         isValid = true;
 
-
         // If the donor name and donation type aren't text
         if (!user_name.matches("[a-zA-Z ]+") ||
                 !first_name.matches("[a-zA-Z ]+") ||
@@ -123,7 +117,6 @@ public class CreateUser extends HttpServlet {
             // Set the variable to not valid, false.
             isValid = false;
         }
-
 
         // If the form entries are invalid.
 
@@ -137,4 +130,3 @@ public class CreateUser extends HttpServlet {
         return isValid;
     }
 }
-

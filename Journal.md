@@ -257,4 +257,9 @@ It was tricky trying to figure out how to use javascript and java together to au
 
 **3/27/2024 9:00am - 10:30am**
 * Weekly Classwork
-* 
+
+### Week 11 - Spring 2024
+**4/05/2024 9:00pm - 12:00am**
+* Working on Logging issues
+* Cleaning up 
+

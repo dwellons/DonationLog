@@ -13,14 +13,16 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * Create a servlet that will add a new Donation to the application.
- *
- *@author Darin Wellons
+ * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
  */
 
 @WebServlet(
         name = "createDonation",
         urlPatterns = { "/createDonation" }
 )
+
 
 public class CreateDonation extends HttpServlet {
     DAO donationDAO;
@@ -50,7 +52,6 @@ public class CreateDonation extends HttpServlet {
                        HttpServletResponse response)
             throws ServletException, IOException {
 
-
         // Create a local variable that references the ServletContext.
         ServletContext context = getServletContext();
 
@@ -65,8 +66,6 @@ public class CreateDonation extends HttpServlet {
 
         if (!validateUserInput(donor_name, donation_type, donation_weight, request)) {
 
-        logger.debug("TEST In Add Donation");
-
             // Send a redirect the browser to the Add Donation page.
             response.sendRedirect(request.getContextPath() + "/DonationCreate.jsp");
             return;
@@ -78,15 +77,12 @@ public class CreateDonation extends HttpServlet {
         // Get Today's date.
         Date donationDate = new Date();
 
-
         // Create the new donation object.
         Donation newDonation = new Donation(donationID, donor_name,donation_type,donation_weight,donationDate);
-
 
         // Call Insert in DAO.
 
         donationDAO.insertDonation(newDonation);
-
 
         // Redirect to Results page.
         // removing /donationlog_war makes links work on AWS
@@ -115,7 +111,6 @@ public class CreateDonation extends HttpServlet {
         // Instantiate validation variable to valid, true.
         isValid = true;
 
-
         // If the donor name and donation type aren't text.
         if (!donor_name.matches("[a-zA-Z ]+") ||
               !donation_type.matches("[a-zA-Z ]+")) {
@@ -143,4 +138,3 @@ public class CreateDonation extends HttpServlet {
         return isValid;
     }
 }
-

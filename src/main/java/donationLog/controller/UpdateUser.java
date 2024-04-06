@@ -12,6 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 
+/**
+ * A servlet that will update users
+ * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
+ */
+
 @WebServlet(
         name = "updateUser",
         urlPatterns = { "/updateUser" }
@@ -22,7 +29,6 @@ public class UpdateUser extends HttpServlet {
 
     // Instantiate Logger.
     private final Logger logger = LogManager.getLogger(this.getClass());
-
 
     // Create a valid or not valid variable for validating form entries.
     private boolean isValid;
@@ -53,7 +59,6 @@ public class UpdateUser extends HttpServlet {
 
         // Validate the input from the form before updating the database.
         if (!validateUserInput(userName, firstName, lastName, request)) {
-            logger.debug("TEST In Update User");
 
             // Set a session attribute for the update message.
             request.getSession().setAttribute("userUpdateMessage",
@@ -92,11 +97,7 @@ public class UpdateUser extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("/UserUpdate.jsp");
         dispatcher.forward(request, response);
 
-        logger.debug("TEST in UpdateUser.java - donationToUpdate:  " + userToUpdate);
-
-
     }
-
 
     /**
      * Have to validate the input coming from the form.

@@ -10,6 +10,13 @@ import donationLog.entity.Donation;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * A class that returns plain text
+ * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
+ */
+
 @Path("/donations")
 public class GetDonations {
 

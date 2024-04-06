@@ -3,10 +3,12 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * This class represents the weather for a location.
+ * This class represents weather for a location
+ * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
  */
 public class Location {
-
 
 	@JsonProperty("postalCodes")
 	private List<PostalCodesItem> postalCodes;

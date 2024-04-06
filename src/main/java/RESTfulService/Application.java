@@ -3,6 +3,12 @@ package RESTfulService;
 import javax.ws.rs.ApplicationPath;
 import java.util.HashSet;
 import java.util.Set;
+/**
+ * A class to control the RESTful service.
+ * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
+ */
 
 //Defines the base URI for all resource URIs.
 @ApplicationPath("/services") //You may want to add a value here so that all traffic isn't routed to the class below.

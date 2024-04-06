@@ -3,7 +3,6 @@ package cognito.util;
 import java.io.IOException;
 import java.util.Properties;
 
-
 /**
  * This interface contains a default method that can be used anywhere a Properties
  * object is needed to be loaded.
@@ -23,7 +22,6 @@ public interface PropertiesLoader{
      */
     default Properties loadProperties(String propertiesFilePath) throws IOException, Exception{
         Properties properties = new Properties();
-
         properties.load(this.getClass().getResourceAsStream(propertiesFilePath));
 
         return properties;

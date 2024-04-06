@@ -15,9 +15,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * A Servlet to Search Users
+ * A servlet that will search users
  * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
  */
+
 @WebServlet(
         urlPatterns = {"/readUsers"}
 )
@@ -29,8 +32,6 @@ public class ReadUsers extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        logger.debug("TEST In Search Users Before DAO call" + request.getAttribute("submit"));
 
         // Instantiate a new DonationDAO.
         DAO usersDAO = new DAO();

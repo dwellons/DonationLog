@@ -11,6 +11,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * A servlet that will delete donations
+ * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
+ */
 
 @WebServlet(
         urlPatterns = {"/deleteDonation"}
@@ -25,8 +31,6 @@ public class DeleteDonation extends HttpServlet {
 
         // Extract the donation ID from the request parameter.
         int donationID = Integer.parseInt(request.getParameter("donationID"));
-
-        logger.debug("TEST In Delete Donations Before DAO call: {}",  request.getAttribute("donationID"));
 
         // Instantiate DAO.
         DAO donationDAO = new DAO();

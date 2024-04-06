@@ -17,8 +17,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * A Servlet to Display Current Weather Conditions
+ * A servlet to display current weather conditions.
  * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
  */
 @WebServlet(
         urlPatterns = {"/LoadWeather"}

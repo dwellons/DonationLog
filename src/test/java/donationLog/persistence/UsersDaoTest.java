@@ -1,6 +1,5 @@
 package donationLog.persistence;
 
-import donationLog.entity.Donation;
 import donationLog.entity.Users;
 import java.util.List;
 import static org.junit.Assert.*;
@@ -8,6 +7,12 @@ import org.junit.Before;
 import org.junit.Test;
 import donationLog.util.Database;
 
+/**
+ * A Test for the donations portion of the DAO
+ * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
+ */
 public class UsersDaoTest {
 
     // Instantiate new DAO

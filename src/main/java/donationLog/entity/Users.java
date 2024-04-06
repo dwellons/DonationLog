@@ -11,9 +11,10 @@ import java.util.*;
 import java.util.Date;
 
 /**
- * A class to represent a User.
- *
+ * A class to represent a user.
  * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
  */
 @Entity
 @Table(name = "user") // CASE SENSITIVE
@@ -25,7 +26,6 @@ public class Users {
     private int id;
     @Column(name = "userName") // Don't have to specify if column is named the same thing as var name (string below)
     private String userName;
-
 
     @Column(name = "password")
     private String password;
@@ -39,7 +39,6 @@ public class Users {
     @OneToMany(mappedBy = "user_id", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Donation> donations = new ArrayList<>();
 
-
     /**
      * Instantiates a User constructor.
      */
@@ -48,13 +47,11 @@ public class Users {
 
     /**
      * Instantiates a new User.
-     *
      * @param id the id
      * @param userName the userName
      * @param password  the password
      * @param firstName the first name of the user
      * @param lastName the last name of the user
-
      */
     public Users(int id, String userName, String password, String firstName, String lastName) {
         this.id = id;
@@ -152,7 +149,7 @@ public class Users {
     }
 
     /**
-     *
+     * gets donations
      * @return
      */
     public List<Donation> getDonations() {
@@ -160,7 +157,7 @@ public class Users {
     }
 
     /**
-     *
+     * sets donations
      * @param donations
      */
     public void setDonations(List<Donation> donations) {
@@ -168,7 +165,7 @@ public class Users {
     }
 
     /**
-     *
+     * The returned user information
      * @return
      */
     @Override

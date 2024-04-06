@@ -6,10 +6,12 @@ import org.hibernate.annotations.GenericGenerator;
 import java.util.Date;
 
 /**
- * A class to represent a Donation.
- *
+ * A class to represent a donation.
  * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
  */
+
 @Entity
 @Table(name = "donations") // CASE SENSITIVE
 public class Donation {
@@ -55,7 +57,6 @@ public class Donation {
 
     }
 
-
     /**
      * Empty Constructor
      * @return
@@ -72,9 +73,8 @@ public class Donation {
         this.donationID = donationID;
     }
 
-
     /**
-     *
+     * gets donorName
      * @return
      */
     public String getDonorName() {
@@ -82,7 +82,7 @@ public class Donation {
     }
 
     /**
-     *
+     * sets donorName
      * @param donorName
      */
     public void setDonorName(String donorName) {
@@ -90,7 +90,7 @@ public class Donation {
     }
 
     /**
-     *
+     * gets donationType
      * @return
      */
     public String getDonationType() {
@@ -98,7 +98,7 @@ public class Donation {
     }
 
     /**
-     *
+     * sets donationType
      * @param donationType
      */
     public void setDonationType(String donationType) {
@@ -106,7 +106,7 @@ public class Donation {
     }
 
     /**
-     *
+     * gets donationWeight
      * @return
      */
     public String getDonationWeight() {
@@ -114,7 +114,7 @@ public class Donation {
     }
 
     /**
-     *
+     * sets donationWeight
      * @param donationWeight
      */
     public void setDonationWeight(String donationWeight) {
@@ -122,7 +122,7 @@ public class Donation {
     }
 
     /**
-     *
+     * gets donationDate
      * @return
      */
     public Date getDonationDate() {
@@ -130,7 +130,7 @@ public class Donation {
     }
 
     /**
-     *
+     * sets donationDate
      * @param donationDate
      */
     public void setDonationDate(Date donationDate) {
@@ -138,7 +138,7 @@ public class Donation {
     }
 
     /**
-     *
+     * gets user_id
      * @return
      */
     public Users getUser_id() {
@@ -146,7 +146,7 @@ public class Donation {
     }
 
     /**
-     *
+     * sets user_id
      * @param user_id
      */
     public void setUser_id(Users user_id) {
@@ -154,7 +154,7 @@ public class Donation {
     }
 
     /**
-     *
+     * The returned donation information
      * @return
      */
     @Override

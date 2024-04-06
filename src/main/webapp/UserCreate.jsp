@@ -13,7 +13,6 @@
 <!-- Sidebar -->
 <c:import url="/assets/index_files/sidebar.jsp"/>
 
-
 <!-- Content -->
 <div id="content">
     <div class="inner">
@@ -69,7 +68,6 @@
                 <input type="submit" value="Add User">
 
             </form>
-
 
 
             <!-- Remove the message after displaying it, if it is present. -->

@@ -13,7 +13,6 @@
 <!-- Sidebar -->
 <c:import url="/assets/index_files/sidebar.jsp"/>
 
-
 <!-- Content -->
 <div id="content">
     <div class="inner">
@@ -46,8 +45,6 @@
                 <input type="text" id="donorName"
                        name="donorName" required>
                 <br>
-
-
 
                 <label for="donationWeight">Describe the issue: </label>
                 <input type="text" id="donationWeight"

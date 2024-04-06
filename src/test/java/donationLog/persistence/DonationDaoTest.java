@@ -11,6 +11,12 @@ import org.junit.Before;
 import org.junit.Test;
 import donationLog.util.Database;
 
+/**
+ * A Test for the donations portion of the DAO
+ * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
+ */
 public class DonationDaoTest {
 
      @Before
@@ -38,7 +44,6 @@ public class DonationDaoTest {
 
         logger.info("RESULTS: " + retrievedDonation + " " + retrievedDonation.getDonorName() + " RESULTS");
     }
-
 
     @Test
     public void updateSuccess() {
@@ -74,8 +79,6 @@ public class DonationDaoTest {
 
         Donation insertedDonation = donationDAO.getDonationById(insertedUserId);
         assertEquals("Piggly Wiggly", insertedDonation.getDonorName());
-
-
     }
     @Test
     public void testDelete() {

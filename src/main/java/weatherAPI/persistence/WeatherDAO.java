@@ -10,7 +10,11 @@ import java.util.Properties;
 
 /**
  * This class searches for weather information based on the stored zip code.
+ * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
  */
+
 public class WeatherDAO implements PropertiesLoader{
     private Properties properties;
 

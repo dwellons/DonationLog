@@ -14,6 +14,13 @@ import org.hibernate.query.criteria.HibernateCriteriaBuilder;
 
 import java.util.List;
 
+/**
+ * A Data Access Object class.
+ * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
+ */
+
 public class DAO {
 
     // DONATIONS
@@ -88,7 +95,6 @@ public class DAO {
         Root<Donation> root = query.from(Donation.class);
         List<Donation> donations = session.createSelectionQuery( query ).getResultList();
 
-        logger.debug("The list of donations " + donations);
         session.close();
 
         return donations;
@@ -104,7 +110,7 @@ public class DAO {
         Session session = sessionFactory.openSession();
 
         // will insert values into curly braces {}
-        logger.debug("Searching for a donation with {} {} ", propertyName, value);
+        //logger.debug("Searching for a donation with {} {} ", propertyName, value);
 
         HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<Donation> query = builder.createQuery(Donation.class);
@@ -140,7 +146,6 @@ public class DAO {
     }
 
     // USERS
-
 
     /**
      * Gets Users by ID.
@@ -195,7 +200,6 @@ public class DAO {
         transaction.commit();
         session.close();
     }
-
 
     /**
      * Returns a list of all users.
@@ -260,6 +264,4 @@ public class DAO {
         session.close();
         return users;
     }
-
-
 }

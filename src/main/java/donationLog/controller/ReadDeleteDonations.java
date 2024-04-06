@@ -13,9 +13,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * A Servlet to Search Donations
+ * A servlet that will search donations
  * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
  */
+
 @WebServlet(
         urlPatterns = {"/readDeleteDonations"}
 )
@@ -27,8 +30,6 @@ public class ReadDeleteDonations extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        logger.debug("TEST In Read Delete Donations Before DAO call" + request.getAttribute("submit"));
 
         // Instantiate a new DAO.
         DAO donationDAO = new DAO();

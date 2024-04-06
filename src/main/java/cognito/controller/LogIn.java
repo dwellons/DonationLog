@@ -30,6 +30,7 @@ public class LogIn extends HttpServlet implements PropertiesLoader {
     public void init() throws ServletException {
         super.init();
         loadProperties();
+        logger.info("Logger initiated for Cognito. Switch to donationLog in config for debug.");
     }
 
     /**
@@ -44,6 +45,7 @@ public class LogIn extends HttpServlet implements PropertiesLoader {
             CLIENT_ID = properties.getProperty("client.id");
             LOGIN_URL = properties.getProperty("loginURL");
             REDIRECT_URL = properties.getProperty("redirectURL");
+
         } catch (IOException ioException) {
             logger.error("Cannot load properties..." + ioException.getMessage(), ioException);
         } catch (Exception e) {

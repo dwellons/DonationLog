@@ -11,6 +11,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * A servlet that will delete a user
+ * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
+ */
 
 @WebServlet(
         urlPatterns = {"/deleteUser"}
@@ -25,8 +31,6 @@ public class DeleteUser extends HttpServlet {
 
         // Extract the user ID from the request parameter.
         int userID = Integer.parseInt(request.getParameter("ID"));
-
-        logger.debug("TEST In Delete User Before DAO call: {}",  request.getAttribute("ID"));
 
         // Instantiate DAO.
         DAO usersDAO = new DAO();

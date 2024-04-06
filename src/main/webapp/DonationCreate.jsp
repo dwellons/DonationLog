@@ -13,7 +13,6 @@
 <!-- Sidebar -->
 <c:import url="/assets/index_files/sidebar.jsp"/>
 
-
 <!-- Content -->
 <div id="content">
     <div class="inner">

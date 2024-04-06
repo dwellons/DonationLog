@@ -13,6 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 
+/**
+ * A servlet that will update donations
+ * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
+ */
+
 @WebServlet(
         name = "updateDonation",
         urlPatterns = { "/updateDonation" }
@@ -22,7 +29,6 @@ public class UpdateDonation extends HttpServlet {
 
     // Instantiate Logger.
     private final Logger logger = LogManager.getLogger(this.getClass());
-
 
      // Create a valid or not valid variable for validating form entries.
 
@@ -53,7 +59,6 @@ public class UpdateDonation extends HttpServlet {
 
         // Validate the input from the form before updating the database.
         if (!validateUserInput(donorName, donationType, donationWeight, request)) {
-            logger.debug("TEST In Update Donation");
 
             // Set a session attribute for the update message.
             request.getSession().setAttribute("donationUpdateMessage",
@@ -91,8 +96,6 @@ public class UpdateDonation extends HttpServlet {
         // Forward to the Update Donation page.
         RequestDispatcher dispatcher = request.getRequestDispatcher("/DonationUpdate.jsp");
         dispatcher.forward(request, response);
-
-        logger.debug("TEST in UpdateDonation.java - donationToUpdate:  " + donationToUpdate);
 
     }
 

@@ -16,7 +16,6 @@ public class SessionFactoryProvider {
     private static SessionFactory sessionFactory;
     private static StandardServiceRegistry registry;
 
-
     // Create session factory.
     public static void createSessionFactory() {
 

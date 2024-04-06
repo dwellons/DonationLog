@@ -12,6 +12,13 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * A class that returns JSON data
+ * @author Darin Wellons
+ * @version 1.0
+ * @since 1.0
+ */
+
 @Path("/donationsJSON")
 public class GetDonationsJSON {
 
