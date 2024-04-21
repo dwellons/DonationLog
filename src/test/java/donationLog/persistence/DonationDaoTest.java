@@ -68,22 +68,23 @@ public class DonationDaoTest {
 
         Date donationDate = new Date(1989,10,16);
         int donationID = 0;
-        int userID = 1;
-        Donation newDonation = new Donation(donationID, "Piggly Wiggly", "Bread", "130", donationDate);
+        Users userID = null;
+        Donation newDonation = new Donation(donationID, "Piggly Wiggly", "Bread", "130", donationDate, userID);
 
         newDonation.setDonationDate(donationDate);
 
         int insertedUserId = donationDAO.insertDonation(newDonation);
 
         assertNotEquals(0, insertedUserId);
-
         Donation insertedDonation = donationDAO.getDonationById(insertedUserId);
         assertEquals("Piggly Wiggly", insertedDonation.getDonorName());
     }
+
     @Test
     public void testDelete() {
         // get the donation with id of 12, delete it
         donationDAO.deleteDonation(donationDAO.getDonationById(12));
+
         // if delete is working, shouldn't get a donation back
         assertNull(donationDAO.getDonationById(12));
 
@@ -93,12 +94,12 @@ public class DonationDaoTest {
         assertNotNull(retrievedUser);
         assertTrue(expctedUserName.equals(retrievedUser.getUserName()));
     }
+
     @Test
     public void getAll() {
         // get all the donations in the list
         List<Donation> donations = donationDAO.getAllDonations();
         assertEquals(7, donations.size());
-
     }
 
     @Test
@@ -107,7 +108,6 @@ public class DonationDaoTest {
         List<Donation> donations = donationDAO.getDonationByPropertyLike("donorName", "Kwik Trip");
         assertEquals(4, donations.size());
         assertEquals(12, donations.get(0).getDonationID());
-
     }
 
     @Test
@@ -115,5 +115,15 @@ public class DonationDaoTest {
         // get all donations with property name like "kwik trip"
         List<Donation> donations = donationDAO.getDonationByPropertyLike("donorName", "Kwik Trip");
         assertEquals(4, donations.size());
+    }
+
+    @Test
+    public void testGetDonationByUserId() {
+        // get donations associated with user id #1
+        int userId = 1;
+        List<Donation> userDonations = donationDAO.getDonationsByUserId(userId);
+
+        // check that the list contains the expected number of donations
+        assertEquals(6, userDonations.size());
     }
 }

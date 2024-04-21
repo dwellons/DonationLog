@@ -7,6 +7,7 @@ import jakarta.persistence.criteria.Expression;
 import jakarta.persistence.criteria.Root;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -145,6 +146,27 @@ public class DAO {
         return donations;
     }
 
+    /**
+     * Gets donations by user id.
+     * @param userId The user id
+     * @return A list of donations associated with the user id
+     */
+    public List<Donation> getDonationsByUserId(int userId) {
+        Session session = sessionFactory.openSession();
+
+        HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<Donation> query = builder.createQuery(Donation.class);
+        Root<Donation> root = query.from(Donation.class);
+
+        // get donations associated with the given user ID
+        query.select(root).where(builder.equal(root.get("user").get("id"), userId));
+        List<Donation> donations = session.createSelectionQuery(query).getResultList();
+
+        session.close();
+
+        return donations;
+    }
+
     // USERS
 
     /**
@@ -153,12 +175,12 @@ public class DAO {
      * @return
      */
     public Users getUserById(int id) {
+        Users user = null;
         Session session = sessionFactory.openSession();
-        Users user = session.get(Users.class, id);
+            user = session.get(Users.class, id);
         session.close();
         return user;
     }
-
     /**
      * Updates users.
      * @param user
@@ -184,7 +206,7 @@ public class DAO {
         // persist is for adding
         session.persist(user);
         transaction.commit();
-        id = user.getID();
+        id = user.getId();
         session.close();
         return id;
     }

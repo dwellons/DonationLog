@@ -50,7 +50,7 @@
                     </thead>
 
                     <tr>
-                        <td>${users.ID}</td>
+                        <td>${users.id}</td>
                         <td>${users.userName}</td>
                         <td>${users.password}</td>
                         <td>${users.firstName}</td>

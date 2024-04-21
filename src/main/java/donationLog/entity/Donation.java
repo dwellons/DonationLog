@@ -34,7 +34,7 @@ public class Donation {
 
     @JoinColumn(name = "user_id")
     @ManyToOne
-    private Users user_id;
+    private Users user;
 
     // Empty Constructor.
     public Donation() {
@@ -48,25 +48,25 @@ public class Donation {
      * @param donationWeight
      * @param donationDate
      */
-    public Donation(int donationID, String donorName, String donationType, String donationWeight, Date donationDate) {
+    public Donation(int donationID, String donorName, String donationType, String donationWeight, Date donationDate, Users user) {
         this.donationID = donationID;
         this.donorName = donorName;
         this.donationType = donationType;
         this.donationWeight = donationWeight;
         this.donationDate = donationDate;
-
+        this.user = user;
     }
 
     /**
-     * Empty Constructor
-     * @return
+     * gets donationID
+     * @return donationID
      */
     public int getDonationID() {
         return donationID;
     }
 
     /**
-     * Constructor
+     * sets donationID
      * @param donationID
      */
     public void setDonationID(int donationID) {
@@ -139,18 +139,19 @@ public class Donation {
 
     /**
      * gets user_id
+     *
      * @return
      */
-    public Users getUser_id() {
-        return user_id;
+    public Users getUser() {
+        return user;
     }
 
     /**
      * sets user_id
-     * @param user_id
+     * @param user
      */
-    public void setUser_id(Users user_id) {
-        this.user_id = user_id;
+    public void setUser(Users user) {
+        this.user = user;
     }
 
     /**
@@ -165,7 +166,7 @@ public class Donation {
                 ", donationType='" + donationType + '\'' +
                 ", donationWeight='" + donationWeight + '\'' +
                 ", donationDate=" + donationDate +
-                ", user_id=" + user_id +
+                ", user_id=" + user +
                 '}';
     }
 }

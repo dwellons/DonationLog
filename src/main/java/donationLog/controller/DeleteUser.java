@@ -1,5 +1,6 @@
 package donationLog.controller;
 
+import donationLog.entity.Donation;
 import donationLog.entity.Users;
 import donationLog.persistence.DAO;
 import org.apache.logging.log4j.LogManager;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * A servlet that will delete a user
@@ -29,23 +31,32 @@ public class DeleteUser extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        // Extract the user ID from the request parameter.
+        // get the user id from the request
         int userID = Integer.parseInt(request.getParameter("ID"));
 
-        // Instantiate DAO.
+        // instantiate DAO
         DAO usersDAO = new DAO();
 
-        // Retrieve the user to delete.
-        Users donationToDelete = usersDAO.getUserById(userID);
+        // get the user to delete
+        Users userToDelete = usersDAO.getUserById(userID);
 
-        // Delete the user from the database.
-        usersDAO.deleteUser(donationToDelete);
+        // get the users donations
+        List<Donation> donations = usersDAO.getDonationsByUserId(1);
 
-        // Set a session attribute for the userDeleteMessage.
+        // remove user id from those donations and set to null
+        for (Donation donation : donations) {
+            donation.setUser(null);
+            usersDAO.updateDonation(donation); // Update donation to reflect disassociation
+        }
+
+        // delete the user from the database
+        usersDAO.deleteUser(userToDelete);
+
+        // set the userDeleteMessage
         request.getSession().setAttribute("userDeleteMessage",
                 "You have successfully removed user number " + userID + ".");
 
-        // Redirect to the ReadUsers servlet to display updated donation list.
+        // redirect to the ReadUsers servlet
         response.sendRedirect(request.getContextPath() + "/readUsers?submit=Show+All+Users");
     }
 }

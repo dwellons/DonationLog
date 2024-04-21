@@ -3,12 +3,7 @@ package donationLog.entity;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.Period;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
-import java.util.Date;
 
 /**
  * A class to represent a user.
@@ -36,7 +31,7 @@ public class Users {
     @Column(name = "lastName")
     private String lastName;
 
-    @OneToMany(mappedBy = "user_id", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "user")
     private List<Donation> donations = new ArrayList<>();
 
     /**
@@ -62,18 +57,15 @@ public class Users {
 
     }
 
-    public void addDonation (Donation donation) {
-        donations.add(donation);
-        donation.setUser_id(this);
-    }
-
     /**
      * Gets id.
+     *
      * @return the id
      */
-    public int getID() {
+    public int getId() {
         return id;
     }
+
 
     /**
      * Sets id.
@@ -149,16 +141,16 @@ public class Users {
     }
 
     /**
-     * gets donations
-     * @return
+     * Gets donations
+     * @return the donations
      */
     public List<Donation> getDonations() {
         return donations;
     }
 
     /**
-     * sets donations
-     * @param donations
+     * Sets donations
+     * @param donations the donations
      */
     public void setDonations(List<Donation> donations) {
         this.donations = donations;

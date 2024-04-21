@@ -1,8 +1,12 @@
 package donationLog.persistence;
 
+import donationLog.entity.Donation;
 import donationLog.entity.Users;
 import java.util.List;
 import static org.junit.Assert.*;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 import donationLog.util.Database;
@@ -23,6 +27,9 @@ public class UsersDaoTest {
         database.runSQL("cleandb.sql");
         usersDAO = new DAO();
     }
+
+    // for log messages
+    private final Logger logger = LogManager.getLogger(this.getClass());
 
     @Test
     public void testGetByIdSuccess() {
@@ -68,17 +75,41 @@ public class UsersDaoTest {
 
     @Test
     public void testDelete() {
-        // get the user with id of 1, delete it
-        usersDAO.deleteUser(usersDAO.getUserById(1));
-        // if delete is working, shouldn't get a user back
+
+        // get the user
+        Users userToDelete = usersDAO.getUserById(1);
+
+        // get the users donations
+        List<Donation> donations = usersDAO.getDonationsByUserId(1);
+
+        // remove user id from those donations and set to null
+        for (Donation donation : donations) {
+            donation.setUser(null);
+            usersDAO.updateDonation(donation); // Update donation to reflect disassociation
+        }
+
+        // delete the user
+        usersDAO.deleteUser(userToDelete);
+
+        // check that the user with ID 1 doesn't exist after deletion
         assertNull(usersDAO.getUserById(1));
 
-        // make sure all the donations are still present that they recorded
-        // get all the donations in the list
-       //List<Donation> donations = usersDAO.getAllDonations();
-       //assertEquals(7, donations.size());
+        // check that the total count of donations remains the same
+        assertEquals(7, usersDAO.getAllDonations().size());
+    }
 
-        // right now deletes donations that the user makes
+
+    @Test
+    public void getUserById() {
+        // get a record out of the database
+        Users retrievedUser = usersDAO.getUserById(1);
+
+        assertNotNull(retrievedUser);
+
+        // does user name match what i expect
+        assertEquals("dwellons", retrievedUser.getUserName());
+
+        logger.info("RESULTS: " + retrievedUser + " " + retrievedUser.getUserName() + " RESULTS");
     }
 
     @Test
@@ -94,7 +125,7 @@ public class UsersDaoTest {
         // gets user with property exactly like "dwellons"
         List<Users> users = usersDAO.getUserByPropertyLike("userName", "dwellons");
         assertEquals(2, users.size());
-        assertEquals(1, users.get(0).getID());
+        assertEquals(1, users.get(0).getId());
 
     }
 
