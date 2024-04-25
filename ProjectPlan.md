@@ -68,23 +68,21 @@
 - [X] Created one DAO to replace DonationDAO and UsersDAO
 - [X] Cleaned up Scripts 
 - [X] Updated Technologies in ReadMe
-- [ ] Update Learning Tracker
+- [X] Update Learning Tracker
 
 ### Week 9 (Start of the team project)
 #### Checkpoint 3 is Due: Deployed to AWS, at least one JSP that displays data from the database is implemented, authentication implemented, add AWS deployed app link to indie project list in student repo.
-- [ ] Weekly journal entry
+- [X] Weekly journal entry
 - [ ] Diagnose Cognito
-- [ ] Double-check all checkpoint 3 items (above) are complete and visible in GitHub.
-- [ ] Recommended suggestions
+- [X] Double-check all checkpoint 3 items (above) are complete and visible in GitHub.
+- [X] Recommended suggestions
 - 
 
 ### Week 10
 - [ ] Weekly journal entry
-- [ ] Print / Send Report AT LEAST - need to figure out what best way to send a report is
-- [ ] Contact page
+- [ ] Print / Send Report - need to figure out what best way to send a report is
+- [X] Contact page
 - [ ] Report an issue
-- [ ] Think about Weather more, make Zip a property that can be easily updated? How would that effect the lat / lng?
-- [ ] Could store zip as a property and then get lat and lng as part of js code calling URL
 - [ ]
 
 ### Week 11

@@ -255,11 +255,42 @@ It was tricky trying to figure out how to use javascript and java together to au
 * Week 9 classwork
 * Project Revision prior to completing weekly exercise
 
-**3/27/2024 9:00am - 10:30am**
+**3/27/2024 9:00pm - 10:30pm**
 * Weekly Classwork
 
+**3/28/2024 7:00pm - 8:30pm**
+* Work on Group Project - entity and hibernate files
+
 ### Week 11 - Spring 2024
+**4/03/2024 7:00pm - 8:00pm**
+* Group Project Team Meeting
+
+**4/05/2024 11:00am - 1:30pm**
+* Work on styling for group project
+
 **4/05/2024 9:00pm - 12:00am**
 * Working on Logging issues
-* Cleaning up 
+
+
+### Week 12 - Spring 2024
+**4/10/2024 5:30pm - 7:00 pm**
+* Record Team Project Presentation
+
+### Week 13 - Spring 2024
+* Finish up and Record Professional Development PowerPoint and presentation.
+
+Key learning points/takeaways - Week 12 and 13
+Stay committed to the things that you have the chance to take part in. 
+
+What challenged me:
+Trying to stay on track and motivated, there was a lot going on the past couple weeks but I was there for the team project and to get my professional development presentation done on time.
+
+### Week 14 - Spring 2024
+**4/22/2024 8pm - 11pm**
+* Determined Database Relation Issue
+
+**4/24/2024 7:00pm -**
+* Work on learning tracker
+* Plan meeting for Peer Review
+
 
