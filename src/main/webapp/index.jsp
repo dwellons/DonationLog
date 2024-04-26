@@ -10,6 +10,9 @@
 <!-- Head -->
 <c:import url="/assets/index_files/head.jsp"/>
 
+<!-- Sidebar -->
+<c:import url="/assets/index_files/sidebar.jsp"/>
+
 <!-- Content -->
 <div id="content">
     <div class="inner">
@@ -25,11 +28,59 @@
                 Homepage
             </div>
 
-            <!-- change back to logIn instead of loadWeather when figuring that out -->
+            <!-- Display the Donation Update Message -->
+            <c:if test="${not empty donationUpdateMessage}">
+                <p>${donationUpdateMessage}</p>
+            </c:if>
+
             <!-- Main Page Display -->
-            <form action="logIn" method="get" id="logInForm">
-                <input type ="submit" name="submit" value="Login">
-            </form>
+            <!-- Search Results Table -->
+            <h3>Recent Donations</h3>
+
+            <c:if test="${not empty donations}">
+
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Donation Number</th>
+                        <th>Donor Name</th>
+                        <th>Donation Type</th>
+                        <th>Donation Weight</th>
+                        <th>Donation Date</th>
+                        <th>Edit</th>
+                    </tr>
+                    </thead>
+                    <c:forEach var="donation" items="${donations}">
+                        <tr>
+                            <td>${donation.donationID}</td>
+                            <td>${donation.donorName}</td>
+                            <td>${donation.donationType}</td>
+                            <td>${donation.donationWeight}</td>
+                            <td>
+                                <fmt:formatDate value="${donation.donationDate}" pattern="yyyy-MM-dd"/>
+                            </td>
+                            <td>
+
+                                <!-- Remove -->
+                                <form action="readDeleteDonations" method="get">
+                                    <!-- Adding to see the submit attribute in the servlet -->
+                                    <input type="hidden" name="submit" value="Remove">
+                                    <input type="hidden" name="donationID" id="donationID" value="${donation.donationID}" >
+                                    <input type="submit" name="submit" value="Remove">
+                                </form>
+
+                                <!-- Update -->
+                                <a href="DonationUpdate.jsp?donationID=${donation.donationID}">Modify</a>
+
+                            </td>
+                        </tr>
+                    </c:forEach>
+                </table>
+            </c:if>
+
+            <c:if test="${empty donations}">
+                <p>No results found.</p>
+            </c:if>
 
         </article>
     </div>
