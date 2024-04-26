@@ -32,7 +32,7 @@
         </header>
         <ul>
 
-            <!-- removing /donationlog_war makes links work on AWS -->
+            <!-- removing /donationlog_war makes links work on AWS
             <h2>AWS Links</h2>
             <a href = "/DonationCreate.jsp">Add a new Donation</a>
             <br>
@@ -44,6 +44,8 @@
             <br>
 
             <h2>Local Links (remove when ready)</h2>
+            -->
+
             <!-- removing /donationlog_war makes links work on AWS -->
             <a href = "/DonationLog_war/DonationCreate.jsp">Add a new Donation</a>
             <br>

@@ -12,6 +12,7 @@ import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.query.Order;
 import org.hibernate.query.criteria.HibernateCriteriaBuilder;
 
 import java.util.List;
