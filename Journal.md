@@ -289,8 +289,10 @@ Trying to stay on track and motivated, there was a lot going on the past couple 
 **4/22/2024 8pm - 11pm**
 * Determined Database Relation Issue
 
-**4/24/2024 7:00pm -**
+**4/24/2024 7:00pm - 9:00pm**
 * Work on learning tracker
 * Plan meeting for Peer Review
 
-
+**4/26/2024 12:00pm - **
+* 
+* Peer Review

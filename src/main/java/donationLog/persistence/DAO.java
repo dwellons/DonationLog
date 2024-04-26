@@ -2,6 +2,7 @@ package donationLog.persistence;
 
 import donationLog.entity.Donation;
 import donationLog.entity.Users;
+import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Expression;
 import jakarta.persistence.criteria.Root;
@@ -94,6 +95,7 @@ public class DAO {
         HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<Donation> query = builder.createQuery(Donation.class);
         Root<Donation> root = query.from(Donation.class);
+
         List<Donation> donations = session.createSelectionQuery( query ).getResultList();
 
         session.close();
@@ -285,5 +287,29 @@ public class DAO {
         List<Users> users = session.createQuery( query ).getResultList();
         session.close();
         return users;
+    }
+
+    /**
+     * Gets the past 5 donations.
+     * @return
+     */
+    public List<Donation> getRecentDonations() {
+        Session session = sessionFactory.openSession();
+
+        HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<Donation> query = builder.createQuery(Donation.class);
+        Root<Donation> root = query.from(Donation.class);
+
+        // use a typed query to use max results
+        TypedQuery<Donation> typedQuery = session.createQuery(query);
+
+        // limit to 5 results max
+        typedQuery.setMaxResults(5);
+
+        List<Donation> donations = typedQuery.getResultList();
+
+        session.close();
+
+        return donations;
     }
 }

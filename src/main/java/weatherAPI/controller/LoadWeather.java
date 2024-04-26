@@ -75,7 +75,7 @@ public class LoadWeather extends HttpServlet {
         request.setAttribute("condition", condition);
 
         // forward the request and response to the JSP page
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/homepage.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("ReadRecentDonations");
         dispatcher.forward(request, response);
     }
 }

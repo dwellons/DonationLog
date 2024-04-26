@@ -126,4 +126,11 @@ public class DonationDaoTest {
         // check that the list contains the expected number of donations
         assertEquals(6, userDonations.size());
     }
+
+    @Test
+    public void getRecent() {
+        // get all the donations in the list
+        List<Donation> donations = donationDAO.getRecentDonations();
+        assertEquals(5, donations.size());
+    }
 }
