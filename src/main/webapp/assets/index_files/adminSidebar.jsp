@@ -15,10 +15,10 @@
 
     <!-- Display Weather Information -->
     <section>
-    <h2>Local Weather Information</h2>
-    <li>Location: ${sessionScope.location}</li>
-    <li>Temperature: ${sessionScope.temperature} F</li>
-    <li>Condition: ${sessionScope.condition}</li>
+        <h2>Local Weather Information</h2>
+        <li>Location: ${sessionScope.location}</li>
+        <li>Temperature: ${sessionScope.temperature} F</li>
+        <li>Condition: ${sessionScope.condition}</li>
     </section>
     <!--Calendar  -->
     <section class="box calendar" id="calendar-container">
@@ -32,20 +32,6 @@
         </header>
         <ul>
 
-            <!-- removing /donationlog_war makes links work on AWS
-            <h2>AWS Links</h2>
-            <a href = "/DonationCreate.jsp">Add a new Donation</a>
-            <br>
-            <a href = "/DonationRead.jsp">Search for a Donation</a>
-            <br>
-            <a href = "/UserCreate.jsp">Add a new User</a>
-            <br>
-            <a href = "/ReportIssue.jsp">Report an Issue</a>
-            <br>
-
-            <h2>Local Links (remove when ready)</h2>
-            -->
-
             <!-- removing /donationlog_war makes links work on AWS -->
             <a href = "/DonationLog_war/DonationCreate.jsp">Add a new Donation</a>
             <br>
@@ -58,9 +44,7 @@
 
             <a href = "logIn">Sign In</a>
             <br>
-            <a href = "#">Sign Out</a>
-            <br>
-            <a href = "/DonationLog_war/Contacts.jsp">Contacts</a>
+            <a href = "/DonationLog_war/ReadRecentDonations">Sign Out</a>
             <br>
             <a href = "http://localhost:8080/DonationLog_war/services/donations">RESTful Response (Plain Text)</a>
             <br>

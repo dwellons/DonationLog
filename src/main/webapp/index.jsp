@@ -11,7 +11,7 @@
 <c:import url="/assets/index_files/head.jsp"/>
 
 <!-- Sidebar -->
-<c:import url="/assets/index_files/sidebar.jsp"/>
+<c:import url="/assets/index_files/userSidebar.jsp"/>
 
 <!-- Content -->
 <div id="content">
@@ -28,13 +28,23 @@
                 Homepage
             </div>
 
-            <!-- Display the Donation Update Message -->
+            <!-- Display the Donation UPDATE Message -->
             <c:if test="${not empty donationUpdateMessage}">
                 <p>${donationUpdateMessage}</p>
             </c:if>
 
+            <!-- Display the Donation Delete Message -->
+            <c:if test="${not empty donationDeleteMessage}">
+                <h3>${donationDeleteMessage}</h3>
+            </c:if>
+
+            <!-- Display the Donation Add Message -->
+            <c:if test="${not empty donationAddMessage}">
+                <h3>${donationAddMessage}</h3>
+            </c:if>
+
             <!-- Main Page Display -->
-            <!-- Search Results Table -->
+            <!-- Recent Donations Table -->
             <h3>Recent Donations</h3>
 
             <c:if test="${not empty donations}">
@@ -47,7 +57,6 @@
                         <th>Donation Type</th>
                         <th>Donation Weight</th>
                         <th>Donation Date</th>
-                        <th>Edit</th>
                     </tr>
                     </thead>
                     <c:forEach var="donation" items="${donations}">
@@ -58,20 +67,6 @@
                             <td>${donation.donationWeight}</td>
                             <td>
                                 <fmt:formatDate value="${donation.donationDate}" pattern="yyyy-MM-dd"/>
-                            </td>
-                            <td>
-
-                                <!-- Remove -->
-                                <form action="readDeleteDonations" method="get">
-                                    <!-- Adding to see the submit attribute in the servlet -->
-                                    <input type="hidden" name="submit" value="Remove">
-                                    <input type="hidden" name="donationID" id="donationID" value="${donation.donationID}" >
-                                    <input type="submit" name="submit" value="Remove">
-                                </form>
-
-                                <!-- Update -->
-                                <a href="DonationUpdate.jsp?donationID=${donation.donationID}">Modify</a>
-
                             </td>
                         </tr>
                     </c:forEach>

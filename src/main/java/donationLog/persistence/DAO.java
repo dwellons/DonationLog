@@ -8,14 +8,15 @@ import jakarta.persistence.criteria.Expression;
 import jakarta.persistence.criteria.Root;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.query.Order;
 import org.hibernate.query.criteria.HibernateCriteriaBuilder;
-
 import java.util.List;
+
+
+
+
 
 /**
  * A Data Access Object class.
@@ -24,7 +25,7 @@ import java.util.List;
  * @since 1.0
  */
 
-public class DAO {
+public class DAO{
 
     // DONATIONS
 
