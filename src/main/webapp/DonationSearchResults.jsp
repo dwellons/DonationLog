@@ -67,7 +67,7 @@
                             <td>${donation.donationType}</td>
                             <td>${donation.donationWeight}</td>
                             <td>
-                                <fmt:formatDate value="${donation.donationDate}" pattern="yyyy-MM-dd"/>
+                                <fmt:formatDate value="${donation.donationDate}" pattern="MM-dd-YYYY"/>
                             </td>
                             <td>
 

@@ -38,9 +38,11 @@ public class ReadRecentDonations extends HttpServlet {
         // Get Recent entries.
         request.setAttribute("donations", donationDAO.getRecentDonations());
 
+        logger.debug(request);
+
         /*
          * The servlet will forward the request and response
-         * to the Results JSP page.
+         * to the index.jsp page.
          */
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request,response);

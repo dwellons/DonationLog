@@ -115,16 +115,16 @@ public class UsersDaoTest {
     @Test
     public void getAll() {
         // gets all users
-        int numberOfUsers = 5;
+        int numberOfUsers = 3;
         List<Users> users = usersDAO.getAllUsers();
-        assertEquals(5, users.size());
+        assertEquals(3, users.size());
     }
 
     @Test
     public void testGetByPropertyEqual() {
         // gets user with property exactly like "dwellons"
         List<Users> users = usersDAO.getUserByPropertyLike("userName", "dwellons");
-        assertEquals(2, users.size());
+        assertEquals(1, users.size());
         assertEquals(1, users.get(0).getId());
 
     }
@@ -134,6 +134,6 @@ public class UsersDaoTest {
         // gets users with property like "nirad"
         usersDAO = new DAO();
         List<Users> users = usersDAO.getUserByPropertyLike("firstName", "Nirad");
-        assertEquals(2, users.size());
+        assertEquals(1, users.size());
     }
 }

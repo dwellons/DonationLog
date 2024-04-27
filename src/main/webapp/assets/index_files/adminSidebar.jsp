@@ -2,7 +2,7 @@
 
     <!-- Home Button  -->
     <!-- removing /donationlog_war makes links work on AWS -->
-    <h1 id="logo"><a href="/DonationLog_war/ReadRecentDonations">homepage</a></h1>
+    <h1 id="logo"><a href="/DonationLog_war/DonationRead.jsp">homepage</a></h1>
 
 
 
@@ -33,18 +33,14 @@
         <ul>
 
             <!-- removing /donationlog_war makes links work on AWS -->
-            <a href = "/DonationLog_war/DonationCreate.jsp">Add a new Donation</a>
-            <br>
+
             <a href = "/DonationLog_war/DonationRead.jsp">Search for a Donation</a>
             <br>
             <a href = "/DonationLog_war/UserCreate.jsp">Add a new User</a>
             <br>
-            <a href = "/DonationLog_war/ReportIssue.jsp">Report an Issue</a>
-            <br>
-
-            <a href = "logIn">Sign In</a>
-            <br>
             <a href = "/DonationLog_war/ReadRecentDonations">Sign Out</a>
+            <br>
+            <a href = "mailto:dwellons@madisoncollege.edu?subject=Donation%20Log%20Issue%20Report&body=Please%20describe%20your%20issue%20above.">Report an Issue</a>
             <br>
             <a href = "http://localhost:8080/DonationLog_war/services/donations">RESTful Response (Plain Text)</a>
             <br>

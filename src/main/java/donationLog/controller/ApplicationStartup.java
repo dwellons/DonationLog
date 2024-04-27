@@ -33,7 +33,6 @@ public class ApplicationStartup extends HttpServlet {
         getServletContext().setAttribute("donations", donationDAO.getRecentDonations());
 
 
-
 // Add Weather to DAO?
         /*
         // new weatherDAO object

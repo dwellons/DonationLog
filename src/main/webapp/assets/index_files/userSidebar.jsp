@@ -35,7 +35,7 @@
             <!-- removing /donationlog_war makes links work on AWS -->
             <a href = "/DonationLog_war/DonationCreate.jsp">Add a new Donation</a>
             <br>
-            <a href = "/DonationLog_war/ReportIssue.jsp">Report an Issue</a>
+            <a href = "mailto:dwellons@madisoncollege.edu?subject=Donation%20Log%20Issue%20Report&body=Please%20describe%20your%20issue%20above.">Report an Issue</a>
             <br>
             <a href = "logIn">Sign In</a>
             <br>

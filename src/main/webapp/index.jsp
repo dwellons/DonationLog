@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -51,14 +52,16 @@
 
                 <table>
                     <thead>
-                    <tr>
-                        <th>Donation Number</th>
-                        <th>Donor Name</th>
-                        <th>Donation Type</th>
-                        <th>Donation Weight</th>
-                        <th>Donation Date</th>
-                    </tr>
+                        <tr>
+                            <th>Donation Number</th>
+                            <th>Donor Name</th>
+                            <th>Donation Type</th>
+                            <th>Donation Weight</th>
+                            <th>Donation Date</th>
+                            <th></th>
+                        </tr>
                     </thead>
+
                     <c:forEach var="donation" items="${donations}">
                         <tr>
                             <td>${donation.donationID}</td>
@@ -66,8 +69,9 @@
                             <td>${donation.donationType}</td>
                             <td>${donation.donationWeight}</td>
                             <td>
-                                <fmt:formatDate value="${donation.donationDate}" pattern="yyyy-MM-dd"/>
+                                <fmt:formatDate value="${donation.donationDate}" pattern="MM-dd-YYYY"/>
                             </td>
+                            <td></td>
                         </tr>
                     </c:forEach>
                 </table>
