@@ -293,6 +293,24 @@ Trying to stay on track and motivated, there was a lot going on the past couple 
 * Work on learning tracker
 * Plan meeting for Peer Review
 
-**4/26/2024 12:00pm - **
-* 
-* Peer Review
+**4/26/2024 12:00pm - 2:30pm, 4:00pm - 11:45pm**
+* Application Startup created
+* Weather is being loaded through startup
+* Modify donation entries now displaying
+* 5 donations now displaying on homepage
+* User/admin functionality started
+* Edited cleandb file
+* Report issue is now linked to send an email
+* Dates issue in donations resolved
+* Peer Review Meeting
+* Typed Query Reference, for limiting amount of results:
+* https://docs.oracle.com/javaee%2F6%2Fapi%2F%2F/javax/persistence/TypedQuery.html#setMaxResults(int)
+
+Key learning points/takeaways - Week 14
+Don't overthink things just let the work do itself.
+
+What challenged me:
+Trying to get the most recent 5 donations. I am still trying to figure out how to get them descending, but I have
+been able to limit it to 5 so far.
+It was a little tricky creating the Application Startup, I couldn't remember exactly how to do it but I just went back
+to last semesters project and it was easy from there. It was not easy at first getting the weather to load using the application start up though, but once I stopped thinking about it so much I figured out how to do what i wanted. I was trying to access the WeatherDAO, but it was in another package. I thought I would have to move my weather info to my DAO, but I took a break doing other work and when I came back I just specified it more directly.

@@ -98,8 +98,8 @@ public class Auth extends HttpServlet implements PropertiesLoader {
             }
         }
 
-        // changed to LoadWeather
-        RequestDispatcher dispatcher = req.getRequestDispatcher("LoadWeather");
+        // This is where it re-directs to after log in.
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/DonationRead.jsp");
         dispatcher.forward(req, resp);
 
     }

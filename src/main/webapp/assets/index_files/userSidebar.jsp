@@ -16,9 +16,9 @@
     <!-- Display Weather Information -->
     <section>
     <h2>Local Weather Information</h2>
-    <li>Location: ${sessionScope.location}</li>
-    <li>Temperature: ${sessionScope.temperature} F</li>
-    <li>Condition: ${sessionScope.condition}</li>
+    <li>Location: ${location}</li>
+    <li>Temperature: ${temperature} F</li>
+    <li>Condition: ${condition}</li>
     </section>
     <!--Calendar  -->
     <section class="box calendar" id="calendar-container">
