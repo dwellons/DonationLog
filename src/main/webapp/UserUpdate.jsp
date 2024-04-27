@@ -65,6 +65,7 @@
             <!-- Remove the message after displaying it, if it is present-->
             <c:remove var="userUpdateMessage"/>
 
+
         </article>
     </div>
 </div>

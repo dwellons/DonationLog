@@ -28,6 +28,23 @@
                 Search Donations
             </div>
 
+            <!-- Display the Donation UPDATE Message -->
+            <c:if test="${not empty donationUpdateMessage}">
+                <p>${donationUpdateMessage}</p>
+            </c:if>
+
+            <!-- Display the Donation Delete Message -->
+            <c:if test="${not empty donationDeleteMessage}">
+                <h3>${donationDeleteMessage}</h3>
+            </c:if>
+
+            <!-- Display the Donation Add Message -->
+            <c:if test="${not empty donationAddMessage}">
+                <h3>${donationAddMessage}</h3>
+            </c:if>
+
+
+
             <!-- Donation Search Form -->
             <h2>Search for a Past Donation</h2>
 
@@ -71,6 +88,11 @@
                 <input type ="submit" name="submit" value="Show All Donations">
 
             </form>
+
+            <!-- Remove the message after displaying it, if it is present-->
+            <c:remove var="donationUpdateMessage"/>
+            <c:remove var="donationDeleteMessage"/>
+            <c:remove var="donationAddMessage"/>
 
         </article>
     </div>

@@ -35,13 +35,6 @@ public class UpdateDonation extends HttpServlet {
     private boolean isValid;
 
     /**
-     * The doPost() method will perform the following:
-     * Extract the data for updating the Donation from the HTML form.
-     * Call the update donation method in the DAO
-     * instance and pass in the form data as arguments.
-     * Add the returned message to the session.
-     * Send a redirect to the browser to the Update Donation page.
-     * NOTE: It’s a doPost() method, not a doGet().
      *
      * @param request  request from the session
      * @param response response from the session
@@ -52,7 +45,7 @@ public class UpdateDonation extends HttpServlet {
             throws ServletException, IOException {
 
         // Extract the data for updating the Donation from the HTML form.
-        int donationID = Integer.parseInt(request.getParameter("donationID"));
+        String donationID = request.getParameter("donationID");
         String donorName = request.getParameter("donorName");
         String donationType = request.getParameter("donationType");
         String donationWeight = request.getParameter("donationWeight");
@@ -76,9 +69,10 @@ public class UpdateDonation extends HttpServlet {
         donationDAO = new DAO();
 
         // Retrieve the existing Donation from the database.
-        Donation donationToUpdate = donationDAO.getDonationById(donationID);
+        Donation donationToUpdate = donationDAO.getDonationById(Integer.parseInt(donationID));
 
         // Update the existing Donation with the new data.
+        donationToUpdate.setDonationID(Integer.parseInt(donationID));
         donationToUpdate.setDonorName(donorName);
         donationToUpdate.setDonationType(donationType);
         donationToUpdate.setDonationWeight(donationWeight);
@@ -94,7 +88,7 @@ public class UpdateDonation extends HttpServlet {
                 "You have updated the donation with ID: " + donationID);
 
         // Forward to the Update Donation page.
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/DonationUpdate.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/DonationRead.jsp");
         dispatcher.forward(request, response);
 
     }
