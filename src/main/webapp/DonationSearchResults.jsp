@@ -73,14 +73,21 @@
 
                                 <!-- Remove -->
                                 <form action="readDeleteDonations" method="get">
-                                    <!-- Adding to see the submit attribute in the servlet -->
+                                    <!-- Adding to see the attribute in the servlet -->
                                     <input type="hidden" name="submit" value="Remove">
                                     <input type="hidden" name="donationID" id="donationID" value="${donation.donationID}" >
                                     <input type="submit" name="submit" value="Remove">
                                 </form>
 
-                                <!-- Update -->
+                                <!-- Update
                                 <a href="DonationUpdate.jsp?donationID=${donation.donationID}">Modify</a>
+                                -->
+                                <form action="readModifyDonation" method="get">
+                                    <!-- Adding to see the attribute in the servlet -->
+                                    <input type="hidden" name="submit" value="Modify">
+                                    <input type="hidden" name="donationID" id="donationID2" value="${donation.donationID}" >
+                                    <input type="submit" name="submit" value="Modify">
+                                </form>
 
                             </td>
                         </tr>

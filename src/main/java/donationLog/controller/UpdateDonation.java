@@ -48,7 +48,7 @@ public class UpdateDonation extends HttpServlet {
      * @throws ServletException for servlet exceptions
      * @throws IOException      for io exceptions
      */
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         // Extract the data for updating the Donation from the HTML form.

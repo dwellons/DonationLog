@@ -33,7 +33,7 @@
             </c:if>
 
             <!-- Delete Donation Table -->
-            <h2>Confirm Removal</h2>
+                    <h2>Confirm Removal</h2>
 
             <c:if test="${not empty donations}">
 
