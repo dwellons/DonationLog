@@ -101,6 +101,8 @@
 
             <a href="DonationRead.jsp">Search Again</a>
 
+            <input type="submit" value="print" onClick="print()"/>
+
             <!-- Remove the messages after displaying them, if they are present. -->
             <c:remove var="donationDeleteMessage"/>
             <c:remove var="donationAddMessage"/>

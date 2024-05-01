@@ -5,7 +5,6 @@
     <h1 id="logo"><a href="/DonationLog_war/DonationRead.jsp">homepage</a></h1>
 
 
-
     <!-- Search -->
     <section>
         <form action="https://www.google.com/search" method="GET" target="_blank">
@@ -54,7 +53,7 @@
 
     <!-- Copyright -->
     <ul id="copyright">
-        <li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
     </ul>
 </div>
 

@@ -1499,3 +1499,13 @@ h1 {
 	font-size:60px;
 	padding-bottom: 10px;
 }
+
+@media print {
+	body * {
+		visibility: hidden;
+	}
+	#content, #content * {
+		visibility: visible;
+	}
+
+}
