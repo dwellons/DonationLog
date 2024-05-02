@@ -79,31 +79,26 @@
 - 
 
 ### Week 10
-- [ ] Weekly journal entry
-- [ ] Print / Send Report - need to figure out what best way to send a report is
+- [X] Weekly journal entry
+- [X] Print / Send Report - need to figure out what best way to send a report is
 - [X] Contact page
-- [ ] Report an issue
+- [X] Report an issue
 - [ ]
 
-### Week 11
-- [ ] Weekly journal entry
-- [ ]
+### Week 11 - 13
+- [X] Weekly journal entry
+- [X] Work on Team Project
 
-### Week 12
-- [ ] Weekly journal entry
-- [ ]
-
-### Week 13
-- [ ] Weekly journal entry
-- [ ]
 
 ### Week 14
-- [ ] Weekly journal entry
-- [ ]
+- [X] Weekly journal entry
+- [X] Figure out database issue
+- [X] Start implementing changes from open issues
 
 ### Week 15
-- [ ] Weekly journal entry
-- [ ] Implement Feedback from Week 14 review
+- [X] Weekly journal entry
+- [X] Implement Feedback from Week 14 review
+- [ ] V2 Task List Created
 - [ ] Final Presentation
 - [ ] Create video, add video link to readme.md
 - [ ] Finalize all documentation

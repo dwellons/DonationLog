@@ -321,4 +321,9 @@ to last semesters project and it was easy from there. It was not easy at first g
 * Added print button to print search results
 * Print specific part of page:
 * https://stackoverflow.com/questions/12997123/print-specific-part-of-webpage
+* Created sign out servlet
+* Updated styling, added image
+* Closed out open issues
+* Remove unused files
+* Modify user now displaying user information
 * 
