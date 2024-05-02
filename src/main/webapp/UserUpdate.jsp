@@ -43,19 +43,19 @@
                 <input type="text" name="ID" id="ID" value="${users.id}" required readonly>
 
                 <label for="userName">Username: </label>
-                <input type="text" id="userName" name="userName" value="${users.userName}" required>
+                <input type="text" id="userName" name="userName" placeholdere="${users.userName}" required>
                 <br>
 
                 <label for="password">Password </label>
-                <input type="text" id="password" name="password" value="${users.password}" required>
+                <input type="text" id="password" name="password" placeholder="${users.password}" required>
                 <br>
 
                 <label for="firstName">First Name: </label>
-                <input type="text" id="firstName" name="firstName" value="${users.firstName}" required>
+                <input type="text" id="firstName" name="firstName" placeholder="${users.firstName}" required>
                 <br>
 
                 <label for="lastName">Last Name: </label>
-                <input type="text" id="lastName" name="lastName" value="${users.lastName}" required>
+                <input type="text" id="lastName" name="lastName" placeholder="${users.lastName}" required>
                 <br>
 
                 <input type="submit" value="Update User">
