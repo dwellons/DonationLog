@@ -58,7 +58,7 @@
 
                 <br>
 
-                <input type="submit" name="submit" value="Submit">
+                <input type="submit" name="submit" value="Search" id="SearchButton">
 
             </form>
 
