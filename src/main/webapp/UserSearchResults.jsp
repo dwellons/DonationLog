@@ -77,7 +77,12 @@
                                 </form>
 
                                 <!-- Update -->
-                                <a href="UserUpdate.jsp?userID=${user.id}">Modify</a>
+                                <form action="readModifyUser" method="get">
+                                    <!-- Adding to see the attribute in the servlet -->
+                                    <input type="hidden" name="submit" value="Modify">
+                                    <input type="hidden" name="userID" id="userID" value="${user.id}" >
+                                    <input type="submit" name="submit" value="Modify">
+                                </form>
 
                             </td>
                         </tr>

@@ -13,17 +13,17 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * A servlet that will update donations
+ * A servlet that will update users
  * @author Darin Wellons
  * @version 1.0
  * @since 1.0
  */
 
 @WebServlet(
-        urlPatterns = {"/readModifyDonation"}
+        urlPatterns = {"/readModifyUser"}
 )
 
-public class ReadUpdateDonation extends HttpServlet {
+public class ReadUpdateUser extends HttpServlet {
 
     // Instantiate Logger
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -32,26 +32,26 @@ public class ReadUpdateDonation extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // Instantiate a new DAO.
-        DAO donationDAO = new DAO();
+        DAO userDAO = new DAO();
 
         // If submit attribute = Submit, search.
         if (request.getParameter("submit").equals("Modify")) {
 
-            // Get my donations, call donationDAO method, pass in the donation.
-            request.setAttribute("donations", donationDAO.getDonationById(Integer.parseInt(request.getParameter("donationID"))));
+            // Get my users, call userDAO method, pass in the donation.
+            request.setAttribute("users", userDAO.getUserById(Integer.parseInt(request.getParameter("userID"))));
         } else {
 
             // Get all entries.
-            request.setAttribute("donations", donationDAO.getAllDonations());
+            request.setAttribute("users", userDAO.getAllUsers());
         }
 
-        logger.debug("REQUEST IN UPDATE DONATION: " + request.getAttribute("donations"));
+        logger.debug("REQUEST IN UPDATE USER: " + request.getAttribute("users"));
 
         /*
          * The servlet will forward the request and response
          * to the Results JSP page.
          */
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/DonationUpdate.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/UserUpdate.jsp");
         dispatcher.forward(request,response);
     }
 }

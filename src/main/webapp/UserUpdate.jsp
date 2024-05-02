@@ -36,32 +36,32 @@
             </c:if>
 
             <br>
-
+            <c:if test="${not empty users}">
             <form action="updateUser" method="post">
 
                 <label for="ID">User ID: </label>
-                <input type="text" name="ID" id="ID" value="${userToUpdate.ID}" required>
+                <input type="text" name="ID" id="ID" value="${users.id}" required readonly>
 
                 <label for="userName">Username: </label>
-                <input type="text" id="userName" name="userName" value="${userToUpdate.userName}" required>
+                <input type="text" id="userName" name="userName" value="${users.userName}" required>
                 <br>
 
                 <label for="password">Password </label>
-                <input type="text" id="password" name="password" value="${userToUpdate.password}" required>
+                <input type="text" id="password" name="password" value="${users.password}" required>
                 <br>
 
                 <label for="firstName">First Name: </label>
-                <input type="text" id="firstName" name="firstName" value="${userToUpdate.firstName}" required>
+                <input type="text" id="firstName" name="firstName" value="${users.firstName}" required>
                 <br>
 
                 <label for="lastName">Last Name: </label>
-                <input type="text" id="lastName" name="lastName" value="${userToUpdate.lastName}" required>
+                <input type="text" id="lastName" name="lastName" value="${users.lastName}" required>
                 <br>
 
                 <input type="submit" value="Update User">
 
             </form>
-
+            </c:if>
             <!-- Remove the message after displaying it, if it is present-->
             <c:remove var="userUpdateMessage"/>
 
