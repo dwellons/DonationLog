@@ -25,9 +25,9 @@ organization.
 * Dependency Management
     * Maven 11
 * Web Services consumed using Java
-    * GeoNames
+    * GeoNames for Weather Information
 * CSS
-    * HTML5 UP
+    * HTML5 UP - https://html5up.net/
 * Data Validation
     * Bootstrap Validator
     * Hibernate Validator
@@ -42,13 +42,14 @@ organization.
 * Unit Testing
     * JUnit
 * Software Used
-    * IDE: IntelliJ IDEA
-    * Screen Layout Design: Figma
+    * IntelliJ IDEA
+    * Figma
     * MAMP Pro
     * SoapUI
     * MySQLWorkbench
     * GitHub Desktop
-* Different API's for emailing Donation Reports:
+    * Postman
+* Different future API's for emailing Donation Reports:
     * Java Mail: https://javaee.github.io/javamail/
     * Apache Commons EMail: https://commons.apache.org/proper/commons-email/
     * Email Verifier: https://rapidapi.com/mr_admin/api/email-verifier
