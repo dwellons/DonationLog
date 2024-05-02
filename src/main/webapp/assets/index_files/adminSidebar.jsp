@@ -37,7 +37,7 @@
             <br>
             <a href = "/DonationLog_war/UserCreate.jsp">Add a new User</a>
             <br>
-            <a href = "/DonationLog_war/ReadRecentDonations">Sign Out</a>
+            <a href = "signOut">Sign Out</a>
             <br>
             <a href = "mailto:dwellons@madisoncollege.edu?subject=Donation%20Log%20Issue%20Report&body=Please%20describe%20your%20issue%20above.">Report an Issue</a>
             <br>

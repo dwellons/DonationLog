@@ -21,6 +21,7 @@ import org.apache.logging.log4j.Logger;
  */
 
 @WebServlet(
+        name = "ReadRecentDonations",
         urlPatterns = {"/ReadRecentDonations"}
 )
 
