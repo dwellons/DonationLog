@@ -11,7 +11,7 @@ import java.io.IOException;
 
 
 /**
- * A servlet to sign the user.
+ * A servlet to sign out the user.
  *
  * @author Darin Wellons
  */
