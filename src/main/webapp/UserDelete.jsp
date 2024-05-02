@@ -78,7 +78,7 @@
                 <p>No results found.</p>
             </c:if>
 
-            <a href="DonationRead.jsp">Go Back to Search</a>
+            <a href="DonationSearch.jsp">Go Back to Search</a>
 
             <!-- Remove the messages after displaying them, if they are present. -->
             <c:remove var="donationDeleteMessage"/>

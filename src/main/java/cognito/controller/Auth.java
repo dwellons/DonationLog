@@ -102,7 +102,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         }
 
         // This is where it re-directs to after log in.
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/DonationRead.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/DonationSearch.jsp");
         dispatcher.forward(req, resp);
 
     }

@@ -2,7 +2,7 @@
 
     <!-- Home Button  -->
     <!-- removing /donationlog_war makes links work on AWS -->
-    <h1 id="logo"><a href="/DonationLog_war/DonationRead.jsp">homepage</a></h1>
+    <h1 id="logo"><a href="/DonationLog_war/DonationSearch.jsp">homepage</a></h1>
 
 
     <!-- Search -->

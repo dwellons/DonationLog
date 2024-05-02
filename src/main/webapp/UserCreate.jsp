@@ -33,7 +33,7 @@
             <h2>Add a new User</h2>
 
             <br>
-            <a href = "/DonationLog_war/UserRead.jsp">Search Existing Users</a>
+            <a href = "/DonationLog_war/UserSearch.jsp">Search Existing Users</a>
             <br>
 
             <!-- Display the User Add Message -->

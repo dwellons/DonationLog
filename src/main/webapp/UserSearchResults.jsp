@@ -94,7 +94,7 @@
                 <p>No results found.</p>
             </c:if>
 
-            <a href="UserRead.jsp">Search Again</a>
+            <a href="UserSearch.jsp">Search Again</a>
 
             <!-- Remove the messages after displaying them, if they are present. -->
             <c:remove var="userDeleteMessage"/>

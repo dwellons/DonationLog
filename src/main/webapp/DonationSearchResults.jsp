@@ -99,7 +99,7 @@
                 <p>No results found.</p>
              </c:if>
 
-            <a href="DonationRead.jsp">Search Again</a>
+            <a href="DonationSearch.jsp">Search Again</a>
 
             <input type="submit" value="print" onClick="print()"/>
 

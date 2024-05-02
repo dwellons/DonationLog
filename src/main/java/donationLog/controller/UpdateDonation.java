@@ -88,7 +88,7 @@ public class UpdateDonation extends HttpServlet {
                 "You have updated the donation with ID: " + donationID);
 
         // Forward to the Update Donation page.
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/DonationRead.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/DonationSearch.jsp");
         dispatcher.forward(request, response);
 
     }
