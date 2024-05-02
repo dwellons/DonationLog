@@ -43,7 +43,7 @@
                 <input type="text" name="ID" id="ID" value="${users.id}" required readonly>
 
                 <label for="userName">Username: </label>
-                <input type="text" id="userName" name="userName" placeholdere="${users.userName}" required>
+                <input type="text" id="userName" name="userName" placeholder="${users.userName}" required>
                 <br>
 
                 <label for="password">Password </label>
