@@ -1507,5 +1507,10 @@ h1 {
 	#content, #content * {
 		visibility: visible;
 	}
-
 }
+
+img {
+	max-width: 100%;
+	margin-top: 1em;
+}
+

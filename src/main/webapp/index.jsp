@@ -83,6 +83,16 @@
                 <p>No results found.</p>
             </c:if>
 
+            <div id="VolunteerImage">
+                <img src="assets/index_files/images/ECOVolunteers2023.png" alt="Volunteers at Edgerton
+                    Community Outreach in 2023">
+                <!-- img source: https://edgertonoutreach.org/volunteer-information/ -->
+                <p>
+                    Volunteers at Edgerton Community Outreach in 2023. Thank you!
+                </p>
+
+            </div>
+
         </article>
     </div>
 </div>
