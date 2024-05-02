@@ -18,9 +18,9 @@ public class ApplicationStartup extends HttpServlet {
 
     // properties object for new weatherDAO object
     private Properties weatherProperties;
-    @Override
 
     public void init() throws ServletException {
+
 
     /*
     Load Donations

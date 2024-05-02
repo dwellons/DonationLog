@@ -67,9 +67,8 @@ public class DonationDaoTest {
     public void testInsertSuccess() {
 
         Date donationDate = new Date(1989,10,16);
-        int donationID = 0;
         Users userID = null;
-        Donation newDonation = new Donation(donationID, "Piggly Wiggly", "Bread", "130", donationDate, userID);
+        Donation newDonation = new Donation("Piggly Wiggly", "Bread", "130", donationDate, userID);
 
         newDonation.setDonationDate(donationDate);
 

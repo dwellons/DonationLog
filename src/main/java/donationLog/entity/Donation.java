@@ -42,14 +42,12 @@ public class Donation {
 
     /**
      * Instantiates a new Donation.
-     * @param donationID
      * @param donorName
      * @param donationType
      * @param donationWeight
      * @param donationDate
      */
-    public Donation(int donationID, String donorName, String donationType, String donationWeight, Date donationDate, Users user) {
-        this.donationID = donationID;
+    public Donation( String donorName, String donationType, String donationWeight, Date donationDate, Users user) {
         this.donorName = donorName;
         this.donationType = donationType;
         this.donationWeight = donationWeight;

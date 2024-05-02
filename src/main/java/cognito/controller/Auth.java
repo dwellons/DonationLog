@@ -8,6 +8,8 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import cognito.auth.*;
 import cognito.util.PropertiesLoader;
+import donationLog.entity.Users;
+import donationLog.persistence.DAO;
 import org.apache.commons.io.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -36,6 +38,7 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.RSAPublicKeySpec;
 import java.util.Base64;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 import java.util.stream.Collectors;
 
@@ -173,8 +176,22 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         logger.debug("here's the username: " + userName);
         logger.debug("here are all the available claims: " + jwt.getClaims());
 
-        // TODO decide what you want to do with the info!
-        // for now, I'm just returning username for display back to the browser
+
+        DAO donationDAO = new DAO();
+        Users user;
+        List<Users> userList = donationDAO.getUserByPropertyEqual("userName", userName);
+
+        if (userList.isEmpty()) {
+            user = new Users(userName);
+            donationDAO.insertUser(user);
+        } else {
+            user = userList.get(0);
+        }
+
+        // here we have the user id for the signed in user.
+        int UserId = user.getId();
+
+        // TODO Determine how we want to associate a donation with a user, when adding donation doesnt require login.
 
         return userName;
     }

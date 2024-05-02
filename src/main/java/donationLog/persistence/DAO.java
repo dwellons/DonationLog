@@ -14,10 +14,6 @@ import org.hibernate.Transaction;
 import org.hibernate.query.criteria.HibernateCriteriaBuilder;
 import java.util.List;
 
-
-
-
-
 /**
  * A Data Access Object class.
  * @author Darin Wellons
@@ -115,7 +111,7 @@ public class DAO{
         Session session = sessionFactory.openSession();
 
         // will insert values into curly braces {}
-        //logger.debug("Searching for a donation with {} {} ", propertyName, value);
+        logger.debug("Searching for a donation with {} {} ", propertyName, value);
 
         HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<Donation> query = builder.createQuery(Donation.class);
@@ -136,7 +132,8 @@ public class DAO{
     public List<Donation> getDonationByPropertyLike(String propertyName, String value) {
         Session session = sessionFactory.openSession();
 
-        logger.debug("Searching for a donation with {} = {}",  propertyName, value);
+        // will insert values into curly braces {}
+        logger.debug("Searching for a donation with {} {} ", propertyName, value);
 
         HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<Donation> query = builder.createQuery(Donation.class);

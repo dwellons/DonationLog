@@ -31,11 +31,10 @@
                 Update Donation
             </div>
 
-            <!-- Update Message -->
-
             <!-- Update Donation FORM -->
             <h2>Update Donation</h2>
 
+            <!-- Update Message -->
             <c:if test="${not empty donationUpdateMessage}">
                 <h3>${donationUpdateMessage}</h3>
             </c:if>

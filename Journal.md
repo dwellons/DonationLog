@@ -314,3 +314,11 @@ Trying to get the most recent 5 donations. I am still trying to figure out how t
 been able to limit it to 5 so far.
 It was a little tricky creating the Application Startup, I couldn't remember exactly how to do it but I just went back
 to last semesters project and it was easy from there. It was not easy at first getting the weather to load using the application start up though, but once I stopped thinking about it so much I figured out how to do what i wanted. I was trying to access the WeatherDAO, but it was in another package. I thought I would have to move my weather info to my DAO, but I took a break doing other work and when I came back I just specified it more directly.
+
+### Week 15 - Spring 2024
+**5/1/2024 6:00pm - 11pm**
+* Begin finalizing project for demonstration and end of semester.
+* Added print button to print search results
+* Print specific part of page:
+* https://stackoverflow.com/questions/12997123/print-specific-part-of-webpage
+* 
