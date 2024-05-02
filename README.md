@@ -14,6 +14,8 @@ using different search options. It will return a summary that the manager can us
 finances or other reasons, or to share with donors. It is designed for initial use and testing by the Edgerton Community Outreach, is open-source and in the future will be free to use for any non-profit
 organization. 
 
+Homepage image source: Edgerton Community Outreach,  https://edgertonoutreach.org/volunteer-information/
+
 ### Project Technologies/Techniques Used.
 
 * Security/Authentication
