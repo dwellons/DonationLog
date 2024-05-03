@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 /**
  * A servlet that will update users
@@ -24,9 +22,6 @@ import org.apache.logging.log4j.Logger;
 )
 
 public class ReadUpdateUser extends HttpServlet {
-
-    // Instantiate Logger
-    private final Logger logger = LogManager.getLogger(this.getClass());
 
     /**
      * Gets a user ready to be updated.
@@ -51,8 +46,6 @@ public class ReadUpdateUser extends HttpServlet {
             // Get all entries.
             request.setAttribute("users", userDAO.getAllUsers());
         }
-
-        logger.debug("REQUEST IN UPDATE USER: " + request.getAttribute("users"));
 
         /*
          * The servlet will forward the request and response

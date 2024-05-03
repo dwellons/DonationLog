@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 /**
  * A servlet that will search donations
@@ -19,15 +17,10 @@ import org.apache.logging.log4j.Logger;
  * @version 1.0
  * @since 1.0
  */
-
 @WebServlet(
         urlPatterns = {"/readDonations"}
 )
-
 public class ReadDonations extends HttpServlet {
-
-    // Instantiate Logger
-    private final Logger logger = LogManager.getLogger(this.getClass());
 
     /**
      * Reads the donations.

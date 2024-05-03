@@ -11,9 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 /**
  * A servlet that will search users
  * @author Darin Wellons
@@ -26,9 +23,6 @@ import org.apache.logging.log4j.Logger;
 )
 
 public class ReadUsers extends HttpServlet {
-
-    // Instantiate Logger
-    private final Logger logger = LogManager.getLogger(this.getClass());
 
     /**
      * Reads the users.

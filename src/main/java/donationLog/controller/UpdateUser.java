@@ -2,8 +2,6 @@ package donationLog.controller;
 
 import donationLog.entity.Users;
 import donationLog.persistence.DAO;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,17 +16,14 @@ import javax.servlet.RequestDispatcher;
  * @version 1.0
  * @since 1.0
  */
-
 @WebServlet(
         name = "updateUser",
         urlPatterns = { "/updateUser" }
 )
 public class UpdateUser extends HttpServlet {
+
+    // Instantiate DAO.
     DAO usersDAO;
-
-
-    // Instantiate Logger.
-    private final Logger logger = LogManager.getLogger(this.getClass());
 
     // Create a valid or not valid variable for validating form entries.
     private boolean isValid;
@@ -96,7 +91,6 @@ public class UpdateUser extends HttpServlet {
      * Have to validate the input coming from the form.
      * If they enter a number in a text field or text in a number field,
      * then the update message will be updated with an error message
-     *
      * @param userName the username
      * @param firstName the first name
      * @param lastName the last name
@@ -109,7 +103,7 @@ public class UpdateUser extends HttpServlet {
                                       HttpServletRequest request)
             throws IOException {
 
-        // instantiate validation variable to valid, true
+        // Initialize validation variable to valid, true
         isValid = true;
 
 
@@ -118,7 +112,7 @@ public class UpdateUser extends HttpServlet {
                 !firstName.matches("[a-zA-Z ]+") ||
                 !lastName.matches("[a-zA-Z ]+")) {
 
-            // Set the variable to not valid, false.
+            // Set the validation variable to not valid, false.
             isValid = false;
         }
 

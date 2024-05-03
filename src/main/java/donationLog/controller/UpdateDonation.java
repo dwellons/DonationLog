@@ -25,13 +25,11 @@ import javax.servlet.RequestDispatcher;
         urlPatterns = { "/updateDonation" }
 )
 public class UpdateDonation extends HttpServlet {
+
+    // Instantiate DAO.
     DAO donationDAO;
 
-    // Instantiate Logger.
-    private final Logger logger = LogManager.getLogger(this.getClass());
-
      // Create a valid or not valid variable for validating form entries.
-
     private boolean isValid;
 
     /**
@@ -110,7 +108,7 @@ public class UpdateDonation extends HttpServlet {
                                       HttpServletRequest request)
             throws IOException {
 
-        // instantiate validation variable to valid, true
+        // Initialize validation variable to valid, true.
         isValid = true;
 
         // If the donor name and donation type aren't text.
@@ -124,7 +122,7 @@ public class UpdateDonation extends HttpServlet {
         // If the weight isn't digits.
         if (!donationWeight.matches("[0-9]+")) {
 
-            //set the variable to not valid, false
+            // Set the validation variable to not valid, false
             isValid = false;
         }
 
