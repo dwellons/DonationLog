@@ -24,7 +24,6 @@ import org.apache.logging.log4j.Logger;
         urlPatterns = { "/createDonation" }
 )
 
-
 public class CreateDonation extends HttpServlet {
     DAO donationDAO;
 
@@ -36,13 +35,7 @@ public class CreateDonation extends HttpServlet {
     private boolean isValid;
 
     /**
-     * The doPost() method will perform the following:
-     * Extract the data for the new Employee from the HTML form.
-     * Call the add employee method in the EmployeeDirectory
-     * instance and pass the form data as arguments.
-     * Add the returned message to the session.
-     * Send a redirect the browser to the Add Employee page
-     * NOTE: It’s a doPost() method, not a doGet().
+     * Creates a donation.
      * @param request request from the session
      * @param response response from the session
      * @throws ServletException for servlet exceptions

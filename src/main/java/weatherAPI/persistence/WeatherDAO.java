@@ -21,16 +21,16 @@ public class WeatherDAO implements PropertiesLoader{
     public WeatherDAO(Properties properties) {
     }
 
-    /*
-     * load the properties file containing the driver, connection url, userid and pwd.
-     */
+
+    // load the properties file containing the driver, connection url, userid and pwd.
+
     private void loadProperties() {
         properties = loadProperties("/weather.properties");
     }
 
     /**
      * gets the weather information for the stored zip code.
-     * @return
+     * @return the weather information
      */
     public Weather getWeatherInfo() {
         loadProperties();

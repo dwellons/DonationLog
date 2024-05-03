@@ -22,9 +22,7 @@ import java.io.IOException;
 public class SignOut extends HttpServlet {
 
     /**
-     * This method forwards the request to the previous page or "/setting" servlet,
-     * removing the userAccount attribute from the http session.
-     *
+     * Signs out a user.
      * @param req  the http request object representing the client's request
      * @param resp the http response object representing the servlet's response
      * @throws ServletException if the servlet encounters difficulty while handling the request

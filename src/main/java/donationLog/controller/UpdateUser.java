@@ -34,14 +34,7 @@ public class UpdateUser extends HttpServlet {
     private boolean isValid;
 
     /**
-     * The doPost() method will perform the following:
-     * Extract the data for updating the Donation from the HTML form.
-     * Call the update donation method in the DonationDAO
-     * instance and pass in the form data as arguments.
-     * Add the returned message to the session.
-     * Send a redirect to the browser to the Update Donation page.
-     * NOTE: It’s a doPost() method, not a doGet().
-     *
+     * Updates a user.
      * @param request  request from the session
      * @param response response from the session
      * @throws ServletException for servlet exceptions

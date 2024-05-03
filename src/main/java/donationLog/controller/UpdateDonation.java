@@ -35,7 +35,7 @@ public class UpdateDonation extends HttpServlet {
     private boolean isValid;
 
     /**
-     *
+     * Updates a donation.
      * @param request  request from the session
      * @param response response from the session
      * @throws ServletException for servlet exceptions

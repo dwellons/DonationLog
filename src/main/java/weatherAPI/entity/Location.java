@@ -31,7 +31,7 @@ public class Location {
 
 	/**
 	 * returns the returned information (postalCodes)
-	 * @return
+	 * @return the postal codes
 	 */
 	@Override
  	public String toString(){

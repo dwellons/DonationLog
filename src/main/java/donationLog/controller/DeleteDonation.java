@@ -26,6 +26,13 @@ public class DeleteDonation extends HttpServlet {
     // Instantiate Logger.
     private final Logger logger = LogManager.getLogger(this.getClass());
 
+    /**
+     * Removes a donation.
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

@@ -27,6 +27,13 @@ public class ReadDeleteUser extends HttpServlet {
     // Instantiate Logger.
     private final Logger logger = LogManager.getLogger(this.getClass());
 
+    /**
+     * Gets a user ready to delete.
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

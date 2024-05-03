@@ -19,6 +19,10 @@ public class ApplicationStartup extends HttpServlet {
     // properties object for new weatherDAO object
     private Properties weatherProperties;
 
+    /**
+     * Loads donations and weather information for application start up.
+     * @throws ServletException
+     */
     public void init() throws ServletException {
 
 

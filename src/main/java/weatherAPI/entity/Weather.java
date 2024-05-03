@@ -21,6 +21,10 @@ public class Weather{
 		return weatherObservation;
 	}
 
+	/**
+	 * Returns the weather information.
+ 	 * @return the weatherObservation
+	 */
 	@Override
  	public String toString(){
 		return 

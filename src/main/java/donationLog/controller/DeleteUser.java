@@ -28,6 +28,13 @@ public class DeleteUser extends HttpServlet {
     // Instantiate Logger.
     private final Logger logger = LogManager.getLogger(this.getClass());
 
+    /**
+     * Deletes a user.
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
