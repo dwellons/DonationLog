@@ -23,7 +23,7 @@ import org.apache.logging.log4j.Logger;
         urlPatterns = {"/LoadWeather"}
 )
 
-public class LoadWeather extends HttpServlet {
+public final class LoadWeather extends HttpServlet {
 
     // Properties object for new weatherDAO object.
     private Properties weatherProperties;

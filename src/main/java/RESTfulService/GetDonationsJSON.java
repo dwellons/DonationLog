@@ -19,7 +19,7 @@ import java.util.List;
  * @since 1.0
  */
 @Path("/donationsJSON")
-public class GetDonationsJSON {
+public final class GetDonationsJSON {
 
     @GET
     @Produces({MediaType.APPLICATION_JSON})

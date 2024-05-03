@@ -2,7 +2,7 @@ package cognito.auth;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class KeysItem{
+public final class KeysItem{
 
 	@JsonProperty("kty")
 	private String kty;

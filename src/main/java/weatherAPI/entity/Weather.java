@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @version 1.0
  * @since 1.0
  */
-public class Weather{
+public final class Weather{
 
 	@JsonProperty("weatherObservation")
 	private WeatherObservation weatherObservation;

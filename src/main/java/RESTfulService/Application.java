@@ -15,7 +15,7 @@ import java.util.Set;
 @ApplicationPath("/services")
 
 // The java class declares root resource and provider classes.
-public class Application extends javax.ws.rs.core.Application {
+public final class Application extends javax.ws.rs.core.Application {
 
     /*
      * The method returns a non-empty collection with classes,

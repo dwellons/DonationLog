@@ -19,7 +19,7 @@ import java.util.Properties;
 /** Begins the authentication process using AWS Cognito
  *
  */
-public class LogIn extends HttpServlet implements PropertiesLoader {
+public final class LogIn extends HttpServlet implements PropertiesLoader {
     Properties properties;
     private final Logger logger = LogManager.getLogger(this.getClass());
     public static String CLIENT_ID;

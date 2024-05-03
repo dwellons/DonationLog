@@ -17,7 +17,7 @@ import java.util.List;
  * @since 1.0
  */
 @Path("/donations")
-public class GetDonations {
+public final class GetDonations {
 
     @GET
     @Produces({MediaType.TEXT_PLAIN})
