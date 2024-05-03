@@ -116,7 +116,7 @@ public class UpdateUser extends HttpServlet {
         // If the username, first name and last name aren't text.
         if (!userName.matches("[a-zA-Z ]+") ||
                 !firstName.matches("[a-zA-Z ]+") ||
-                !userName.matches("[a-zA-Z ]+")) {
+                !lastName.matches("[a-zA-Z ]+")) {
 
             // Set the variable to not valid, false.
             isValid = false;
