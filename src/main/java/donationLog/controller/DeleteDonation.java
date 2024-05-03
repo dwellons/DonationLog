@@ -17,7 +17,6 @@ import java.io.IOException;
  * @version 1.0
  * @since 1.0
  */
-
 @WebServlet(
         urlPatterns = {"/deleteDonation"}
 )
@@ -48,11 +47,17 @@ public class DeleteDonation extends HttpServlet {
         // Delete the donation from the database
         donationDAO.deleteDonation(donationToDelete);
 
+        // Log the deleted donation
+        StringBuilder logDonationMessage = new StringBuilder();
+        logDonationMessage.append(donationToDelete).append(" was deleted.");
+        logger.info(logDonationMessage.toString());
+
         // Set a session attribute for the donationDeleteMessage.
-        request.getSession().setAttribute("donationDeleteMessage",
-                "You have successfully removed donation number " + donationID + ".");
+        StringBuilder deleteDonationMessage = new StringBuilder();
+        deleteDonationMessage.append("You have successfully removed donation number ").append(donationID).append(".");
+        request.getSession().setAttribute("donationDeleteMessage", deleteDonationMessage.toString());
 
         // Redirect to the ReadDonations servlet to display updated donation list.
-         response.sendRedirect(request.getContextPath() + "/readDonations?submit=Show+All+Donations");
+        response.sendRedirect(request.getContextPath() + "/readDonations?submit=Show+All+Donations");
     }
 }

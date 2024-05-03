@@ -75,11 +75,12 @@ public class CreateDonation extends HttpServlet {
         Donation newDonation = new Donation(donor_name,donation_type,donation_weight,donationDate, user);
 
         // Call Insert in DAO.
-
         donationDAO.insertDonation(newDonation);
 
+        // Log the new donation
+        logger.info(newDonation);
+
         // Redirect to Results page.
-        // removing /donationlog_war makes links work on AWS
         response.sendRedirect("/DonationLog_war/index.jsp");
 
         request.getSession().setAttribute("donationAddMessage",

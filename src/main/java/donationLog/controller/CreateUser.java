@@ -72,11 +72,12 @@ public class CreateUser extends HttpServlet {
         Users newUser = new Users(id, user_name, password, first_name, last_name);
 
         // Call Insert in DAO.
-
         usersDAO.insertUser(newUser);
 
-        // Redirect to Results page.
+        // Log the new user
+        logger.info(newUser);
 
+        // Redirect to Results page.
         response.sendRedirect("/DonationLog_war/readUsers?submit=Show+All+Users");
 
         request.getSession().setAttribute("userAddMessage",
