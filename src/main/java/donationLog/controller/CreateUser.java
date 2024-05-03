@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -17,14 +16,14 @@ import org.apache.logging.log4j.Logger;
  * @version 1.0
  * @since 1.0
  */
-
 @WebServlet(
         name = "createUser",
         urlPatterns = { "/createUser" }
 )
-
 public class CreateUser extends HttpServlet {
-    DAO usersDAO;
+
+    // Instantiate DAO
+    private DAO usersDAO;
 
     // Instantiate Logger
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -75,13 +74,17 @@ public class CreateUser extends HttpServlet {
         usersDAO.insertUser(newUser);
 
         // Log the new user
-        logger.info(newUser);
+        StringBuilder logMessage = new StringBuilder();
+        logMessage.append("You have added the user: ")
+                .append(request.getParameter("userName"));
+        logger.info(logMessage.toString());
 
-        // Redirect to Results page.
+        // Redirect to show all users page.
         response.sendRedirect("/DonationLog_war/readUsers?submit=Show+All+Users");
 
+        // Set the userAddMessage
         request.getSession().setAttribute("userAddMessage",
-                "You have added a new user.");
+                logMessage.toString());
     }
 
     /**
@@ -113,11 +116,11 @@ public class CreateUser extends HttpServlet {
         }
 
         // If the form entries are invalid.
-
         if (!isValid) {
-            request.getSession().setAttribute("userAddMessage",
-                    "Invalid Form Input. Please check your entries. "
-                            + "Username, First Name and Last Name can only contain text.");
+            StringBuilder errorMessage = new StringBuilder();
+            errorMessage.append("Invalid Form Input. Please check your entries. ")
+                    .append("Username, First Name and Last Name can only contain text.");
+            request.getSession().setAttribute("userAddMessage", errorMessage.toString());
         }
 
         // Return the variable set to valid or invalid.
