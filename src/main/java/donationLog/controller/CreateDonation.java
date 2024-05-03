@@ -49,9 +49,6 @@ public class CreateDonation extends HttpServlet {
                        HttpServletResponse response)
             throws ServletException, IOException {
 
-        // Create a local variable that references the ServletContext.
-        ServletContext context = getServletContext();
-
         // Extract the data for the new Donation from the HTML form.
         String donor_name = request.getParameter("donorName");
         String donation_type = request.getParameter("donationType");

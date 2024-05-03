@@ -43,11 +43,6 @@ public class CreateUser extends HttpServlet {
                        HttpServletResponse response)
             throws ServletException, IOException {
 
-        /**
-         * Create a local variable that references the ServletContext.
-         */
-        ServletContext context = getServletContext();
-
         // Extract the data for the new User from the HTML form.
         String user_name = request.getParameter("userName");
         String password = request.getParameter("password");
