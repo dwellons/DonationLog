@@ -2,9 +2,6 @@ package donationLog.controller;
 
 import donationLog.entity.Donation;
 import donationLog.persistence.DAO;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +24,7 @@ import javax.servlet.RequestDispatcher;
 public class UpdateDonation extends HttpServlet {
 
     // Instantiate DAO.
-    DAO donationDAO;
+    private DAO donationDAO;
 
      // Create a valid or not valid variable for validating form entries.
     private boolean isValid;

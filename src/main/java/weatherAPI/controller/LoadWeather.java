@@ -25,9 +25,6 @@ import org.apache.logging.log4j.Logger;
 
 public class LoadWeather extends HttpServlet {
 
-    // Instantiate Logger.
-    private final Logger logger = LogManager.getLogger(this.getClass());
-
     // Properties object for new weatherDAO object.
     private Properties weatherProperties;
 

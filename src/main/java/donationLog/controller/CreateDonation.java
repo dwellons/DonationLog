@@ -25,7 +25,9 @@ import org.apache.logging.log4j.Logger;
 )
 
 public class CreateDonation extends HttpServlet {
-    DAO donationDAO;
+
+    // Instantiate DAO
+    private DAO donationDAO;
 
     // Instantiate Logger
     private final Logger logger = LogManager.getLogger(this.getClass());

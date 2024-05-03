@@ -23,7 +23,7 @@ import javax.servlet.RequestDispatcher;
 public class UpdateUser extends HttpServlet {
 
     // Instantiate DAO.
-    DAO usersDAO;
+    private DAO usersDAO;
 
     // Create a valid or not valid variable for validating form entries.
     private boolean isValid;
