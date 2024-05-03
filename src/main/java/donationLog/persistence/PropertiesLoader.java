@@ -1,5 +1,8 @@
 package donationLog.persistence;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.*;
 import java.util.*;
 
@@ -18,13 +21,15 @@ public interface PropertiesLoader{
      * the file path was not found.
      */
     default Properties loadProperties(String propertiesFilePath){
+
+        // For Logging
+        final Logger logger = LogManager.getLogger(this.getClass());
+
         Properties properties = new Properties();
         try {
             properties.load(this.getClass().getResourceAsStream(propertiesFilePath));
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
         } catch (Exception exception) {
-            exception.printStackTrace();
+            logger.debug(exception);
         }
         return properties;
     }
