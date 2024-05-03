@@ -23,10 +23,7 @@ import org.apache.logging.log4j.Logger;
 )
 
 public class ReadDeleteUser extends HttpServlet {
-
-    // Instantiate Logger.
-    private final Logger logger = LogManager.getLogger(this.getClass());
-
+    
     /**
      * Gets a user ready to delete.
      * @param request

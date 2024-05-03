@@ -18,15 +18,10 @@ import org.apache.logging.log4j.Logger;
  * @version 1.0
  * @since 1.0
  */
-
 @WebServlet(
         urlPatterns = {"/readDeleteDonations"}
 )
-
 public class ReadDeleteDonations extends HttpServlet {
-
-    // Instantiate Logger
-    private final Logger logger = LogManager.getLogger(this.getClass());
 
     /**
      * Gets a donation ready to delete.
