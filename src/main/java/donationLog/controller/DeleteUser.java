@@ -3,8 +3,6 @@ package donationLog.controller;
 import donationLog.entity.Donation;
 import donationLog.entity.Users;
 import donationLog.persistence.DAO;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,9 +23,6 @@ import java.util.List;
 )
 public class DeleteUser extends HttpServlet {
 
-    // Instantiate Logger.
-    private final Logger logger = LogManager.getLogger(this.getClass());
-
     /**
      * Deletes a user.
      * @param request
@@ -38,32 +33,33 @@ public class DeleteUser extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        // get the user id from the request
+        // Get the user id from the request.
         int userID = Integer.parseInt(request.getParameter("ID"));
 
-        // instantiate DAO
+        // Instantiate DAO.
         DAO usersDAO = new DAO();
 
-        // get the user to delete
+        // Get the user to delete.
         Users userToDelete = usersDAO.getUserById(userID);
 
-        // get the users donations
+        // Get the users donations.
         List<Donation> donations = usersDAO.getDonationsByUserId(1);
 
-        // remove user id from those donations and set to null
+        // Remove user id from those donations and set to null.
         for (Donation donation : donations) {
             donation.setUser(null);
-            usersDAO.updateDonation(donation); // Update donation to reflect disassociation
+            usersDAO.updateDonation(donation);
         }
 
-        // delete the user from the database
+        // Delete the user from the database.
         usersDAO.deleteUser(userToDelete);
 
-        // set the userDeleteMessage
-        request.getSession().setAttribute("userDeleteMessage",
-                "You have successfully removed user number " + userID + ".");
+        // Set the userDeleteMessage.
+        StringBuilder deleteMessage = new StringBuilder();
+        deleteMessage.append("You have successfully removed user number ").append(userID).append(".");
+        request.getSession().setAttribute("userDeleteMessage", deleteMessage.toString());
 
-        // redirect to the ReadUsers servlet
+        // Redirect to the ReadUsers servlet.
         response.sendRedirect(request.getContextPath() + "/readUsers?submit=Show+All+Users");
     }
 }
