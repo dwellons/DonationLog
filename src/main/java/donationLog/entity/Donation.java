@@ -2,7 +2,6 @@ package donationLog.entity;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
-
 import java.util.Date;
 
 /**
@@ -11,7 +10,6 @@ import java.util.Date;
  * @version 1.0
  * @since 1.0
  */
-
 @Entity
 @Table(name = "donations") // CASE SENSITIVE
 public class Donation {
