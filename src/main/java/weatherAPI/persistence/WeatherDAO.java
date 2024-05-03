@@ -1,6 +1,8 @@
 package weatherAPI.persistence;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import weatherAPI.entity.Weather;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -17,6 +19,9 @@ import java.util.Properties;
 
 public class WeatherDAO implements PropertiesLoader{
     private Properties properties;
+
+    // For Logging
+    private final Logger logger = LogManager.getLogger(this.getClass());
 
     public WeatherDAO(Properties properties) {
     }
@@ -47,10 +52,8 @@ public class WeatherDAO implements PropertiesLoader{
 
         try {
             weather = mapper.readValue(response, Weather.class);
-
-        } catch (JsonProcessingException e) {
-            //TODO setup logging
-            throw new RuntimeException(e);
+        } catch (JsonProcessingException exception) {
+            logger.debug(exception);
         }
         return weather;
     }
