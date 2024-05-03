@@ -299,11 +299,12 @@ public class DAO{
         CriteriaQuery<Donation> query = builder.createQuery(Donation.class);
         Root<Donation> root = query.from(Donation.class);
 
-        // use a typed query to use max results
+        // Use a typed query to use max results.
         TypedQuery<Donation> typedQuery = session.createQuery(query);
 
-        // limit to 5 results max
-        typedQuery.setMaxResults(5);
+        // Limit to 5 results max.
+        int maxResults = 5;
+        typedQuery.setMaxResults(maxResults);
 
         List<Donation> donations = typedQuery.getResultList();
 
