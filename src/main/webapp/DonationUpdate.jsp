@@ -2,13 +2,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
 <html>
-
 
 <!-- Head -->
 <c:import url="/assets/index_files/head.jsp"/>
@@ -43,13 +40,6 @@
             <c:if test="${not empty donations}">
             <form action="updateDonation" method="get">
 
-
-
-                 <!-- donation is being sent, when form is here can see donation -->
-
-                <label for="donationID">Donation ID: </label>
-                <input type="text" name="donationID" id="donationID" value="${donations.donationID}" required readonly>
-
                 <label for="donorName">Donor Name: </label>
                 <input type="text" id="donorName" name="donorName"  placeholder="${donations.donorName}" required>
                 <br>
@@ -62,10 +52,12 @@
                 <input type="text" id="donationWeight" name="donationWeight"  placeholder="${donations.donationWeight}" required>
                 <br>
 
-                <input type="submit" value="Update Donation">
+                <input type="submit" value="Update Donation" id="UpdateButton">
 
             </form>
             </c:if>
+
+            <a href="DonationSearch.jsp">Go Back to Search</a>
 
             <!-- Remove the message after displaying it, if it is present -->
             <c:remove var="donationUpdateMessage"/>
