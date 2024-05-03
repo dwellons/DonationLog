@@ -1,4 +1,5 @@
 package weatherAPI.entity;
+
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -14,7 +15,7 @@ public class Location {
 	private List<PostalCodesItem> postalCodes;
 
 	/**
-	 * sets the postal codes (item returned from geonames)
+	 * Sets the postal codes (item returned from geonames).
 	 * @param postalCodes
 	 */
 	public void setPostalCodes(List<PostalCodesItem> postalCodes){
@@ -22,7 +23,7 @@ public class Location {
 	}
 
 	/**
-	 * gets the postal codes (item returned from geonames)
+	 * Gets the postal codes (item returned from geonames).
 	 * @return
 	 */
 	public List<PostalCodesItem> getPostalCodes(){
@@ -30,7 +31,7 @@ public class Location {
 	}
 
 	/**
-	 * returns the returned information (postalCodes)
+	 * Returns the returned information (postalCodes).
 	 * @return the postal codes
 	 */
 	@Override

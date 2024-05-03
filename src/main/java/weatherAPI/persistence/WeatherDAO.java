@@ -1,4 +1,5 @@
 package weatherAPI.persistence;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
@@ -26,15 +27,13 @@ public class WeatherDAO implements PropertiesLoader{
     public WeatherDAO(Properties properties) {
     }
 
-
-    // load the properties file containing the driver, connection url, userid and pwd.
-
+    // Load the properties file containing the driver, connection url, userid and pwd.
     private void loadProperties() {
         properties = loadProperties("/weather.properties");
     }
 
     /**
-     * gets the weather information for the stored zip code.
+     * Gets the weather information for the stored zip code.
      * @return the weather information
      */
     public Weather getWeatherInfo() {

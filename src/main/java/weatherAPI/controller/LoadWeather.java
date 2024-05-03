@@ -25,28 +25,29 @@ import org.apache.logging.log4j.Logger;
 
 public class LoadWeather extends HttpServlet {
 
-    // Instantiate Logger
+    // Instantiate Logger.
     private final Logger logger = LogManager.getLogger(this.getClass());
 
-    // properties object for new weatherDAO object
+    // Properties object for new weatherDAO object.
     private Properties weatherProperties;
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
-        // new weatherDAO object
+        // New weatherDAO object.
         WeatherDAO dao = new WeatherDAO(weatherProperties);
 
-        // new weather object with weather info loaded from dao
+        // New weather object with weather info loaded from dao.
         Weather weather = dao.getWeatherInfo();
 
-        // get the temperature
+        // Get the temperature.
         String temperature = weather.getWeatherObservation().getTemperature();
 
-        // get the location
+        // Get the location.
         String location = weather.getWeatherObservation().getStationName();
 
-        // get the current condition
+        // Get the current condition.
         String currentCondition = weather.getWeatherObservation().getWeatherCondition();
         String condition = "" ;
 
@@ -56,17 +57,13 @@ public class LoadWeather extends HttpServlet {
             condition = currentCondition;
         }
 
-        // Convert Temp from Celsius to Fahrenheit
+        // Convert Temp from Celsius to Fahrenheit.
         double tempFar = 0.00;
         tempFar = Double.parseDouble(temperature) * ((double) 9/5) + 32;
 
-        // set the weather values in the request attribute
+        // Set the weather values in the request attribute.
         request.setAttribute("temperature", tempFar);
         request.setAttribute("location", location);
         request.setAttribute("condition", condition);
-
-        // forward the request, if needed:
-        // RequestDispatcher dispatcher = request.getRequestDispatcher("DonationSearch.jsp");
-        // dispatcher.forward(request, response);
     }
 }

@@ -3,7 +3,7 @@ package weatherAPI.entity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * This class returns the weather data
+ * This class returns the weather data.
  * @author Darin Wellons
  * @version 1.0
  * @since 1.0
@@ -31,5 +31,5 @@ public class Weather{
 			"Weather{" + 
 			"weatherObservation = '" + weatherObservation + '\'' + 
 			"}";
-		}
+	}
 }
