@@ -57,9 +57,6 @@ public class Users {
 
     }
 
-    public Users(String userName) {
-    }
-
     /**
      * Gets id.
      *

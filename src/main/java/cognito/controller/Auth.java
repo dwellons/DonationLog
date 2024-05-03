@@ -177,6 +177,10 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         logger.debug("here are all the available claims: " + jwt.getClaims());
 
 
+        // TODO Determine how we want to associate a donation with a user, when adding donation doesnt require login.
+        /*
+         * for trying to associate user with donation in v2.
+
         DAO donationDAO = new DAO();
         Users user;
         List<Users> userList = donationDAO.getUserByPropertyEqual("userName", userName);
@@ -189,9 +193,8 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         }
 
         // here we have the user id for the signed in user.
-        int UserId = user.getId();
-
-        // TODO Determine how we want to associate a donation with a user, when adding donation doesnt require login.
+            int UserId = user.getId();
+         */
 
         return userName;
     }
