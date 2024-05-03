@@ -13,12 +13,11 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * A class that returns JSON data
+ * A class that returns JSON data.
  * @author Darin Wellons
  * @version 1.0
  * @since 1.0
  */
-
 @Path("/donationsJSON")
 public class GetDonationsJSON {
 
@@ -26,17 +25,18 @@ public class GetDonationsJSON {
     @Produces({MediaType.APPLICATION_JSON})
     public Response getListedDonations() throws IOException {
 
-        // create a new object
+        // Create a new object.
         DAO donationDAO;
 
-        // instantiate DAO
+        // Instantiate DAO.
         donationDAO = new DAO();
 
-        // get all the donations
+        // Get all the donations.
         List<Donation> donations = donationDAO.getAllDonations();
 
-        // put them into a string
-        String donationsOutput = "These are the listed donations: " + donations;
+        // Put them into a string.
+        StringBuilder donationsOutput = new StringBuilder();
+        donationsOutput.append("These are the listed donations: ").append(donations);
 
         // JSON
         /*
@@ -44,13 +44,14 @@ public class GetDonationsJSON {
          */
         ObjectMapper mapper = new ObjectMapper();
 
-        //Object to JSON in file
-        mapper.writeValue(new File("/Volumes/WD_Black P40/GitHub/Personal/DonationLog/logs/user.json"), donationsOutput);
+        // Object to JSON in file.
+        mapper.writeValue(new File("/Volumes/WD_Black P40/GitHub/Personal/DonationLog/logs/user.json"),
+                donationsOutput.toString());
 
-        //Convert object to JSON string
-        String jsonInString = mapper.writeValueAsString(donationsOutput);
+        // Convert object to JSON string.
+        String jsonInString = mapper.writeValueAsString(donationsOutput.toString());
 
-        // return to the page
+        // Return to the page.
         return Response.status(200).entity(jsonInString).build();
     }
 }

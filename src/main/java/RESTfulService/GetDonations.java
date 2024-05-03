@@ -11,12 +11,11 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * A class that returns plain text
+ * A class that returns plain text.
  * @author Darin Wellons
  * @version 1.0
  * @since 1.0
  */
-
 @Path("/donations")
 public class GetDonations {
 
@@ -24,18 +23,20 @@ public class GetDonations {
     @Produces({MediaType.TEXT_PLAIN})
     public Response getListedDonations() throws IOException {
 
-        // create a new object
+        // Create a new object.
         DAO donationDAO;
 
-        // instantiate DAO
+        // Instantiate DAO.
         donationDAO = new DAO();
 
-        // get all the donations
+        // Get all the donations.
         List<Donation> donations = donationDAO.getAllDonations();
 
-        // put them into a string
-        String donationsOutput = "These are the listed donations: " + donations;
+        // Put them into a string.
+        StringBuilder donationsOutput = new StringBuilder();
+        donationsOutput.append("These are the listed donations: ").append(donations);
 
-        return Response.status(200).entity(donationsOutput).build();
+        // Return to the page.
+        return Response.status(200).entity(donationsOutput.toString()).build();
     }
 }
