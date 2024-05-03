@@ -29,6 +29,7 @@ public class CreateDonation extends HttpServlet {
 
     // Instantiate Logger
     private final Logger logger = LogManager.getLogger(this.getClass());
+
     /**
      * Create a valid or not valid variable for validating form entries.
      */

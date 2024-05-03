@@ -58,7 +58,7 @@ public class CreateUser extends HttpServlet {
         int id = 0;
 
         // Have to validate the input from the form before accessing database.
-        if (!validateUserInput(user_name, password, first_name, last_name, request)) {
+        if (!validateUserInput(user_name, first_name, last_name, request)) {
 
             // Send a redirect the browser to the Add User page
             response.sendRedirect(request.getContextPath() + "/UserCreate.jsp");
@@ -88,14 +88,13 @@ public class CreateUser extends HttpServlet {
      * If they enter a number in a text field or text in number field,
      * then the add message will be updated with an error message.
      * @param user_name the username
-     * @param password the password
      * @param first_name the first name
      * @param last_name the last name
      * @param request the http request
      * @return isValid if the entry is valid
      * @throws IOException
      */
-    private boolean validateUserInput(String user_name, String password,
+    private boolean validateUserInput(String user_name,
                                       String first_name, String last_name,
                                       HttpServletRequest request)
             throws IOException {
