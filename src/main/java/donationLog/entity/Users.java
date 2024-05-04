@@ -70,7 +70,7 @@ public class Users {
      * Sets id.
      * @param id the id
      */
-    public void setID(int id) {
+    public void setUserID(int id) {
 
         this.id = id;
     }
@@ -169,4 +169,6 @@ public class Users {
                 ", lastName='" + lastName + '\'' +
                 '}';
     }
+
+
 }

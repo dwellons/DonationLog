@@ -40,6 +40,10 @@
             <c:if test="${not empty donations}">
             <form action="updateDonation" method="get">
 
+                <label for="donationID">Donation ID: </label>
+                <input type="text" id="donationID" name="donationID"  placeholder="${donations.donationID}" required>
+                <br>
+
                 <label for="donorName">Donor Name: </label>
                 <input type="text" id="donorName" name="donorName"  placeholder="${donations.donorName}" required>
                 <br>

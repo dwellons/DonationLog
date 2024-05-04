@@ -19,6 +19,7 @@ import java.io.IOException;
  */
 
 @WebServlet(
+        name = "readUsers",
         urlPatterns = {"/readUsers"}
 )
 
@@ -38,7 +39,7 @@ public class ReadUsers extends HttpServlet {
         DAO usersDAO = new DAO();
 
         // If submit attribute = Submit, search.
-        if (request.getParameter("submit").equals("Submit")) {
+        if (request.getParameter("submit").equals("Search")) {
 
             // Get my Users, call usersDAO method, pass in the donation.
             request.setAttribute("users", usersDAO.getUserByPropertyEqual(request.getParameter("searchType"), request.getParameter("searchTerm")));

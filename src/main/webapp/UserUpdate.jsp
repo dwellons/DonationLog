@@ -39,8 +39,8 @@
             <c:if test="${not empty users}">
             <form action="updateUser" method="post">
 
-                <label for="ID">User ID: </label>
-                <input type="text" name="ID" id="ID" value="${users.id}" required readonly>
+                <label for="userID">User ID: </label>
+                <input type="text" id="userID" name="userID" placeholder="${users.id}" required>
 
                 <label for="userName">Username: </label>
                 <input type="text" id="userName" name="userName" placeholder="${users.userName}" required>

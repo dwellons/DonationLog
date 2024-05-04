@@ -36,7 +36,7 @@ public class ReadDonations extends HttpServlet {
         DAO donationDAO = new DAO();
 
         // If submit attribute = Submit, search.
-        if (request.getParameter("submit").equals("Submit")) {
+        if (request.getParameter("submit").equals("Search")) {
 
             // Get my donations, call donationDAO method, pass in the donation.
             request.setAttribute("donations", donationDAO.getDonationByPropertyEqual(request.getParameter("searchType"), request.getParameter("searchTerm")));

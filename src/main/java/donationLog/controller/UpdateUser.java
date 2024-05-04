@@ -39,10 +39,10 @@ public class UpdateUser extends HttpServlet {
             throws ServletException, IOException {
 
         // Extract the data for updating the Donation from the HTML form.
-        int userID = Integer.parseInt(request.getParameter("ID"));
+        String userID = (request.getParameter("userID"));
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
-        String firstName = request.getParameter("firstname");
+        String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
 
         // Validate the input from the form before updating the database.
@@ -63,9 +63,10 @@ public class UpdateUser extends HttpServlet {
         usersDAO = new DAO();
 
         // Retrieve the existing Donation from the database.
-        Users userToUpdate = usersDAO.getUserById(userID);
+        Users userToUpdate = usersDAO.getUserById(Integer.parseInt(userID));
 
         // Update the existing Donation with the new data.
+        userToUpdate.setUserID(Integer.parseInt(userID));
         userToUpdate.setUserName(userName);
         userToUpdate.setPassword(password);
         userToUpdate.setFirstName(firstName);
@@ -82,7 +83,7 @@ public class UpdateUser extends HttpServlet {
                 "You have updated the User with ID: " + userID);
 
         // Forward to the Update User page.
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/UserUpdate.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/UserSearch.jsp");
         dispatcher.forward(request, response);
 
     }
