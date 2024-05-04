@@ -20,9 +20,8 @@ import java.util.Properties;
  * @since 1.0
  */
 @WebServlet(
-        urlPatterns = {"/LoadWeather"}
+        urlPatterns = {"/loadWeather"}
 )
-
 public final class LoadWeather extends HttpServlet {
 
     // Properties object for new weatherDAO object.
@@ -30,6 +29,10 @@ public final class LoadWeather extends HttpServlet {
 
     // Instantiate Logger
     private final Logger logger = LogManager.getLogger(this.getClass());
+
+    public LoadWeather(Properties weatherProperties) {
+        this.weatherProperties = weatherProperties;
+    }
 
 
     @Override

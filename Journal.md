@@ -331,9 +331,14 @@ to last semesters project and it was easy from there. It was not easy at first g
 * Removed print references in project
 * Updated comments and javadoc
 * Update date formatting and some styling
-* QA plug
+* QA plug initial scan
 * Implementing String Builder
 * Removed unused import statements
 * Resolved issue modifying users and donations
-* created Version2.md
-* 
+* Created Version2.md
+* Fixed multiple QA plug issues
+* Temp is rounding
+* Went through indie project tips and code best practices
+* Implemented peer code review tips
+* Went through past checkpoints
+* Ready for presentation

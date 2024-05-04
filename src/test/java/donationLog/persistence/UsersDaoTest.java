@@ -4,7 +4,6 @@ import donationLog.entity.Donation;
 import donationLog.entity.Users;
 import java.util.List;
 import static org.junit.Assert.*;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Before;
@@ -20,7 +19,7 @@ import donationLog.util.Database;
 public class UsersDaoTest {
 
     // Instantiate new DAO
-    DAO usersDAO;
+    private DAO usersDAO;
     @Before
     public void setup() {
         Database database = Database.getInstance();
