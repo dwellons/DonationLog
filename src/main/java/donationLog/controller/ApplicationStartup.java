@@ -16,7 +16,7 @@ import java.util.Properties;
 )
 public class ApplicationStartup extends HttpServlet {
 
-    // properties object for new weatherDAO object
+    // Properties object for new weatherDAO object.
     private Properties weatherProperties;
 
     /**
@@ -39,19 +39,19 @@ public class ApplicationStartup extends HttpServlet {
     /*
     Load Weather
      */
-        // new weatherDAO object
+        // New weatherDAO object.
         WeatherDAO weatherDAO = new weatherAPI.persistence.WeatherDAO(weatherProperties);
 
-        // new weather object with weather info loaded from dao
+        // New weather object with weather info loaded from dao.
         Weather weather = weatherDAO.getWeatherInfo();
 
-        // get the temperature
+        // Get the temperature.
         String temperature = weather.getWeatherObservation().getTemperature();
 
-        // get the location
+        // Get the location.
         String location = weather.getWeatherObservation().getStationName();
 
-        // get the current condition
+        // Get the current condition.
         String currentCondition = weather.getWeatherObservation().getWeatherCondition();
         String condition = "" ;
 
@@ -61,10 +61,10 @@ public class ApplicationStartup extends HttpServlet {
             condition = currentCondition;
         }
 
-        // Convert Temp from Celsius to Fahrenheit
+        // Convert Temp from Celsius to Fahrenheit.
         int tempFar = (int) Math.round(Double.parseDouble(temperature) * ((double) 9/5) + 32);
 
-        // set the weather values in the request attribute
+        // Set the weather values in the request attribute.
         getServletContext().setAttribute("temperature", tempFar);
         getServletContext().setAttribute("location", location);
         getServletContext().setAttribute("condition", condition);

@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.util.Objects;
 import java.util.Properties;
 
-
 /**
  * A servlet to display current weather conditions.
  * @author Darin Wellons
