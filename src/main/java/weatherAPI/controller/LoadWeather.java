@@ -1,5 +1,7 @@
 package weatherAPI.controller;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import weatherAPI.entity.Weather;
 import weatherAPI.persistence.WeatherDAO;
 import javax.servlet.ServletException;
@@ -10,6 +12,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.Objects;
 import java.util.Properties;
+
 
 /**
  * A servlet to display current weather conditions.
@@ -26,8 +29,12 @@ public final class LoadWeather extends HttpServlet {
     // Properties object for new weatherDAO object.
     private Properties weatherProperties;
 
+    // Instantiate Logger
+    private final Logger logger = LogManager.getLogger(this.getClass());
+
+
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         // New weatherDAO object.
@@ -56,9 +63,12 @@ public final class LoadWeather extends HttpServlet {
         double tempFar = 0.00;
         tempFar = Double.parseDouble(temperature) * ((double) 9/5) + 32;
 
+        logger.debug("Weather: " + weather);
+        System.out.println("test");
+
         // Set the weather values in the request attribute.
-        request.setAttribute("temperature", tempFar);
-        request.setAttribute("location", location);
-        request.setAttribute("condition", condition);
+        getServletContext().setAttribute("temperature", tempFar);
+        getServletContext().setAttribute("location", location);
+        getServletContext().setAttribute("condition", condition);
     }
 }

@@ -326,4 +326,14 @@ to last semesters project and it was easy from there. It was not easy at first g
 * Closed out open issues
 * Remove unused files
 * Modify user now displaying user information
+
+**5/3/2024 4:00pm - 11pm**
+* Removed print references in project
+* Updated comments and javadoc
+* Update date formatting and some styling
+* QA plug
+* Implementing String Builder
+* Removed unused import statements
+* Resolved issue modifying users and donations
+* created Version2.md
 * 

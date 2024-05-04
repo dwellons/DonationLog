@@ -105,12 +105,15 @@ public class CreateDonation extends HttpServlet {
         // Instantiate validation variable to valid, true.
         isValid = true;
 
+        StringBuilder errorMessage = new StringBuilder();
+
         // If the donor name and donation type aren't text.
         if (!donor_name.matches("[a-zA-Z ]+") ||
-              !donation_type.matches("[a-zA-Z ]+")) {
+                !donation_type.matches("[a-zA-Z ]+")) {
 
             // Set the variable to not valid, false.
             isValid = false;
+            errorMessage.append("Donor and Donation Type can only contain text.");
         }
 
         // If the weight isn't digits.
@@ -118,14 +121,13 @@ public class CreateDonation extends HttpServlet {
 
             // Set the variable to not valid, false
             isValid = false;
+            errorMessage.append("Weight can only contain digits.");
         }
 
         // If the form entries are invalid.
         if (!isValid) {
             request.getSession().setAttribute("donationAddMessage",
-                    "Invalid Form Input. Please check your entries. "
-                            + "Donor, Donation Type can only contain text"
-                            + "Weight can only contain digits");
+                    "Invalid Form Input. Please check your entries. " + errorMessage.toString());
         }
 
         // Return the variable set to valid or invalid.

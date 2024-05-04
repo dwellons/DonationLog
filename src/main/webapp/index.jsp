@@ -87,7 +87,7 @@
                         Community Outreach in 2023">
                     <!-- img source: https://edgertonoutreach.org/volunteer-information/ -->
                 </a>
-                
+
                 <p>
                     Volunteers at Edgerton Community Outreach in 2023. Thank you!
                 </p>

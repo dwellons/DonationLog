@@ -27,7 +27,7 @@ Homepage image source: Edgerton Community Outreach,  https://edgertonoutreach.or
 * Dependency Management
     * Maven 11
 * Web Services consumed using Java
-    * GeoNames for Weather Information
+    * GeoNames for Weather Information - https://www.geonames.org/
 * CSS
     * HTML5 UP - https://html5up.net/
 * Data Validation
@@ -38,7 +38,7 @@ Homepage image source: Edgerton Community Outreach,  https://edgertonoutreach.or
     * Hibernate
 * Hosting
     * AWS
-* Tech I'd like to explore as part of this work
+* Future Tech I'd like to explore as part of this work
     * Email API's
     * Codenameone for Mobile deployment
 * Unit Testing
@@ -47,7 +47,6 @@ Homepage image source: Edgerton Community Outreach,  https://edgertonoutreach.or
     * IntelliJ IDEA
     * Figma
     * MAMP Pro
-    * SoapUI
     * MySQLWorkbench
     * GitHub Desktop
     * Postman
@@ -62,6 +61,7 @@ Homepage image source: Edgerton Community Outreach,  https://edgertonoutreach.or
 * [User Stories](DesignDocuments/UserStories.md)
 * [Screen Design](DesignDocuments/Screens.md)
 * [Project Plan](ProjectPlan.md)
+* [Version 2.0](Version2.md)
 
 ### Documentation of progress, reflections, and time spent on this class.
 

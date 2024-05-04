@@ -34,6 +34,8 @@ public class ApplicationStartup extends HttpServlet {
 
         // Get Recent entries.
         getServletContext().setAttribute("donations", donationDAO.getRecentDonations());
+
+
     /*
     Load Weather
      */
