@@ -46,7 +46,7 @@ public class UpdateUser extends HttpServlet {
         String lastName = request.getParameter("lastName");
 
         // Validate the input from the form before updating the database.
-        if (!validateUserInput(userName, firstName, lastName, request)) {
+        if (!validateUserInput(userName, firstName, lastName, request, response)) {
 
             // Set a session attribute for the update message.
             request.getSession().setAttribute("userUpdateMessage",
@@ -101,28 +101,40 @@ public class UpdateUser extends HttpServlet {
      */
     private boolean validateUserInput(String userName, String firstName,
                                       String lastName,
-                                      HttpServletRequest request)
-            throws IOException {
+                                      HttpServletRequest request, HttpServletResponse response)
+            throws IOException, ServletException {
 
-        // Initialize validation variable to valid, true
+        // Initialize validation variable to valid, true.
         isValid = true;
 
+        StringBuilder errorMessage = new StringBuilder();
 
         // If the username, first name and last name aren't text.
-        if (!userName.matches("[a-zA-Z ]+") ||
-                !firstName.matches("[a-zA-Z ]+") ||
-                !lastName.matches("[a-zA-Z ]+")) {
-
-            // Set the validation variable to not valid, false.
+        if (!userName.matches("[a-zA-Z ]+")) {
             isValid = false;
+            errorMessage.append("Username can only contain text. ");
         }
 
+        if (!firstName.matches("[a-zA-Z ]+")) {
+            isValid = false;
+            errorMessage.append("First Name can only contain text. ");
+        }
+
+        if (!lastName.matches("[a-zA-Z ]+")) {
+            isValid = false;
+            errorMessage.append("Last Name can only contain text. ");
+        }
 
         // If the form entries are invalid.
         if (!isValid) {
+
+            // Set error message in session attribute.
             request.getSession().setAttribute("userUpdateMessage",
-                    "Invalid Form Input. Please check your entries. "
-                            + "Username, First Name and Last Name can only contain text.");
+                    "Invalid Form Input. Please check your entries. " + errorMessage.toString());
+
+            // Forward to the user search page.
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/UserSearch.jsp");
+            dispatcher.forward(request, response);
         }
 
         // Return the variable set to valid or invalid.
