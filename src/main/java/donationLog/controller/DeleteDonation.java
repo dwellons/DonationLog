@@ -33,7 +33,8 @@ public class DeleteDonation extends HttpServlet {
      * @throws IOException
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
         // Extract the donation ID from the request parameter.
         int donationID = Integer.parseInt(request.getParameter("donationID"));

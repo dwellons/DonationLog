@@ -33,7 +33,8 @@ public class ReadUsers extends HttpServlet {
      * @throws IOException
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
         // Instantiate a new DonationDAO.
         DAO usersDAO = new DAO();
@@ -42,7 +43,9 @@ public class ReadUsers extends HttpServlet {
         if (request.getParameter("submit").equals("Search")) {
 
             // Get my Users, call usersDAO method, pass in the donation.
-            request.setAttribute("users", usersDAO.getUserByPropertyEqual(request.getParameter("searchType"), request.getParameter("searchTerm")));
+            request.setAttribute("users",
+                    usersDAO.getUserByPropertyEqual(request.getParameter("searchType"),
+                            request.getParameter("searchTerm")));
         } else {
             // Get all entries.
             request.setAttribute("users", usersDAO.getAllUsers());

@@ -16,7 +16,6 @@ import javax.servlet.RequestDispatcher;
  * @version 1.0
  * @since 1.0
  */
-
 @WebServlet(
         name = "updateDonation",
         urlPatterns = { "/updateDonation" }
@@ -26,7 +25,7 @@ public class UpdateDonation extends HttpServlet {
     // Instantiate DAO.
     private DAO donationDAO;
 
-     // Create a valid or not valid variable for validating form entries.
+    // Create a valid or not valid variable for validating form entries.
     private boolean isValid;
 
     /**
@@ -46,17 +45,8 @@ public class UpdateDonation extends HttpServlet {
         String donationWeight = request.getParameter("donationWeight");
 
         // Validate the input from the form before updating the database.
-        if (!validateUserInput(donorName, donationType, donationWeight, request)) {
-
-            // Set a session attribute for the update message.
-            request.getSession().setAttribute("donationUpdateMessage",
-                    "Invalid Form Input. Please check your entries. "
-                            + "Donor, Donation Type can only contain text"
-                            + "Weight can only contain digits");
-
-            // Forward to the Update Donation page.
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/DonationUpdate.jsp");
-            dispatcher.forward(request, response);
+        if (!validateUserInput(donorName, donationType, donationWeight, request, response)) {
+            // If input is not valid, return without further processing
             return;
         }
 
@@ -82,7 +72,7 @@ public class UpdateDonation extends HttpServlet {
         request.getSession().setAttribute("donationUpdateMessage",
                 "You have updated the donation with ID: " + donationID);
 
-        // Forward to the Update Donation page.
+        // Forward to the donation search page.
         RequestDispatcher dispatcher = request.getRequestDispatcher("/DonationSearch.jsp");
         dispatcher.forward(request, response);
 
@@ -102,11 +92,13 @@ public class UpdateDonation extends HttpServlet {
      */
     private boolean validateUserInput(String donorName, String donationType,
                                       String donationWeight,
-                                      HttpServletRequest request)
-            throws IOException {
+                                      HttpServletRequest request, HttpServletResponse response)
+            throws IOException, ServletException {
 
         // Initialize validation variable to valid, true.
         isValid = true;
+
+        StringBuilder errorMessage = new StringBuilder();
 
         // If the donor name and donation type aren't text.
         if (!donorName.matches("[a-zA-Z ]+") ||
@@ -114,21 +106,27 @@ public class UpdateDonation extends HttpServlet {
 
             // Set the variable to not valid, false.
             isValid = false;
+            errorMessage.append("Donor and Donation Type can only contain text. ");
         }
 
         // If the weight isn't digits.
         if (!donationWeight.matches("[0-9]+")) {
 
-            // Set the validation variable to not valid, false
+            // Set the validation variable to not valid, false.
             isValid = false;
+            errorMessage.append("Weight can only contain digits. ");
         }
 
         // If the form entries are invalid.
         if (!isValid) {
+
+            // Set error message in session attribute.
             request.getSession().setAttribute("donationUpdateMessage",
-                    "Invalid Form Input. Please check your entries. "
-                            + "Donor, Donation Type can only contain text"
-                            + "Weight can only contain digits");
+                    "Invalid Form Input. Please check your entries. " + errorMessage.toString());
+
+            // Forward to the donation search page.
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/DonationSearch.jsp");
+            dispatcher.forward(request, response);
         }
 
         // Return the variable set to valid or invalid.

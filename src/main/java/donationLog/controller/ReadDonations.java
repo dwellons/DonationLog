@@ -30,7 +30,8 @@ public class ReadDonations extends HttpServlet {
      * @throws IOException
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
         // Instantiate a new DAO.
         DAO donationDAO = new DAO();
@@ -39,7 +40,9 @@ public class ReadDonations extends HttpServlet {
         if (request.getParameter("submit").equals("Search")) {
 
             // Get my donations, call donationDAO method, pass in the donation.
-            request.setAttribute("donations", donationDAO.getDonationByPropertyEqual(request.getParameter("searchType"), request.getParameter("searchTerm")));
+            request.setAttribute("donations",
+                    donationDAO.getDonationByPropertyEqual(request.getParameter("searchType"),
+                            request.getParameter("searchTerm")));
         } else {
 
             // Get all entries.

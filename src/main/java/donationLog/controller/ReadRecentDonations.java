@@ -31,7 +31,8 @@ public class ReadRecentDonations extends HttpServlet {
      * @throws IOException
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
         // Instantiate a new DAO.
         DAO donationDAO = new DAO();

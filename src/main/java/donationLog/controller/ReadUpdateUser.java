@@ -31,7 +31,8 @@ public class ReadUpdateUser extends HttpServlet {
      * @throws IOException
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
         // Instantiate a new DAO.
         DAO userDAO = new DAO();

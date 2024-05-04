@@ -31,7 +31,8 @@ public class DeleteUser extends HttpServlet {
      * @throws IOException
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
         // Get the user id from the request.
         int userID = Integer.parseInt(request.getParameter("ID"));
