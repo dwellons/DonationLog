@@ -15,6 +15,8 @@
             <h2>I want to...</h2>
         </header>
         <ul>
+            <a href = "/DonationLog_war/DonationCreate.jsp">Add a new Donation</a>
+            <br>
             <a href = "/DonationLog_war/DonationSearch.jsp">Search for a Donation</a>
             <br>
             <a href = "/DonationLog_war/UserCreate.jsp">Add a new User</a>
