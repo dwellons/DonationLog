@@ -44,10 +44,6 @@ public final class GetDonationsJSON {
          */
         ObjectMapper mapper = new ObjectMapper();
 
-        // Object to JSON in file.
-        mapper.writeValue(new File("/Volumes/WD_Black P40/GitHub/Personal/DonationLog/logs/user.json"),
-                donationsOutput.toString());
-
         // Convert object to JSON string.
         String jsonInString = mapper.writeValueAsString(donationsOutput.toString());
 
