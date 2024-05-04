@@ -59,9 +59,8 @@ public final class LoadWeather extends HttpServlet {
             condition = currentCondition;
         }
 
-        // Convert Temp from Celsius to Fahrenheit.
-        double tempFar = 0.00;
-        tempFar = Double.parseDouble(temperature) * ((double) 9/5) + 32;
+        // Convert Temp from Celsius to Fahrenheit
+        int tempFar = (int) Math.round(Double.parseDouble(temperature) * ((double) 9/5) + 32);
 
         logger.debug("Weather: " + weather);
         System.out.println("test");

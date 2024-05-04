@@ -62,8 +62,7 @@ public class ApplicationStartup extends HttpServlet {
         }
 
         // Convert Temp from Celsius to Fahrenheit
-        double tempFar = 0.00;
-        tempFar = Double.parseDouble(temperature) * ((double) 9/5) + 32;
+        int tempFar = (int) Math.round(Double.parseDouble(temperature) * ((double) 9/5) + 32);
 
         // set the weather values in the request attribute
         getServletContext().setAttribute("temperature", tempFar);
