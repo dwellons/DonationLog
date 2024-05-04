@@ -47,7 +47,7 @@ import java.util.stream.Collectors;
  * Inspired by: https://stackoverflow.com/questions/52144721/how-to-get-access-token-using-client-credentials-using-java-code
  */
 
-public class Auth extends HttpServlet implements PropertiesLoader {
+public final class Auth extends HttpServlet implements PropertiesLoader {
     Properties properties;
     String CLIENT_ID;
     String CLIENT_SECRET;

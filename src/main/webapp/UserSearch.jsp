@@ -28,6 +28,21 @@
                 Search Users
             </div>
 
+            <!-- Display the User UPDATE Message -->
+            <c:if test="${not empty userUpdateMessage}">
+                <p>${userUpdateMessage}</p>
+            </c:if>
+
+            <!-- Display the User Delete Message -->
+            <c:if test="${not empty userDeleteMessage}">
+                <h3>${userDeleteMessage}</h3>
+            </c:if>
+
+            <!-- Display the User Add Message -->
+            <c:if test="${not empty userAddMessage}">
+                <h3>${userAddMessage}</h3>
+            </c:if>
+
             <!-- Donation Search Form -->
             <h2>Search for a User</h2>
 
