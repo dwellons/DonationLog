@@ -78,7 +78,7 @@ public class CreateDonation extends HttpServlet {
         // Log the new donation
         logger.info(newDonation);
 
-        // Redirect to Results page.
+        // Redirect to Read Recent Donations page.
         response.sendRedirect("ReadRecentDonations");
 
         request.getSession().setAttribute("donationAddMessage",
