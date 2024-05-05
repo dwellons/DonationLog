@@ -56,7 +56,6 @@ public class CreateDonation extends HttpServlet {
         Users user = null;
 
         // Have to validate the input from the form before accessing database.
-
         if (!validateUserInput(donor_name, donation_type, donation_weight, request)) {
 
             // Send a redirect the browser to the Add Donation page.
