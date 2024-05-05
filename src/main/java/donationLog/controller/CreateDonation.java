@@ -80,7 +80,7 @@ public class CreateDonation extends HttpServlet {
         logger.info(newDonation);
 
         // Redirect to Results page.
-        response.sendRedirect("/DonationLog_war/index.jsp");
+        response.sendRedirect("ReadRecentDonations");
 
         request.getSession().setAttribute("donationAddMessage",
                 "You have added your donation.");

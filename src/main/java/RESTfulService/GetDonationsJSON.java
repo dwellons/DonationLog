@@ -1,14 +1,14 @@
 package RESTfulService;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import donationLog.entity.Donation;
 import donationLog.persistence.DAO;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import donationLog.entity.Donation;
-import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
